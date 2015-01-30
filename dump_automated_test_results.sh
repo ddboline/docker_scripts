@@ -9,4 +9,5 @@ for C in $CONTAINERS;
 do
     mkdir temp_$C
     sudo docker cp ${C}:/root temp_${C}/
+    sudo chown -R ${USER}:${USER} temp_${C}/
 done
