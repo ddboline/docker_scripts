@@ -17,4 +17,4 @@ TEST_SCRIPT="test_cloud9.sh"
 git clone ${GITHUB_REPO} ${HOME}/${GITHUB_DIR}
 cd ${HOME}/${GITHUB_DIR}
 sh ${SETUP_SCRIPT}
-sh ${TEST_SCRIPT}
+sh ${TEST_SCRIPT} 2> ${HOME}/output.err > ${HOME}/output.out
