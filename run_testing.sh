@@ -6,6 +6,10 @@ apt-get install -y git python-boto
 export HOME="/root"
 export USER="root"
 
+cd ${HOME}/docker_scripts
+git pull
+cd /
+
 echo "Host *" >> ${HOME}/.ssh/config
 echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
 
