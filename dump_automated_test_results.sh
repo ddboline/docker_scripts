@@ -8,6 +8,7 @@ CONTAINERS=`sudo docker ps -a | awk '!/CONTAIN/ {print $1}'`
 for C in $CONTAINERS;
 do
     mkdir temp_$C
-    sudo docker cp ${C}:/root/output.* temp_${C}/
+    sudo docker cp ${C}:/root/output.out temp_${C}/
+    sudo docker cp ${C}:/root/output.err temp_${C}/
     sudo chown -R ${USER}:${USER} temp_${C}/
 done
