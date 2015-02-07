@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo echo ""
-for REPO in aws_scripts gapi_scripts programming_tests;
+for REPO in aws_scripts gapi_scripts garmin_app programming_tests;
 do
     sudo docker run -d ddboline/ddboline_keys:v0.4 /root/run_testing.sh ${REPO}
 done
