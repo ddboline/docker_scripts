@@ -8,7 +8,7 @@ D=`date +%Y%m%d%H%M%S`
 
 for C in $CONTAINERS;
 do
-    mkdir temp_$C
+    mkdir temp_${D}_${C}
     sudo docker cp ${C}:/root/output.out temp_${D}_${C}/
     sudo docker cp ${C}:/root/output.err temp_${D}_${C}/
     sudo chown -R ${USER}:${USER} temp_${D}_${C}/
