@@ -3,7 +3,7 @@
 sudo echo ""
 sudo docker ps -a
 
-CONTAINERS=`sudo docker ps -a | awk '!/CONTAIN/ {printf("%s,%s\n", $1, $NF}'`
+CONTAINERS=`sudo docker ps -a | awk '!/CONTAIN/ {printf("%s,%s\n",$1,$NF)}'`
 D=`date +%Y%m%d%H%M%S`
 
 for CN in $CONTAINERS;
