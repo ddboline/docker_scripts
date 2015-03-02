@@ -1,12 +1,13 @@
 # Base docker image
-FROM debian:jessie
-MAINTAINER Jessica Frazelle <jess@docker.com>
+FROM ddboline/ddboline_keys:latest
+MAINTAINER Daniel Boline <ddboline@gmail.com>
 
-COPY google-talkplugin_current_amd64.deb /src/google-talkplugin_current_amd64.deb
-
-ADD  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /src/google-chrome-stable_current_amd64.deb
+COPY /etc/apt/sources.list.d/google-chrome.list /etc/apt/sources.list.d/google-chrome.list
 
 # Install Chromium
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key A040830F7FAC5991 && \
+    apt-get update && apt-get install -y google-chrome-stable
+
 RUN sed -i.bak 's/jessie main/jessie main contrib non-free/g' /etc/apt/sources.list && \
     mkdir -p /usr/share/icons/hicolor && \
     apt-get update && apt-get install -y \
