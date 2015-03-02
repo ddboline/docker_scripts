@@ -10,7 +10,7 @@ echo "Host *" >> ${HOME}/.ssh/config
 echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
 
 GITHUB_DIR=${REPONAME}
-GITHUB_REPO="ssh://ubuntu@ddbolineinthecloud.mooo.com/home/ubuntu/setup_files/repo/${GITHUB_DIR}"
+GITHUB_REPO="ssh://ddboline@ddbolineathome.mooo.com/home/ddboline/setup_files/repo/${GITHUB_DIR}"
 SETUP_SCRIPT="setup_cloud9.sh"
 TEST_SCRIPT="test_cloud9.sh"
 
