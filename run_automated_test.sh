@@ -7,4 +7,7 @@ do
     sudo docker run --name=\"${REPO}_${D}\" -d ddboline/ddboline_keys:latest /root/run_testing.sh ${REPO}
 done
 
-sudo docker run --name=\"ddboline_personal_scripts_${D}\" -d ddboline/ddboline_keys:latest /root/run_testing_ssh.sh ddboline_personal_scripts
+for REPO in ddboline_personal_scripts blaze_test;
+do
+    sudo docker run --name=\"${REPO}_${D}\" -d ddboline/ddboline_keys:latest /root/run_testing_ssh.sh ${REPO}
+done
