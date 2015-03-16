@@ -13,8 +13,8 @@ do
     mkdir temp_${N}_${D}_${C}
     sudo docker cp ${C}:/root/output.out temp_${N}_${D}_${C}/
     sudo docker cp ${C}:/root/output.err temp_${N}_${D}_${C}/
-    sudo docker cp ${C}:/root temp_${N}_${D}_${C}/
-    sudo docker cp ${C}:/root temp_${N}_${D}_${C}/
-    #sudo docker cp ${C}:/root/garmin_app temp_${D}_${C}/
+#     sudo docker cp ${C}:/root temp_${N}_${D}_${C}/
+#     sudo docker cp ${C}:/root temp_${N}_${D}_${C}/
+#     sudo docker cp ${C}:/root/garmin_app temp_${D}_${C}/
     sudo chown -R ${USER}:${USER} temp_${N}_${D}_${C}/
 done
