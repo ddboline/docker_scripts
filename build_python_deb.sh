@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y python-pip
+apt-get install -y python-pip python-dev
 pip install py2deb
 mkdir -p /root/py2deb
 py2deb -r /root/py2deb -- --upgrade $@
