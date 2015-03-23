@@ -1,17 +1,20 @@
 #!/bin/bash
 
 REPOS="
-blaze cvxopt nolearn numpy into odo pandas
-scikit-learn scipy theano pystruct sqlalchemy
+numpy scipy
+pandas blaze cvxopt scikit-learn
+into odo pymc seaborn
+nolearn theano pystruct sqlalchemy
 gensim nltk spacy scikit-monaco
-pymc
-seaborn
 git+https://github.com/benanne/Lasagne.git
 git+https://github.com/ddboline/pylearn2.git
 "
 
 apt-get update
-apt-get install -y python-pip python-dev
+apt-get install -y python-pip python-dev lintian
+apt-get install -y liblapack-dev libblas-dev dpkg-dev
+apt-get install -y gfortran libfreetype6-dev libpng12-dev
+apt-get install -y pkg-config
 pip install py2deb
 mkdir -p /root/py2deb
 for REPO in $REPOS;
