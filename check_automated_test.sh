@@ -9,3 +9,8 @@ for C in $CONTAINERS;
 do
     sudo docker logs $C 2>&1 | tail -n2
 done
+
+for C in $CONTAINERS;
+do
+    sudo docker top $C
+done
