@@ -1,8 +1,8 @@
 #!/bin/bash
 
 REPOS="
-numpy scipy
-pandas blaze cvxopt scikit-learn
+numpy scipy pandas 
+blaze cvxopt scikit-learn
 into odo pymc seaborn
 nolearn theano pystruct sqlalchemy
 gensim nltk spacy scikit-monaco
