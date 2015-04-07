@@ -1,16 +1,17 @@
 #!/bin/bash
 
-sudo echo ""
-sudo docker ps -a
+SUDO=""
+$SUDO echo ""
+$SUDO docker ps -a
 
-CONTAINERS=`sudo docker ps -a | awk '!/CONTAIN/ {print $1}'`
+CONTAINERS=`$SUDO docker ps -a | awk '!/CONTAIN/ {print $1}'`
 
 for C in $CONTAINERS;
 do
-    sudo docker logs $C 2>&1 | tail -n2
+    $SUDO docker logs $C 2>&1 | tail -n2
 done
 
 for C in $CONTAINERS;
 do
-    sudo docker top $C
+    $SUDO docker top $C
 done
