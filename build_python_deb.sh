@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # REPOS="
+# blaze
 # numpy scipy pandas 
-# blaze cvxopt scikit-learn
+# cvxopt scikit-learn
 # into odo pymc seaborn
 # nolearn theano pystruct sqlalchemy
 # gensim nltk spacy scikit-monaco
@@ -10,7 +11,10 @@
 # git+https://github.com/ddboline/pylearn2.git
 # "
 REPOS="
-blaze
+theano
+nolearn
+git+https://github.com/benanne/Lasagne.git
+git+https://github.com/ddboline/pylearn2.git
 "
 
 apt-get update
