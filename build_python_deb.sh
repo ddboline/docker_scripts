@@ -5,16 +5,14 @@
 # numpy scipy pandas 
 # cvxopt scikit-learn
 # into odo pymc seaborn
-# nolearn theano pystruct sqlalchemy
+# theano pystruct sqlalchemy
 # gensim nltk spacy scikit-monaco
+# https://github.com/dnouri/nolearn.git
 # git+https://github.com/benanne/Lasagne.git
 # git+https://github.com/ddboline/pylearn2.git
 # "
 REPOS="
-theano
-nolearn
-git+https://github.com/benanne/Lasagne.git
-git+https://github.com/ddboline/pylearn2.git
+https://github.com/dnouri/nolearn.git
 "
 
 apt-get update
