@@ -11,9 +11,7 @@
 # git+https://github.com/benanne/Lasagne.git
 # git+https://github.com/ddboline/pylearn2.git
 # "
-REPOS="
-SharedArray
-"
+REPOS="$@"
 
 apt-get update
 apt-get install -y python-pip python-dev lintian liblapack-dev libblas-dev \
