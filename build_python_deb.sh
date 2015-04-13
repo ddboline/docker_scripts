@@ -10,6 +10,7 @@
 # git+https://github.com/dnouri/nolearn.git
 # git+https://github.com/benanne/Lasagne.git
 # git+https://github.com/ddboline/pylearn2.git
+# git+https://github.com/fchollet/keras.git
 # "
 REPOS="$@"
 
