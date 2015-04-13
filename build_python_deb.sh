@@ -12,7 +12,7 @@
 # git+https://github.com/ddboline/pylearn2.git
 # "
 REPOS="
-git+https://github.com/dnouri/nolearn.git
+SharedArray
 "
 
 apt-get update
