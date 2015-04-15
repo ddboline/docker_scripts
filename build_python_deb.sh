@@ -1,12 +1,8 @@
 #!/bin/bash
 
 # REPOS="
-# blaze
-# numpy scipy pandas 
-# cvxopt scikit-learn
-# into odo pymc seaborn
-# theano pystruct sqlalchemy
-# gensim nltk spacy scikit-monaco
+# blaze numpy scipy pandas cvxopt scikit-learn into odo pymc seaborn 
+# theano pystruct sqlalchemy gensim nltk spacy scikit-monaco
 # git+https://github.com/dnouri/nolearn.git
 # git+https://github.com/benanne/Lasagne.git
 # git+https://github.com/ddboline/pylearn2.git
