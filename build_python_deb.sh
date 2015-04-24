@@ -7,6 +7,7 @@
 # git+https://github.com/benanne/Lasagne.git
 # git+https://github.com/ddboline/pylearn2.git
 # git+https://github.com/fchollet/keras.git
+# git+https://github.com/aigamedev/scikit-neuralnetwork.git
 # "
 REPOS="$@"
 
