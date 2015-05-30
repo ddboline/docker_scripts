@@ -12,7 +12,7 @@
 REPOS="$@"
 
 apt-get update
-apt-get install -y python-pip python-dev lintian liblapack-dev libblas-dev \
+apt-get install -y python3-pip python3-dev lintian liblapack-dev libblas-dev \
                    dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config
 pip install py2deb
 mkdir -p /root/py2deb
