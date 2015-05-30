@@ -14,7 +14,8 @@ REPOS="$@"
 apt-get update
 apt-get install -y python3-pip python3-dev lintian liblapack-dev libblas-dev \
                    dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config
-pip install py2deb
+rm /usr/bin/pip; ln -s /usr/bin/pip3 /usr/bin/pip # override python2 pip!!!
+pip3 install py2deb
 mkdir -p /root/py2deb
 for REPO in $REPOS;
 do
