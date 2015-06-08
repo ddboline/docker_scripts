@@ -7,7 +7,7 @@ TMP="/tmp/tmp.docker.`head -c1000 /dev/urandom | tr -dc [:alpha:][:digit:] | hea
 echo $1
 $SUDO docker run -it --name=\"bash_${D}\" --cidfile="$TMP" -m 1g \
         --net=host -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority \
-        -e DISPLAY=$DISPLAY:HOME=/root:USER=root -v /dev/snd:/dev/snd --privileged \
+        -e DISPLAY=$DISPLAY -v /dev/snd:/dev/snd --privileged \
         ddboline/ddboline_keys:chrome_test
 $SUDO docker ps -a
 

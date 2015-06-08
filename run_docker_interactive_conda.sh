@@ -15,10 +15,10 @@ else
             --cidfile="$TMP" -v ~/setup_files/build/${REPO}:/root/${REPO} \
             ddboline/ddboline_keys:conda_latest /bin/bash \
                 -c "sh /root/run_testing_local_conda.sh ${REPO} ; cd /root/${REPO} ; export HOME=/root ; export USER=root ; /bin/bash"
+    ### this has to be done by root...
+    sudo chown -R ddboline:ddboline ~/setup_files/build/${REPO}/
 fi
 
-### this has to be done by root...
-sudo chown -R ddboline:ddboline ~/setup_files/build/${REPO}/
 sleep 5
 $SUDO docker stop `cat $TMP`
 sleep 5

@@ -5,21 +5,21 @@ MAINTAINER Daniel Boline <ddboline@gmail.com>
 ADD google-chrome.list /etc/apt/sources.list.d/google-chrome.list
 
 RUN export uid=1000 gid=1000 && \
-    mkdir -p /home/developer && \
-    echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
-    echo "developer:x:${uid}:" >> /etc/group && \
-    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
-    chmod 0440 /etc/sudoers.d/developer && \
-    chown ${uid}:${gid} -R /home/developer
+    mkdir -p /home/ubuntu && \
+    echo "ubuntu:x:${uid}:${gid}:Developer,,,:/home/ubuntu:/bin/bash" >> /etc/passwd && \
+    echo "ubuntu:x:${uid}:" >> /etc/group && \
+    echo "ubuntu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ubuntu && \
+    chmod 0440 /etc/sudoers.d/ubuntu && \
+    chown ${uid}:${gid} -R /home/ubuntu
 
-USER developer
-ENV HOME /home/developer
+USER ubuntu
+ENV HOME /home/ubuntu
 
 # Install Chromium
 RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key A040830F7FAC5991 && \
     sudo apt-get update && sudo apt-get install -y google-chrome-stable
 
-RUN mkdir -p /home/developer/Downloads
+RUN mkdir -p /home/ubuntu/Downloads
 
 # Autorun x11vnc
-CMD ["/usr/bin/google-chrome-stable", "--no-sandbox", "--user-data-dir=/home/developer/Downloads"]
+CMD ["/usr/bin/google-chrome-stable", "--no-sandbox", "--user-data-dir=/home/ubuntu/Downloads"]
