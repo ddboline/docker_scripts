@@ -21,10 +21,10 @@ sudo apt-get update
 sudo apt-get install -y python-pip python-py2deb python3-dev lintian liblapack-dev libblas-dev \
                    dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
                    python3-pkg-resources python3-setuptools
-mkdir -p /root/py2deb
+mkdir -p /home/ubuntu/py2deb
 for REPO in $REPOS;
 do
-    sudo py2deb -r /root/py2deb -y -- --upgrade $REPO
+    sudo py2deb -r /home/ubuntu/py2deb -y -- --upgrade $REPO
 done
 
 # scp /root/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/new/
