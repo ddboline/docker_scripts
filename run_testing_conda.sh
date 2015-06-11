@@ -1,10 +1,10 @@
 #!/bin/bash
 REPONAME=$1
-apt-get update
-apt-get install -y git
+sudo apt-get update
+sudo apt-get install -y git
 
-export HOME="/root"
-export USER="root"
+# export HOME="/root"
+# export USER="root"
 
 echo "Host *" >> ${HOME}/.ssh/config
 echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
