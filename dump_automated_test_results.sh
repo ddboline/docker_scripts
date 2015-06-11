@@ -12,10 +12,10 @@ do
     C=`echo $CN | sed 's:,: :g' | awk '{print $1}'`
     N=`echo $CN | sed 's:,: :g' | awk '{print $2}'`
     mkdir temp_${N}_${D}_${C}
-    $SUDO docker cp ${C}:/root/output.out temp_${N}_${D}_${C}/
-    $SUDO docker cp ${C}:/root/output.err temp_${N}_${D}_${C}/
-#     $SUDO docker cp ${C}:/root temp_${N}_${D}_${C}/
-#     $SUDO docker cp ${C}:/root temp_${N}_${D}_${C}/
-#     $SUDO docker cp ${C}:/root/garmin_app temp_${D}_${C}/
+    $SUDO docker cp ${C}:/home/ubuntu/output.out temp_${N}_${D}_${C}/
+    $SUDO docker cp ${C}:/home/ubuntu/output.err temp_${N}_${D}_${C}/
+#     $SUDO docker cp ${C}:/home/ubuntu temp_${N}_${D}_${C}/
+#     $SUDO docker cp ${C}:/home/ubuntu temp_${N}_${D}_${C}/
+#     $SUDO docker cp ${C}:/home/ubuntu/garmin_app temp_${D}_${C}/
     $SUDO chown -R ${USER}:${USER} temp_${N}_${D}_${C}/
 done
