@@ -12,9 +12,9 @@ if [ -z $1 ]; then
 else
     REPO=$1
     $SUDO docker run -it --name=\"${REPO}_${D}\" \
-            --cidfile="$TMP" -v ~/setup_files/build/${REPO}:/root/${REPO} \
+            --cidfile="$TMP" -v ~/setup_files/build/${REPO}:/home/ubuntu/${REPO} \
             ddboline/ddboline_keys:latest /bin/bash \
-                -c "sh /root/run_testing_local.sh ${REPO} ; cd /root/${REPO} ; export HOME=/root ; export USER=root ; /bin/bash"
+                -c "sh /home/ubuntu/run_testing_local.sh ${REPO} ; cd /home/ubuntu/${REPO} ; export HOME=/home/ubuntu ; export USER=ubuntu ; /bin/bash"
 fi
 
 ### this has to be done by root...
