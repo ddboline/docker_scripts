@@ -7,7 +7,5 @@ RUN sudo sh -c "echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.s
     sudo wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     sudo /bin/bash /Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
     sudo rm Miniconda3-latest-Linux-x86_64.sh
-### && /opt/conda/bin/conda install --yes conda==3.10.1
-#RUN /opt/conda/bin/conda install --yes blaze boto dateutil ipython lockfile lxml matplotlib numpy pandas pexpect pip psycopg2 pytz requests scikit-learn scipy theano
 
 ENV PATH /opt/conda/bin:$PATH
