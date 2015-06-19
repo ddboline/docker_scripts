@@ -1,18 +1,18 @@
 FROM		ubuntu:15.04
 MAINTAINER	Daniel Boline <ddboline@gmail.com>
 
-RUN apt-get update && apt-get install -y git sudo
 RUN mkdir -p /home/ubuntu
-ADD     run_testing.sh /home/ubuntu/run_testing.sh
-ADD     run_testing_ssh.sh /home/ubuntu/run_testing_ssh.sh
-ADD     run_testing_local.sh /home/ubuntu/run_testing_local.sh
-ADD     run_testing_conda.sh /home/ubuntu/run_testing_conda.sh
-ADD     run_testing_local_conda.sh /home/ubuntu/run_testing_local_conda.sh
-ADD     run_testing_local.sh /home/ubuntu/run_testing_local.sh
-ADD     run_testing_ssh_conda.sh /home/ubuntu/run_testing_ssh_conda.sh
+COPY    run_testing.sh /home/ubuntu/run_testing.sh
+COPY    run_testing_ssh.sh /home/ubuntu/run_testing_ssh.sh
+COPY    run_testing_local.sh /home/ubuntu/run_testing_local.sh
+COPY    run_testing_conda.sh /home/ubuntu/run_testing_conda.sh
+COPY    run_testing_local_conda.sh /home/ubuntu/run_testing_local_conda.sh
+COPY    run_testing_local.sh /home/ubuntu/run_testing_local.sh
+COPY    run_testing_ssh_conda.sh /home/ubuntu/run_testing_ssh_conda.sh
 ADD     keys_20150617.tar.gz /home/ubuntu/
 ADD     keys_20150617.tar.gz /root/
 
+RUN apt-get update && apt-get install -y git sudo
 RUN cp -a /home/ubuntu/.ssh /root/ && chown -R root:root /root
 
 RUN export uid=1000 gid=1000 && \

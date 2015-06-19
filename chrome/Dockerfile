@@ -1,7 +1,7 @@
 FROM ddboline/ddboline_keys:latest
 MAINTAINER Daniel Boline <ddboline@gmail.com>
 
-ADD google-chrome.list /etc/apt/sources.list.d/google-chrome.list
+COPY google-chrome.list /etc/apt/sources.list.d/google-chrome.list
 
 # Install Chromium
 RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key A040830F7FAC5991 && \
