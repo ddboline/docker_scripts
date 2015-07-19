@@ -27,5 +27,5 @@ RUN export uid=1000 gid=1000 && \
 USER ubuntu
 ENV USER ubuntu
 ENV HOME /home/ubuntu
-ENV LANG en_US.UTF-8
+ENV LANG C.UTF-8
 ENV LANGUAGE en_US:en
