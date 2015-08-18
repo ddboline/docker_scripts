@@ -11,8 +11,8 @@ echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
 
 GITHUB_DIR=${REPONAME}
 GITHUB_REPO="https://github.com/ddboline/${GITHUB_DIR}.git"
-SETUP_SCRIPT="setup_cloud9.sh"
-TEST_SCRIPT="test_cloud9.sh"
+SETUP_SCRIPT="setup_python3.sh"
+TEST_SCRIPT="test_python3.sh"
 
 git clone ${GITHUB_REPO} ${HOME}/${GITHUB_DIR}
 cd ${HOME}/${GITHUB_DIR}
