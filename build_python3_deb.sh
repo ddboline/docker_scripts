@@ -23,7 +23,7 @@ sudo apt-get install -y python-pip python-py2deb python3-dev lintian liblapack-d
 mkdir -p /home/ubuntu/py2deb
 for REPO in $REPOS;
 do
-    sudo py2deb -r /home/ubuntu/py2deb -y -- --upgrade $REPO
+    sudo py2deb -r /home/ubuntu/py2deb -y -- $REPO
 done
 
 # scp /root/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/new/
