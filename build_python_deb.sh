@@ -13,5 +13,3 @@ for REPO in $REPOS;
 do
     py2deb -r /home/ubuntu/py2deb -y -- --upgrade $REPO
 done
-
-# scp /root/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/new/

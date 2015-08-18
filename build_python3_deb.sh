@@ -16,5 +16,3 @@ for REPO in $REPOS;
 do
     sudo py2deb -r /home/ubuntu/py2deb3 -y --name-prefix=python3 -- $REPO
 done
-
-# scp /root/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/new/
