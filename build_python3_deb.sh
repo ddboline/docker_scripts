@@ -17,7 +17,7 @@ sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/t
 REPOS="$@"
 
 sudo apt-get update
-sudo apt-get install -y python-pip python-py2deb python3-dev lintian liblapack-dev libblas-dev \
+sudo apt-get install -y --force-yes python-pip python-py2deb python3-dev lintian liblapack-dev libblas-dev \
                    dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
                    python3-pkg-resources python3-setuptools
 mkdir -p /home/ubuntu/py2deb
