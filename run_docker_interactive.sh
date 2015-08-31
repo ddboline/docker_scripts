@@ -18,7 +18,7 @@ else
 fi
 
 ### this has to be done by root...
-sudo chown -R ddboline:ddboline ~/setup_files/build/${REPO}/
+sudo chown -R ${USER}:${USER} ~/setup_files/build/${REPO}/
 sleep 5
 $SUDO docker stop `cat $TMP`
 sleep 5
