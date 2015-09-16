@@ -13,7 +13,7 @@ else
     REPO=$1
     $SUDO docker run -it --name=\"${REPO}_${D}\" \
             --cidfile="$TMP" ddboline/ddboline_keys:pip_py2deb_latest /bin/bash \
-                -c "py2deb -r /home/ubuntu/py2deb -y -- --upgrade ${REPO} ; cd /home/ubuntu/ ; export HOME=/home/ubuntu ; export USER=ubuntu ; /bin/bash"
+                -c "/usr/bin/py2deb -r /home/ubuntu/py2deb -y -- --upgrade ${REPO} ; cd /home/ubuntu/ ; /bin/bash"
 fi
 
 ### this has to be done by root...
