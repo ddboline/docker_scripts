@@ -14,5 +14,5 @@ sudo apt-get install -y --force-yes python3-pip python3-py2deb python3-dev linti
 mkdir -p /home/ubuntu/py2deb3
 for REPO in $REPOS;
 do
-    sudo py2deb -r /home/ubuntu/py2deb3 -y --name-prefix=python3 -- $REPO
+    sudo py2deb -r /home/ubuntu/py2deb3 -y --name-prefix=python3 -- --upgrade $REPO
 done

@@ -16,5 +16,5 @@ sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev 
 mkdir -p /home/ubuntu/py2deb
 for REPO in $REPOS;
 do
-    py2deb -r /home/ubuntu/py2deb -y -- $REPO
+    py2deb -r /home/ubuntu/py2deb -y -- --upgrade $REPO
 done

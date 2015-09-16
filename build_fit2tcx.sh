@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO="https://github.com/ddboline/Fit2Tcx.git"
+REPO="https://github.com/adiesner/Fit2Tcx"
 
 apt-get update
 apt-get install -y libtinyxml-dev pkg-config \
