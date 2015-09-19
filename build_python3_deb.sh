@@ -3,7 +3,7 @@
 ### hack...
 export LANG="C.UTF-8"
 
-sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/trusty/python3/pip_py2deb ./ > /etc/apt/sources.list.d/py2deb2.list"
+sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/trusty/python3/pip_py2deb ./ > /etc/apt/sources.list.d/py2deb3.list"
 
 REPOS="$@"
 
