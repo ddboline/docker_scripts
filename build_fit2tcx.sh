@@ -6,7 +6,7 @@ REPO="https://github.com/adiesner/Fit2Tcx"
 
 sudo apt-get update
 sudo apt-get install -y libtinyxml-dev pkg-config \
-                   checkinstall
+                        checkinstall
 
 git clone $REPO
 
