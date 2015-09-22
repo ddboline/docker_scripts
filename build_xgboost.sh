@@ -1,5 +1,7 @@
 #!/bin/bash
 
+VERSION="0.4.3"
+RELEASE="2"
 REPO="https://github.com/ddboline/xgboost.git"
 
 sudo apt-get update
@@ -11,7 +13,9 @@ cd xgboost
 
 make
 ### this part is sadly interactive
-checkinstall
+printf "XGBoost: Fast Gradient Boosted Decision Trees\n" > description-pak
+sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
+sudo chown ${USER}:${USER} fit2tcx_${VERSION}-${RELEASE}*.deb
 
 sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/trusty/pip_py2deb ./ > /etc/apt/sources.list.d/py2deb2.list"
 sudo apt-get update
