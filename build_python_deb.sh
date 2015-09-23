@@ -1,8 +1,8 @@
 #!/bin/bash
 
-REPOS="numpy scipy pandas scikit-learn blaze gensim nltk statsmodels pip py2deb
-       py4j requests youtube-dl pysparkling cython pystan seaborn matplotlib 
-       theano Lasagne nolearn scikit-neuralnetwork keras gdbn
+REPOS="numpy scipy pandas scikit-learn blaze gensim nltk statsmodels py2deb
+       setuptools py4j requests youtube-dl pysparkling cython pystan seaborn matplotlib 
+       theano Lasagne nolearn scikit-neuralnetwork keras gdbn sharedarray 
        git+https://github.com/lisa-lab/pylearn2.git"
 
 REPOS="$@"
