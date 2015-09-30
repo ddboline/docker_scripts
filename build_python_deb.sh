@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#py2deb -r /home/ubuntu/py2deb -y --rename=python-pyyaml,python-yaml --rename=pyusb,python-usb -- --upgrade pyyaml
+
 REPOS="numpy scipy pandas scikit-learn blaze gensim nltk statsmodels py2deb
        setuptools py4j requests youtube-dl pysparkling cython pystan seaborn matplotlib 
        theano Lasagne nolearn scikit-neuralnetwork keras gdbn sharedarray 
@@ -24,5 +26,5 @@ fi
 
 for REPO in $REPOS;
 do
-    py2deb -r /home/ubuntu/py2deb -y -- --upgrade $REPO
+    py2deb -r /home/ubuntu/py2deb -y --rename=python-pyyaml,python-yaml -- --upgrade $REPO
 done
