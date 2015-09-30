@@ -1,5 +1,21 @@
 #!/bin/bash
 
+OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb"
+
+REPOS="py2deb youtube-dl py4j setuptools sharedarray
+       numpy scipy pandas scikit-learn
+       blaze gensim nltk statsmodels
+       requests pysparkling cython pystan seaborn matplotlib
+       theano Lasagne nolearn scikit-neuralnetwork keras gdbn
+       git+https://github.com/lisa-lab/pylearn2.git
+       git+https://github.com/ddboline/garmin_app.git
+       git+https://github.com/ddboline/roku_app.git
+       git+https://github.com/ddboline/security_log_analysis.git
+       git+https://github.com/ddboline/sync_app.git
+       git+https://github.com/Tigge/antfs-cli.git
+       git+https://github.com/Tigge/openant.git
+       "
+
 ### hack...
 export LANG="C.UTF-8"
 
@@ -14,5 +30,5 @@ sudo apt-get install -y --force-yes python3-pip python3-py2deb python3-dev linti
 mkdir -p /home/ubuntu/py2deb3
 for REPO in $REPOS;
 do
-    sudo py2deb -r /home/ubuntu/py2deb3 -y --name-prefix=python3 -- --upgrade $REPO
+    sudo py2deb -r /home/ubuntu/py2deb3 -y $OPTS --name-prefix=python3 -- --upgrade $REPO
 done
