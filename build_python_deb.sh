@@ -2,7 +2,7 @@
 
 #py2deb -r /home/ubuntu/py2deb -y --rename=pyyaml,python-yaml --rename=pyusb,python-usb -- --upgrade pyyaml
 
-OPTS="--rename=python-pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify"
+OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify"
 
 REPOS="py2deb youtube-dl py4j setuptools sharedarray
        numpy scipy pandas scikit-learn
