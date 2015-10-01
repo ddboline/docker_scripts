@@ -6,9 +6,9 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
       --rename=google-api-python-client,python-googleapi"
 
-REPOS="py2deb youtube-dl py4j setuptools sharedarray
+REPOS="py2deb youtube-dl py4j setuptools
        numpy scipy pandas scikit-learn scikit-image
-       blaze gensim nltk statsmodels websockify
+       blaze gensim nltk statsmodels websockify sharedarray
        requests pysparkling cython pystan seaborn matplotlib
        theano lasagne nolearn scikit-neuralnetwork keras gdbn
        git+https://github.com/ddboline/pylearn2.git
