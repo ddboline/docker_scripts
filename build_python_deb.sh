@@ -4,7 +4,7 @@
 
 OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
-      --rename=google-api-python-client,python-googleapi"
+      --rename=google-api-python-client,python-googleapi --rename=cython,cython"
 
 REPOS="py2deb youtube-dl py4j setuptools
        numpy scipy pandas scikit-learn scikit-image
