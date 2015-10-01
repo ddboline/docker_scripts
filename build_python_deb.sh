@@ -3,11 +3,12 @@
 #py2deb -r /home/ubuntu/py2deb -y --rename=pyyaml,python-yaml --rename=pyusb,python-usb -- --upgrade pyyaml
 
 OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
-      --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage"
+      --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
+      --rename=google-api-python-client,python-googleapi"
 
-REPOS="py2deb youtube-dl py4j setuptools sharedarray websockify
+REPOS="py2deb youtube-dl py4j setuptools sharedarray
        numpy scipy pandas scikit-learn scikit-image
-       blaze gensim nltk statsmodels
+       blaze gensim nltk statsmodels websockify
        requests pysparkling cython pystan seaborn matplotlib
        theano lasagne nolearn scikit-neuralnetwork keras gdbn
        git+https://github.com/ddboline/pylearn2.git
@@ -15,8 +16,8 @@ REPOS="py2deb youtube-dl py4j setuptools sharedarray websockify
        git+https://github.com/ddboline/roku_app.git
        git+https://github.com/ddboline/security_log_analysis.git
        git+https://github.com/ddboline/sync_app.git
-       git+https://github.com/Tigge/antfs-cli.git
        git+https://github.com/Tigge/openant.git
+       git+https://github.com/Tigge/antfs-cli.git
        "
 
 REPOS="$@"
