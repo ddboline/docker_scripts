@@ -1,6 +1,7 @@
 #!/bin/bash
 
-OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb"
+OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb 
+      --rename=scikit-learn,python3-sklearn --rename=scikit-image,python3-skimage"
 
 REPOS="py2deb youtube-dl py4j setuptools sharedarray
        numpy scipy pandas scikit-learn
@@ -33,5 +34,5 @@ do
     sudo py2deb -r /home/ubuntu/py2deb3 -y $OPTS --name-prefix=python3 -- --upgrade $REPO
 done
 
-ssh ddboline@ddbolineathome.mooo.com "rm /home/ddboline/setup_files/deb/py2deb3/py2deb3/*.deb"
+ssh ddboline@ddbolineathome.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb3/py2deb3"
 scp /home/ubuntu/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/

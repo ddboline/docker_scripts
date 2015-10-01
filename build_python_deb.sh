@@ -2,14 +2,15 @@
 
 #py2deb -r /home/ubuntu/py2deb -y --rename=pyyaml,python-yaml --rename=pyusb,python-usb -- --upgrade pyyaml
 
-OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify"
+OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
+      --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage"
 
-REPOS="py2deb youtube-dl py4j setuptools sharedarray
-       numpy scipy pandas scikit-learn
+REPOS="py2deb youtube-dl py4j setuptools sharedarray websockify
+       numpy scipy pandas scikit-learn scikit-image
        blaze gensim nltk statsmodels
        requests pysparkling cython pystan seaborn matplotlib
        theano Lasagne nolearn scikit-neuralnetwork keras gdbn
-       git+https://github.com/lisa-lab/pylearn2.git
+       git+https://github.com/ddboline/pylearn2.git
        git+https://github.com/ddboline/garmin_app.git
        git+https://github.com/ddboline/roku_app.git
        git+https://github.com/ddboline/security_log_analysis.git
@@ -37,5 +38,5 @@ do
     py2deb -r /home/ubuntu/py2deb -y $OPTS -- --upgrade $REPO
 done
 
-ssh ddboline@ddbolineathome.mooo.com "rm /home/ddboline/setup_files/deb/py2deb/py2deb/*.deb"
+ssh ddboline@ddbolineathome.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb/py2deb"
 scp /home/ubuntu/py2deb/*.deb ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
