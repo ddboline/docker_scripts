@@ -9,7 +9,7 @@ REPOS="py2deb youtube-dl py4j setuptools sharedarray websockify
        numpy scipy pandas scikit-learn scikit-image
        blaze gensim nltk statsmodels
        requests pysparkling cython pystan seaborn matplotlib
-       theano Lasagne nolearn scikit-neuralnetwork keras gdbn
+       theano lasagne nolearn scikit-neuralnetwork keras gdbn
        git+https://github.com/ddboline/pylearn2.git
        git+https://github.com/ddboline/garmin_app.git
        git+https://github.com/ddboline/roku_app.git
