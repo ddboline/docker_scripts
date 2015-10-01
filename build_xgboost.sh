@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="0.40"
+VERSION="0.41"
 RELEASE="1"
 REPO="https://github.com/ddboline/xgboost.git"
 
