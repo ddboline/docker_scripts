@@ -9,4 +9,3 @@ RUN sudo sh -c "echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.s
     sudo rm Miniconda3-latest-Linux-x86_64.sh
 
 ENV PATH /opt/conda/bin:$PATH
-ENV LANG C.UTF-8
