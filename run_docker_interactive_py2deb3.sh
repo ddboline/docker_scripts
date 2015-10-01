@@ -7,13 +7,13 @@ TMP="/tmp/tmp.docker.`head -c1000 /dev/urandom | tr -dc [:alpha:][:digit:] | hea
 echo "$@"
 if [ -z $1 ]; then
     $SUDO docker run -it --name=\"bash_${D}\" --cidfile="$TMP" \
-            ddboline/ddboline_keys:pip_py2deb_latest /bin/bash
+            ddboline/ddboline_keys:pip_py2deb3_latest /bin/bash
     $SUDO docker ps -a
 else
     REPO="$@"
     $SUDO docker run -it --name=\"${REPO}_${D}\" \
-            --cidfile="$TMP" ddboline/ddboline_keys:pip_py2deb_latest /bin/bash \
-                -c "/usr/bin/py2deb -r /home/ubuntu/py2deb -y -- --upgrade ${REPO} ; cd /home/ubuntu/ ; /bin/bash"
+            --cidfile="$TMP" ddboline/ddboline_keys:pip_py2deb3_latest /bin/bash \
+                -c "/usr/bin/py2deb -r /home/ubuntu/py2deb3 -y -- --upgrade ${REPO} ; cd /home/ubuntu/ ; /bin/bash"
 fi
 
 ### this has to be done by root...
