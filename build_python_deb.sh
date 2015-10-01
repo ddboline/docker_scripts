@@ -2,7 +2,7 @@
 
 #py2deb -r /home/ubuntu/py2deb -y --rename=pyyaml,python-yaml --rename=pyusb,python-usb -- --upgrade pyyaml
 
-OPTS="--rename=python-pyyaml,python-yaml --rename=pyusb,python-usb"
+OPTS="--rename=python-pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify"
 
 REPOS="py2deb youtube-dl py4j setuptools sharedarray
        numpy scipy pandas scikit-learn
@@ -36,3 +36,6 @@ for REPO in $REPOS;
 do
     py2deb -r /home/ubuntu/py2deb -y $OPTS -- --upgrade $REPO
 done
+
+ssh ddboline@ddbolineathome.mooo.com "rm /home/ddboline/setup_files/deb/py2deb/py2deb/*.deb"
+scp /home/ubuntu/py2deb/*.deb ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/

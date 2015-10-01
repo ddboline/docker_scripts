@@ -32,3 +32,6 @@ for REPO in $REPOS;
 do
     sudo py2deb -r /home/ubuntu/py2deb3 -y $OPTS --name-prefix=python3 -- --upgrade $REPO
 done
+
+ssh ddboline@ddbolineathome.mooo.com "rm /home/ddboline/setup_files/deb/py2deb3/py2deb3/*.deb"
+scp /home/ubuntu/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
