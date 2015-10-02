@@ -34,10 +34,16 @@ if [ ! -e "/usr/bin/py2deb" ]; then
     mkdir -p /home/ubuntu/py2deb
 fi
 
+md5sum /home/ubuntu/py2deb/*.deb > existing.log
+
 for REPO in $REPOS;
 do
     py2deb -r /home/ubuntu/py2deb -y $OPTS -- --upgrade $REPO
 done
 
-ssh ddboline@ddbolineathome.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb/py2deb"
-scp /home/ubuntu/py2deb/*.deb ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+md5sum /home/ubuntu/py2deb/*.deb > modified.log
+MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+if [ -n "$MODIFIED" ]; then
+    ssh ddboline@ddbolineathome.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb/py2deb"
+    scp $MODIFIED ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+fi
