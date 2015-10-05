@@ -28,20 +28,20 @@ fi
 if [ ! -e "/usr/bin/py2deb" ]; then
     sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/trusty/pip_py2deb ./ > /etc/apt/sources.list.d/py2deb2.list"
     sudo apt-get update
-    sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev libblas-dev \
+    sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev libopenblas-dev \
                                 dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
                                 python-setuptools python-py2deb
-    mkdir -p /home/ubuntu/py2deb
+    mkdir -p /home/${USER}/py2deb
 fi
 
-md5sum /home/ubuntu/py2deb/*.deb > existing.log
+md5sum /home/${USER}/py2deb/*.deb > existing.log
 
 for REPO in $REPOS;
 do
-    py2deb -r /home/ubuntu/py2deb -y $OPTS -- --upgrade $REPO
+    py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade $REPO
 done
 
-md5sum /home/ubuntu/py2deb/*.deb > modified.log
+md5sum /home/${USER}/py2deb/*.deb > modified.log
 MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
 if [ -n "$MODIFIED" ]; then
     ssh ddboline@ddbolineathome.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb/py2deb"
