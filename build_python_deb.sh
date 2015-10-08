@@ -12,6 +12,7 @@ REPOS="py2deb youtube-dl py4j setuptools
        requests pysparkling cython pystan seaborn matplotlib
        theano lasagne nolearn scikit-neuralnetwork keras gdbn
        git+https://github.com/ddboline/pylearn2.git
+       git+https://github.com/ddboline/stravalib.git
        git+https://github.com/ddboline/garmin_app.git
        git+https://github.com/ddboline/roku_app.git
        git+https://github.com/ddboline/security_log_analysis.git
