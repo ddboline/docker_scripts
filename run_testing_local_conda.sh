@@ -2,9 +2,6 @@
 sudo apt-get update
 sudo apt-get install -y git
 
-# export HOME="/root"
-# export USER="root"
-
 echo "Host *" >> ${HOME}/.ssh/config
 echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
 

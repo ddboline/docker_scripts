@@ -6,6 +6,7 @@ RUN sudo apt-get update && sudo apt-get install -y wget bzip2 ca-certificates
 RUN sudo sh -c "echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh" && \
     sudo wget --quiet https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     sudo /bin/bash /Miniconda3-latest-Linux-x86_64.sh -b -p /opt/conda && \
-    sudo rm Miniconda3-latest-Linux-x86_64.sh
+    sudo rm Miniconda3-latest-Linux-x86_64.sh && \
+    sudo /opt/conda/bin/conda install --yes conda-build anaconda-client
 
 ENV PATH /opt/conda/bin:$PATH

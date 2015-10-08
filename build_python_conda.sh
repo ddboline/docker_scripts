@@ -7,6 +7,6 @@ REPO="$@"
 
 CONDA=`which conda`
 
-sudo $CONDA install conda-build anaconda-client
+sudo $CONDA install --yes conda-build anaconda-client
 $CONDA skeleton pypi $REPO
 $CONDA build $REPO
