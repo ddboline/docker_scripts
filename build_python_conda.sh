@@ -9,4 +9,4 @@ CONDA=`which conda`
 
 sudo $CONDA install --yes conda-build anaconda-client
 $CONDA skeleton pypi $REPO
-$CONDA build $REPO
+$CONDA build -c https://conda.anaconda.org/ddboline $REPO
