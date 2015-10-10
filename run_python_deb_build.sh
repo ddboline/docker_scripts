@@ -35,6 +35,7 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=beautifulsoup4,python-bs4"
 
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
+sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
 sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/Tigge/antfs-cli.git
