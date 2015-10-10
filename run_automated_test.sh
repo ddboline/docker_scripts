@@ -5,7 +5,7 @@ $SUDO echo ""
 D=`date +%Y%m%d%H%M%S`
 
 if [ -z $1 ]; then
-    REPOS="aws_scripts gapi_scripts garmin_app garmin_scripts programming_tests roku_app sync_app"
+    REPOS="aws_scripts blaze_test gapi_scripts garmin_app garmin_scripts programming_tests roku_app sync_app"
 else
     REPOS="$@"
 fi

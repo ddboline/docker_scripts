@@ -5,7 +5,7 @@ $SUDO echo ""
 D=`date +%Y%m%d%H%M%S`
 
 if [ -z $1 ]; then
-    REPOS="ddboline_personal_scripts blaze_test"
+    REPOS="ddboline_personal_scripts"
 else
     REPOS="$@"
 fi
