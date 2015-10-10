@@ -8,15 +8,15 @@ cd ~/
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh scipy pandas matplotlib mock nose pyparsing pbr
-sudo dpkg -i ~/python-scipy_*.deb
+sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh scikit-learn scikit-image blaze gensim nltk
 sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
-        python-mock_*.deb python-nose_*.deb python-pyparsing_*.deb \
-        python-pbr_*.deb
+        ~/py2deb/python-mock_*.deb ~/py2deb/python-nose_*.deb ~/py2deb/python-pyparsing_*.deb \
+        ~/py2deb/python-pbr_*.deb
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling cython
-sudo dpkg -i cython_*.deb 
+sudo dpkg -i ~/py2deb/cython_*.deb 
 ./docker_scripts/build_python_deb.sh pystan seaborn theano
 sudo dpkg -i ~/py2deb/python-theano_*.deb 
 
@@ -48,3 +48,5 @@ sudo apt-get install -y postgresql-server-dev-9.3
 ./docker_scripts/build_python_deb.sh asyncio boltons beautifulsoup4 cssselect cytoolz lxml pandasql pillow
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git
 ./docker_scripts/build_python_deb.sh units xray
+
+scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
