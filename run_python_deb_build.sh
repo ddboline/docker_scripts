@@ -4,7 +4,7 @@ git pull
 
 cd ~/
 
-./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j setuptoolsnumpy
+./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j setuptools numpy
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh scipy pandas matplotlib mock nose pyparsing pbr
