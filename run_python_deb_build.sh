@@ -52,7 +52,7 @@ sudo apt-get install -y postgresql-server-dev-9.3
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git
 ./docker_scripts/build_python_deb.sh units xray sqlacodegen
 
-./docker_scripts/build_python_deb.sh docker-compose fuzzywuzzy spyder pymonad pyquery click
+./docker_scripts/build_python_deb.sh docker-compose fuzzywuzzy spyder pymonad pyquery click pyscaffold
 
 ./docker_scripts/build_xgboost.sh
 
