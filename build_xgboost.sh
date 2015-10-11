@@ -26,3 +26,4 @@ sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev 
 mkdir -p /home/ubuntu/py2deb
 cd python-package/
 py2deb -r /home/ubuntu/py2deb -y -- .
+~/docker_scripts/build_python_deb.sh .

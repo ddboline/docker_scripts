@@ -21,7 +21,7 @@ sudo dpkg -i ~/py2deb/cython_*.deb
 sudo dpkg -i ~/py2deb/python-theano_*.deb 
 
 sudo apt-get install -y libhdf5-dev
-./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn
+./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/garmin_app.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/roku_app.git \
@@ -34,11 +34,14 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=pytz,python-tz --rename=pillow,python-pil
       --rename=beautifulsoup4,python-bs4"
 
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
-sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
-./docker_scripts/build_python_deb.sh git+https://github.com/Tigge/antfs-cli.git
+sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
+sudo dpkg -i ~/py2deb/python-usb_*.deb
+sudo dpkg -i ~/py2deb/python-openant_*.deb
+sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/antfs-cli.git
+sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
+
+sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
 sudo apt-get install -y postgresql-server-dev-9.3
 ./docker_scripts/build_python_deb.sh psycopg2
@@ -47,6 +50,8 @@ sudo apt-get install -y postgresql-server-dev-9.3
 
 ./docker_scripts/build_python_deb.sh asyncio boltons beautifulsoup4 cssselect cytoolz lxml pandasql pillow
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git
-./docker_scripts/build_python_deb.sh units xray
+./docker_scripts/build_python_deb.sh units xray sqlacodegen
+
+./docker_scripts/build_python_deb.sh docker-compose fuzzywuzzy spyder pymonad pyquery click
 
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
