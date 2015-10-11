@@ -54,4 +54,6 @@ sudo apt-get install -y postgresql-server-dev-9.3
 
 ./docker_scripts/build_python_deb.sh docker-compose fuzzywuzzy spyder pymonad pyquery click
 
+./docker_scripts/build_xgboost.sh
+
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
