@@ -17,7 +17,7 @@ sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling cython
 sudo dpkg -i ~/py2deb/cython_*.deb 
-./docker_scripts/build_python_deb.sh pystan seaborn theano patsy
+./docker_scripts/build_python_deb.sh pystan seaborn theano patsy enum34 executor
 sudo dpkg -i ~/py2deb/python-theano_*.deb 
 
 sudo apt-get install -y libhdf5-dev
