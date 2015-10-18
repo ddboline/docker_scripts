@@ -1,2 +1,2 @@
 all:
-	docker build -t ddboline/ddboline_keys:conda_v0.2.7 .
+	docker build -t ddboline/ddboline_keys:conda_v0.2.8 .
