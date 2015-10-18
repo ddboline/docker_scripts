@@ -16,9 +16,11 @@ sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
         ~/py2deb/python-pbr_*.deb
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling cython
-sudo dpkg -i ~/py2deb/cython_*.deb 
+sudo dpkg -i ~/py2deb/cython_*.deb
+sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh pystan seaborn theano patsy enum34 executor
 sudo dpkg -i ~/py2deb/python-theano_*.deb 
+sudo apt-get install -f -y --force-yes
 
 sudo apt-get install -y libhdf5-dev
 ./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
@@ -38,6 +40,7 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
 sudo dpkg -i ~/py2deb/python-usb_*.deb
 sudo dpkg -i ~/py2deb/python-openant_*.deb
+sudo apt-get install -f -y --force-yes
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/antfs-cli.git
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
 
