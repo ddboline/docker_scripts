@@ -4,7 +4,8 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
       --rename=google-api-python-client,python-googleapi --rename=cython,cython
       --rename=pytz,python-tz --rename=pillow,python-pil
-      --rename=beautifulsoup4,python-bs4 --rename=compose,python-docker-compose"
+      --rename=beautifulsoup4,python-bs4 --rename=compose,python-docker-compose
+      --rename=pyzmq,python-zmq"
 
 REPOS="py2deb youtube-dl py4j setuptools docker-compose
        numpy scipy pandas scikit-learn scikit-image
