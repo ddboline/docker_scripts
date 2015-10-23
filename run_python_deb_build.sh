@@ -59,7 +59,7 @@ sudo apt-get install -y postgresql-server-dev-9.3
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
 
-./docker_scripts/build_python_deb.sh pytest pytest-xdist pytest-instafail
+./docker_scripts/build_python_deb.sh pytest pytest-xdist pytest-instafail getlyrics
 
 ./docker_scripts/build_xgboost.sh
 
