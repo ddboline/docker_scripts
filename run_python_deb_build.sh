@@ -4,6 +4,9 @@ git pull
 
 cd ~/
 
+sudo apt-get install -y postgresql-server-dev-9.3
+sudo apt-get install -y libhdf5-dev
+
 ./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j setuptools numpy
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
@@ -13,7 +16,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh scikit-learn scikit-image blaze gensim nltk
 sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
         ~/py2deb/python-mock_*.deb ~/py2deb/python-nose_*.deb ~/py2deb/python-pyparsing_*.deb \
-        ~/py2deb/python-pbr_*.deb
+        ~/py2deb/python-pbr_*.deb ~/py2deb/python-dateutil*.deb ~/py2deb/python-tz*.deb
 sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling cython
 sudo dpkg -i ~/py2deb/cython_*.deb
@@ -22,7 +25,6 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-theano_*.deb 
 sudo apt-get install -f -y --force-yes
 
-sudo apt-get install -y libhdf5-dev
 ./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/garmin_app.git
@@ -46,7 +48,6 @@ sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
 
 sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
-sudo apt-get install -y postgresql-server-dev-9.3
 ./docker_scripts/build_python_deb.sh psycopg2
 
 ./docker_scripts/build_fit2tcx.sh
@@ -59,7 +60,7 @@ sudo apt-get install -y postgresql-server-dev-9.3
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
 
-./docker_scripts/build_python_deb.sh pytest pytest-xdist pytest-instafail getlyrics
+./docker_scripts/build_python_deb.sh pytest pytest-xdist pytest-instafail getlyrics wget
 
 ./docker_scripts/build_xgboost.sh
 
