@@ -64,4 +64,6 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
 ./docker_scripts/build_xgboost.sh
 
+./docker_scripts/build_python_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
+
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
