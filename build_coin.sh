@@ -1,13 +1,13 @@
 #!/bin/bash
 
-VERSION="2.8"
+VERSION="2.9"
 RELEASE="1"
 
 sudo apt-get update
 sudo apt-get install -y subversion g++ make zlib1g-dev pkg-config \
                         checkinstall
 
-svn co https://projects.coin-or.org/svn/Cbc/stable/2.8 coin_Cbc
+svn co https://projects.coin-or.org/svn/Cbc/stable/${VERSION} coin_Cbc
 
 cd coin_Cbc
 
