@@ -56,7 +56,7 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git
 ./docker_scripts/build_python_deb.sh units xray sqlacodegen
 
-./docker_scripts/build_python_deb.sh fuzzywuzzy spyder pymonad pyquery click pyscaffold onedrivesdk
+./docker_scripts/build_python_deb.sh fuzzywuzzy spyder pymonad pyquery click pyscaffold
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
 
@@ -65,5 +65,7 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_xgboost.sh
 
 ./docker_scripts/build_python_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
+
+./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox
 
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
