@@ -7,8 +7,9 @@ ADD     keys_vworld.tar.gz /root/
 ADD     hosts /home/ubuntu/hosts
 ADD     build_python_deb.sh /home/ubuntu/
 
-RUN apt-get update && apt-get install -y git sudo
+RUN apt-get update && apt-get install -y git sudo postgresql-server-dev-9.3 npm
 RUN cp -a /home/ubuntu/.ssh /root/ && chown -R root:root /root
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /etc/sudoers.d && \
@@ -16,8 +17,8 @@ RUN export uid=1000 gid=1000 && \
     echo "ubuntu:x:${uid}:" >> /etc/group && \
     echo "ubuntu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ubuntu && \
     chmod 0440 /etc/sudoers.d/ubuntu && \
-    chown ${uid}:${gid} -R /home/ubuntu && \
-    cat /home/ubuntu/hosts >> /etc/hosts
+    mkdir /home/ubuntu/tmp && \
+    chown ${uid}:${gid} -R /home/ubuntu
 
 USER ubuntu
 ENV USER ubuntu
