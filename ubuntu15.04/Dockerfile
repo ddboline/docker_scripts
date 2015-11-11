@@ -3,12 +3,14 @@ MAINTAINER	Daniel Boline <ddboline@gmail.com>
 
 RUN mkdir -p /home/ubuntu
 COPY    run_testing.sh /home/ubuntu/run_testing.sh
-COPY    run_testing_ssh.sh /home/ubuntu/run_testing_ssh.sh
-COPY    run_testing_local.sh /home/ubuntu/run_testing_local.sh
+COPY    run_testing_python3.sh /home/ubuntu/run_testing_python3.sh
 COPY    run_testing_conda.sh /home/ubuntu/run_testing_conda.sh
-COPY    run_testing_local_conda.sh /home/ubuntu/run_testing_local_conda.sh
-COPY    run_testing_local.sh /home/ubuntu/run_testing_local.sh
+COPY    run_testing_ssh.sh /home/ubuntu/run_testing_ssh.sh
+COPY    run_testing_ssh_python3.sh /home/ubuntu/run_testing_ssh_python3.sh
 COPY    run_testing_ssh_conda.sh /home/ubuntu/run_testing_ssh_conda.sh
+COPY    run_testing_local.sh /home/ubuntu/run_testing_local.sh
+COPY    run_testing_local_conda.sh /home/ubuntu/run_testing_local_conda.sh
+COPY    run_testing_local_python3.sh /home/ubuntu/run_testing_local_python3.sh
 ADD     keys_20150617.tar.gz /home/ubuntu/
 ADD     keys_20150617.tar.gz /root/
 
