@@ -1,7 +1,7 @@
 all:
 	cp ../run_testing*.sh
-	cp ../keys_20150617.tar.gz .
-	docker build -t ddboline/ddboline_keys:v0.8.2 .
+	cp ../keys_20151018.tar.gz .
+	docker build -t ddboline/ddboline_keys:v0.8.3 .
 
 clean:
-	rm run_testing*.sh keys_20150617.tar.gz
+	rm run_testing*.sh keys_20151018.tar.gz
