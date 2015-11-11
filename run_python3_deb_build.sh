@@ -72,4 +72,6 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
 ./docker_scripts/build_xgboost.sh
 
+./docker_scripts/build_python3_deb.sh eventlet
+
 scp ~/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/

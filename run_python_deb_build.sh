@@ -63,5 +63,6 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_python_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
 ./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox
 ./docker_scripts/build_python_deb.sh futures jinja2 nuitka numexpr pexpect pulp tables
+./docker_scripts/build_python_deb.sh eventlet
 
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
