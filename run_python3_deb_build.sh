@@ -18,14 +18,14 @@ python3 setup.py build
 ~/docker_scripts/build_python3_deb.sh .
 cd ~/
 
-./docker_scripts/build_python3_deb.sh setuptools
-sudo apt-get remove -y python3-pkg-resources
-sudo dpkg -i ~/py2deb3/python3-setuptools_*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python3_deb.sh scipy
-sudo dpkg -i ~/py2deb3/python3-scipy_*.deb
-sudo apt-get install -f -y --force-yes
+# ./docker_scripts/build_python3_deb.sh setuptools
+# sudo apt-get remove -y python3-pkg-resources
+# sudo dpkg -i ~/py2deb3/python3-setuptools_*.deb
+# sudo apt-get install -f -y --force-yes
+# 
+# ./docker_scripts/build_python3_deb.sh scipy
+# sudo dpkg -i ~/py2deb3/python3-scipy_*.deb
+# sudo apt-get install -f -y --force-yes
 
 # ./docker_scripts/build_python3_deb.sh py2deb youtube-dl py4j
 # sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
