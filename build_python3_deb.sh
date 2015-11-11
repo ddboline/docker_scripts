@@ -2,9 +2,12 @@
 
 OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb --rename=websockify,websockify 
       --rename=scikit-learn,python3-sklearn --rename=scikit-image,python3-skimage 
-      --rename=google-api-python-client,python3-googleapi --rename=cython,cython
-      --rename=pytz,python3-tz --rename=pillow,python3-pil --rename=python-debian,python3-debian"
+      --rename=google-api-python3-client,python3-googleapi --rename=cython,cython
+      --rename=pytz,python3-tz --rename=pillow,python3-pil --rename=python-debian,python3-debian
+      --rename=beautifulsoup4,python3-bs4 --rename=compose,python3-docker-compose
+      --rename=pyzmq,python3-zmq --rename=spyder,spyder"
 
+      
 REPOS="py2deb youtube-dl py4j setuptools
        numpy scipy pandas scikit-learn scikit-image
        blaze gensim nltk statsmodels websockify sharedarray
