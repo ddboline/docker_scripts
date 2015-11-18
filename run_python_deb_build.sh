@@ -43,7 +43,7 @@ sudo dpkg -i ~/py2deb/python-usb_*.deb
 sudo dpkg -i ~/py2deb/python-openant_*.deb
 sudo apt-get install -f -y --force-yes
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/antfs-cli.git
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
+sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy preshed
 
 sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
