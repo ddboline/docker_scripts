@@ -6,6 +6,8 @@ ADD     keys_vworld.tar.gz /home/ubuntu/
 ADD     keys_vworld.tar.gz /root/
 ADD     hosts /home/ubuntu/hosts
 ADD     build_python_deb.sh /home/ubuntu/
+ADD	run_python_deb_build.sh /home/ubuntu
+ADD	build_universe_api.sh /home/ubuntu
 
 RUN apt-get update && apt-get install -y git sudo postgresql-server-dev-9.3 npm
 RUN cp -a /home/ubuntu/.ssh /root/ && chown -R root:root /root
