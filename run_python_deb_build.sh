@@ -4,6 +4,7 @@ git pull
 
 cd ~/
 
+sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3
 sudo apt-get install -y libhdf5-dev
 
