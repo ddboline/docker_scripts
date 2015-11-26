@@ -7,6 +7,7 @@ cd ~/
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3
 sudo apt-get install -y libhdf5-dev
+sudo apt-get install -y libxml2-dev libxslt1-dev
 
 ./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j 
 
