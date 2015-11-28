@@ -11,30 +11,21 @@ sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev
 sudo dpkg -i ~/py2deb3/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
-git clone https://github.com/numpy/numpy.git
-cd numpy
-python3 setup.py build
-~/docker_scripts/build_python3_deb.sh .
-cd ~/
-
-./docker_scripts/build_python3_deb.sh setuptools
-sudo apt-get remove -y python3-pkg-resources
-sudo dpkg -i ~/py2deb3/python3-setuptools_*.deb
+./docker_scripts/build_python3_deb.sh py2deb youtube-dl py4j numpy setuptools
+sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh scipy
 sudo dpkg -i ~/py2deb3/python3-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh py2deb youtube-dl py4j
-sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
-sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh pandas matplotlib mock nose pyparsing pbr
 ./docker_scripts/build_python3_deb.sh scikit-learn scikit-image blaze gensim nltk
 sudo dpkg -i ~/py2deb3/python3-pandas_*.deb ~/py2deb3/python3-matplotlib_*.deb \
         ~/py2deb3/python3-mock_*.deb ~/py2deb3/python3-nose_*.deb ~/py2deb3/python3-pyparsing_*.deb \
         ~/py2deb3/python3-pbr_*.deb
 sudo apt-get install -f -y --force-yes
+
 ./docker_scripts/build_python3_deb.sh statsmodels websockify sharedarray requests pysparkling
 ./docker_scripts/build_python3_deb.sh pystan seaborn theano patsy enum34 executor
 sudo dpkg -i ~/py2deb3/python3-theano_*.deb 
@@ -43,9 +34,10 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/garmin_app.git
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/roku_app.git \
-                                     git+https://github.com/ddboline/security_log_analysis.git \
-                                     git+https://github.com/ddboline/sync_app.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/roku_app.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/security_log_analysis.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/sync_app.git
+./docker_scripts/build_python3_deb.sh https://github.com/ddboline/python-deb-pkg-tools.git
 
 OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb --rename=websockify,websockify 
       --rename=scikit-learn,python3-sklearn --rename=scikit-image,python3-skimage 
