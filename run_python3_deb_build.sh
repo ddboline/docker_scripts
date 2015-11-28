@@ -5,13 +5,13 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev
+sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev
 
 ./docker_scripts/build_python3_deb.sh cython
 sudo dpkg -i ~/py2deb3/cython3_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh py2deb youtube-dl py4j numpy setuptools
+./docker_scripts/build_python3_deb.sh py2deb youtube-dl py4j numpy setuptools pytz python-dateutil
 sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -51,7 +51,7 @@ sudo dpkg -i ~/py2deb3/python3-usb_*.deb
 sudo dpkg -i ~/py2deb3/python3-openant_*.deb
 sudo apt-get install -f -y --force-yes
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/antfs-cli.git
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy
+sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy preshed
 
 sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
@@ -62,13 +62,15 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 ./docker_scripts/build_python3_deb.sh asyncio boltons beautifulsoup4 cssselect cytoolz lxml pandasql pillow
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git
 ./docker_scripts/build_python3_deb.sh units xray sqlacodegen
-
 ./docker_scripts/build_python3_deb.sh fuzzywuzzy spyder pymonad pyquery click pyscaffold onedrivesdk
-
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git
-
-./docker_scripts/build_python3_deb.sh pytest pytest-xdist pytest-instafail
+./docker_scripts/build_python3_deb.sh pytest pytest-xdist pytest-instafail pyprof2calltree getlyrics wget
 
 ./docker_scripts/build_xgboost.sh
 
-scp ~/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
+./docker_scripts/build_python3_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
+./docker_scripts/build_python3_deb.sh onedrivesdk boxsdk dropbox eventlet
+./docker_scripts/build_python3_deb.sh futures jinja2 nuitka numexpr pexpect pulp tables
+./docker_scripts/build_python3_deb.sh deap tpot 
+
+scp ~/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb3/py2deb3/

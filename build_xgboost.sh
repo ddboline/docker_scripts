@@ -25,5 +25,8 @@ sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev 
                                python-setuptools python-py2deb python-numpy=1.9\* python-scipy
 mkdir -p /home/ubuntu/py2deb
 cd python-package/
-py2deb -r /home/ubuntu/py2deb -y -- .
-~/docker_scripts/build_python_deb.sh .
+if [ -e "/home/ubuntu/py2deb" ]; then
+    ~/docker_scripts/build_python_deb.sh .
+elif [ -e "/home/ubuntu/py2deb3" ]; then
+    ~/docker_scripts/build_python3_deb.sh .
+fi
