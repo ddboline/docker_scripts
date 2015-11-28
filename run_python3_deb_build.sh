@@ -8,7 +8,7 @@ sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev
 
 ./docker_scripts/build_python3_deb.sh cython
-sudo dpkg -i ~/py2deb3/cython_*.deb
+sudo dpkg -i ~/py2deb3/cython3_*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh py2deb youtube-dl py4j numpy setuptools
