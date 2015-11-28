@@ -1,4 +1,4 @@
-FROM		ubuntu:14.04.2
+FROM		ubuntu:14.04
 MAINTAINER	Daniel Boline <ddboline@gmail.com>
 
 RUN mkdir -p /home/ubuntu
