@@ -11,12 +11,11 @@ sudo apt-get install -y libhdf5-dev
 sudo dpkg -i ~/py2deb3/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
-git clone https://github.com/numpy/numpy.git
-cd numpy
-git checkout v1.10.1
-python3 setup.py build
-~/docker_scripts/build_python3_deb.sh .
-cd ~/
+sudo rm /usr/bin/python
+sudo ln -s /usr/bin/python3.4 /usr/bin/python
+./docker_scripts/build_python3_deb.sh numpy
+sudo rm /usr/bin/python
+sudo ln -s /usr/bin/python2.7 /usr/bin/python
 
 # ./docker_scripts/build_python3_deb.sh setuptools
 # sudo apt-get remove -y python3-pkg-resources
