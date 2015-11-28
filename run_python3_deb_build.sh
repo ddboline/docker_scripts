@@ -4,8 +4,7 @@ git pull
 
 cd ~/
 
-sudo apt-get install -y postgresql-server-dev-9.3
-sudo apt-get install -y libhdf5-dev
+sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev
 
 ./docker_scripts/build_python3_deb.sh cython
 sudo dpkg -i ~/py2deb3/cython_*.deb
