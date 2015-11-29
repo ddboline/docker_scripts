@@ -71,6 +71,6 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 ./docker_scripts/build_python3_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
 ./docker_scripts/build_python3_deb.sh onedrivesdk boxsdk dropbox eventlet
 ./docker_scripts/build_python3_deb.sh futures jinja2 nuitka numexpr pexpect pulp tables
-./docker_scripts/build_python3_deb.sh deap tpot 
+./docker_scripts/build_python3_deb.sh deap tpot pyusb
 
 scp ~/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb3/py2deb3/
