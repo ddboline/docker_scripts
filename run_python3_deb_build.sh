@@ -7,6 +7,10 @@ cd ~/
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev
 
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git
+sudo dpkg -i ~/py2deb3/python3-deb-pkg-tools_*.deb
+sudo apt-get install -f -y --force-yes
+
 ./docker_scripts/build_python3_deb.sh cython
 sudo dpkg -i ~/py2deb3/cython3_*.deb
 sudo apt-get install -f -y --force-yes
@@ -70,7 +74,11 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
 ./docker_scripts/build_python3_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
 ./docker_scripts/build_python3_deb.sh onedrivesdk boxsdk dropbox eventlet
-./docker_scripts/build_python3_deb.sh futures jinja2 nuitka numexpr pexpect pulp tables
-./docker_scripts/build_python3_deb.sh deap tpot pyusb
+./docker_scripts/build_python3_deb.sh jinja2 nuitka numexpr pexpect pulp tables
+./docker_scripts/build_python3_deb.sh deap tpot pyusb imagehash
+./docker_scripts/build_python3_deb.sh cloudpickle et_xmlfile flexx greenlet ipython_genutils
+./docker_scripts/build_python3_deb.sh jdcal lockfile markupsafe odfpy openpyxl
+./docker_scripts/build_python3_deb.sh wheel traitlets simplegeneric pickleshare path.py
+./docker_scripts/build_python3_deb.sh pdfkit ptyprocess pulp python-debian pyyaml requests-toolbelt
 
 scp ~/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb3/py2deb3/
