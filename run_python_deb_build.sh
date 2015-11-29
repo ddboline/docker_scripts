@@ -5,17 +5,17 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.3
-sudo apt-get install -y libhdf5-dev
-sudo apt-get install -y libxml2-dev libxslt1-dev
+sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev
 
-./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j 
+./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j cython
+sudo dpkg -i ~/py2deb/cython_*.deb
+sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh setuptools numpy
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python_deb.sh scipy pandas matplotlib mock nose pyparsing pbr python-dateutil pytz cython theano
+./docker_scripts/build_python_deb.sh scipy pandas matplotlib mock nose pyparsing pbr python-dateutil pytz theano
 sudo dpkg -i ~/py2deb/python-scipy_*.deb ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
         ~/py2deb/python-mock_*.deb ~/py2deb/python-nose_*.deb ~/py2deb/python-pyparsing_*.deb \
         ~/py2deb/python-pbr_*.deb ~/py2deb/python-dateutil*.deb ~/py2deb/python-tz*.deb ~/py2deb/cython_*.deb \
@@ -66,5 +66,7 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox
 ./docker_scripts/build_python_deb.sh futures jinja2 nuitka numexpr pexpect pulp tables
 ./docker_scripts/build_python_deb.sh eventlet pyprof2calltree deap tpot
+./docker_scripts/build_python_deb.sh wheel traitlets simplegeneric pickleshare path.py
+./docker_scripts/build_python_deb.sh ipython_genutils imagehash markupsafe
 
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
