@@ -1,7 +1,6 @@
 #!/bin/bash
 
 cp /etc/hosts temp.hosts
-echo "10.124.15.33    GitLab02.visibleworld.com" >> temp.hosts
 sudo cp temp.hosts /etc/hosts
 
 sudo apt-get update
