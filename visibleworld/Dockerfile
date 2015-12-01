@@ -20,6 +20,7 @@ RUN export uid=1000 gid=1000 && \
     echo "ubuntu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ubuntu && \
     chmod 0440 /etc/sudoers.d/ubuntu && \
     mkdir /home/ubuntu/tmp && \
+    git clone https://github.com/ddboline/docker_scripts.git /home/ubuntu/docker_scripts && \
     chown ${uid}:${gid} -R /home/ubuntu
 
 USER ubuntu
