@@ -68,5 +68,6 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_python_deb.sh eventlet pyprof2calltree deap tpot
 ./docker_scripts/build_python_deb.sh wheel traitlets simplegeneric pickleshare path.py
 ./docker_scripts/build_python_deb.sh ipython_genutils imagehash markupsafe
+./docker_scripts/build_python_deb.sh protobuf
 
 scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
