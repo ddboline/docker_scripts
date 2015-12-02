@@ -80,6 +80,6 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 ./docker_scripts/build_python3_deb.sh jdcal lockfile markupsafe odfpy openpyxl
 ./docker_scripts/build_python3_deb.sh wheel traitlets simplegeneric pickleshare path.py
 ./docker_scripts/build_python3_deb.sh pdfkit ptyprocess pulp python-debian pyyaml requests-toolbelt
-./docker_scripts/build_python3_deb.sh protobuf
+./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools
 
 scp ~/py2deb3/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb3/py2deb3/
