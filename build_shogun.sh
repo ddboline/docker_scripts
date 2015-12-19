@@ -5,7 +5,7 @@ RELEASE="1"
 REPO="https://github.com/shogun-toolbox/shogun.git"
 
 sudo apt-get update
-sudo apt-get install -y nvidia-opencl-dev opencl-headers libprotobuf-dev \
+sudo apt-get install -y opencl-headers libprotobuf-dev \
                         ccache python-glpk python-cvxopt libglpk-dev \
                         libparpack2-dev libeigen3-dev libviennacl-dev \
                         liblpsolve55-dev lzma-dev libarchive-dev liblzo2-dev \
