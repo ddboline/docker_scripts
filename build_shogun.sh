@@ -9,7 +9,7 @@ sudo apt-get install -y opencl-headers libprotobuf-dev \
                         ccache python-glpk python-cvxopt libglpk-dev \
                         libparpack2-dev libeigen3-dev libviennacl-dev \
                         liblpsolve55-dev lzma-dev libarchive-dev liblzo2-dev \
-                        python-sip-dev swig
+                        python-sip-dev swig cmake
 
 git clone $REPO
 

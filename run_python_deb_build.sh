@@ -38,7 +38,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh eventlet pyprof2calltree deap tpot
 ./docker_scripts/build_python_deb.sh wheel traitlets simplegeneric pickleshare path.py
 ./docker_scripts/build_python_deb.sh ipython_genutils imagehash markupsafe
-./docker_scripts/build_python_deb.sh protobuf
+./docker_scripts/build_python_deb.sh protobuf setuptools_scm
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pulp.git
