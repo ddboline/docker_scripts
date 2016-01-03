@@ -44,15 +44,17 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh pytest pytest-xdist pytest-instafail pyprof2calltree getlyrics wget
 ./docker_scripts/build_python3_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
 ./docker_scripts/build_python3_deb.sh onedrivesdk boxsdk dropbox eventlet
-./docker_scripts/build_python3_deb.sh jinja2 nuitka numexpr pexpect pulp tables
+./docker_scripts/build_python3_deb.sh jinja2 nuitka numexpr pexpect tables
 ./docker_scripts/build_python3_deb.sh deap tpot pyusb imagehash
 ./docker_scripts/build_python3_deb.sh cloudpickle et_xmlfile flexx greenlet ipython_genutils
 ./docker_scripts/build_python3_deb.sh jdcal lockfile markupsafe odfpy openpyxl
 ./docker_scripts/build_python3_deb.sh wheel traitlets simplegeneric pickleshare path.py
-./docker_scripts/build_python3_deb.sh pdfkit ptyprocess pulp python-debian pyyaml requests-toolbelt
-./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools
-./docker_scripts/build_python3_deb.sh psycopg2
+./docker_scripts/build_python3_deb.sh pdfkit ptyprocess python-debian pyyaml requests-toolbelt
+./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools setuptools_scm
+./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional
 
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/garmin_app.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/roku_app.git
@@ -62,7 +64,7 @@ sudo apt-get install -f -y --force-yes
 
 OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb --rename=websockify,websockify 
       --rename=scikit-learn,python3-sklearn --rename=scikit-image,python3-skimage 
-      --rename=google-api-python3-client,python3-googleapi --rename=cython,cython
+      --rename=google-api-python3-client,python3-googleapi --rename=cython,cython3
       --rename=pytz,python3-tz --rename=pillow,python3-pil
       --rename=beautifulsoup4,python3-bs4"
 
@@ -80,7 +82,6 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 ./docker_scripts/build_fit2tcx.sh
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git
 
 ./docker_scripts/build_xgboost.sh
 
