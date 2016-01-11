@@ -51,9 +51,9 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh wheel traitlets simplegeneric pickleshare path.py
 ./docker_scripts/build_python3_deb.sh pdfkit ptyprocess python-debian pyyaml requests-toolbelt
 ./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools setuptools_scm
-./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional
+./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional python-Levenshtein futures
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/garmin_app.git
