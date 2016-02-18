@@ -1,4 +1,4 @@
-FROM		ubuntu:15.04
+FROM		ubuntu:wily
 MAINTAINER	Daniel Boline <ddboline@gmail.com>
 
 RUN mkdir -p /home/ubuntu
