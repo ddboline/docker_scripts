@@ -51,7 +51,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh wheel traitlets simplegeneric pickleshare path.py
 ./docker_scripts/build_python3_deb.sh pdfkit ptyprocess python-debian pyyaml requests-toolbelt
 ./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools setuptools_scm
-./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional python-Levenshtein futures
+./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional python-Levenshtein futures boxsdk
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git
@@ -60,7 +60,6 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/roku_app.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/security_log_analysis.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/sync_app.git
-./docker_scripts/build_python3_deb.sh https://github.com/ddboline/python-deb-pkg-tools.git
 
 OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb --rename=websockify,websockify 
       --rename=scikit-learn,python3-sklearn --rename=scikit-image,python3-skimage 
