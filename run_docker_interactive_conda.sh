@@ -17,7 +17,7 @@ else
             ddboline/ddboline_keys:conda_latest /bin/bash \
                 -c "sh /home/ubuntu/run_testing_local_conda.sh ${REPO} ; cd /home/ubuntu/${REPO} ; export HOME=/home/ubuntu ; export USER=ubuntu ; /bin/bash"
     ### this has to be done by root...
-    sudo chown -R ddboline:ddboline ~/setup_files/build/${REPO}/
+#     sudo chown -R ddboline:ddboline ~/setup_files/build/${REPO}/
 fi
 
 sleep 5
