@@ -52,6 +52,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh pdfkit ptyprocess python-debian pyyaml requests-toolbelt
 ./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools setuptools_scm
 ./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional python-Levenshtein futures boxsdk
+./docker_scripts/build_python3_deb.sh records
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git
