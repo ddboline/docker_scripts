@@ -60,6 +60,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/roku_app.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/security_log_analysis.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/sync_app.git
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/movie_collection_app.git
 
 OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
