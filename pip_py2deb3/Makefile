@@ -1,2 +1,2 @@
 all:
-	docker build --no-cache=true -t ddboline/ddboline_keys:pip_py2deb3_v0.0.0.7 .
+	docker build --no-cache=true -t ddboline/ddboline_keys:pip_py2deb3_v0.0.0.8 .
