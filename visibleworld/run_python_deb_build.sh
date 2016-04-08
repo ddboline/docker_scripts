@@ -8,11 +8,15 @@ sudo apt-get install -y freetds-bin freetds-dev
 sudo dpkg -i ~/py2deb/python-setuptools_*.deb
 sudo apt-get install -f -y --force-yes
 
-./build_python_deb.sh openpyxl pika psycopg2 requests pandas numpy python-logstash jsonschema test-helper cython
-
-sudo dpkg -i ~/py2deb/python-numpy_*.deb ~/py2deb/cython_*.deb
+./build_python_deb.sh cython
+sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
+./build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.0-1
+sudo dpkg -i ~/py2deb/python-numpy_*.deb
+sudo apt-get install -f -y --force-yes
+
+./build_python_deb.sh openpyxl pika psycopg2 requests pandas python-logstash jsonschema test-helper
 ./build_python_deb.sh futures scipy matplotlib spyder sqlalchemy statsmodels tables vcrpy vcrpy-unittest
 ./build_python_deb.sh jinja2 pyparsing wheel py2deb
 
