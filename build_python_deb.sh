@@ -46,6 +46,6 @@ done
 md5sum /home/${USER}/py2deb/*.deb > modified.log
 MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
 if [ -n "$MODIFIED" ]; then
-    ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb/py2deb"
-    scp $MODIFIED ubuntu@ddbolineinthecloud.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+    ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ubuntu/setup_files/deb/py2deb/py2deb"
+    scp $MODIFIED ubuntu@ddbolineinthecloud.mooo.com:/home/ubuntu/setup_files/deb/py2deb/py2deb/
 fi
