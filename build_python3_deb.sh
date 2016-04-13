@@ -31,7 +31,7 @@ if [ -z "$REPOS" ]; then
 fi
 
 if [ ! -e "/usr/bin/py2deb" ]; then
-    sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/trusty/python3/pip_py2deb ./ > /etc/apt/sources.list.d/py2deb3.list"
+    sudo bash -c "echo deb ssh://ubuntu@ddbolineinthecloud.mooo.com/var/www/html/deb/trusty/python3/pip_py2deb ./ > /etc/apt/sources.list.d/py2deb3.list"
 
     sudo apt-get update
     sudo apt-get install -y --force-yes python3-pip python3-py2deb python3-dev lintian liblapack-dev libblas-dev \
@@ -50,6 +50,6 @@ done
 md5sum /home/${USER}/py2deb3/*.deb > modified.log
 MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
 if [ -n "$MODIFIED" ]; then
-    ssh ddboline@ddbolineathome.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb3/py2deb3"
-    scp $MODIFIED ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
+    ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ddboline/setup_files/deb/py2deb3/py2deb3"
+    scp $MODIFIED ubuntu@ddbolineinthecloud.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
 fi

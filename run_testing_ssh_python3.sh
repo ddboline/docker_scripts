@@ -8,7 +8,7 @@ echo "  StrictHostKeyChecking no" >> ${HOME}/.ssh/config
 for REPONAME in $@;
 do
     GITHUB_DIR=${REPONAME}
-    GITHUB_REPO="ssh://ddboline@ddbolineathome.mooo.com/home/ddboline/setup_files/repo/${GITHUB_DIR}"
+    GITHUB_REPO="ssh://ubuntu@ddbolineinthecloud.mooo.com/home/ddboline/setup_files/repo/${GITHUB_DIR}"
     SETUP_SCRIPT="setup_python3.sh"
     TEST_SCRIPT="test_python3.sh"
     

@@ -86,4 +86,4 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
 ./docker_scripts/build_xgboost.sh
 
-scp ~/py2deb/*.deb ddboline@ddbolineathome.mooo.com:~/setup_files/deb/py2deb/py2deb/
+scp ~/py2deb/*.deb ubuntu@ddbolineinthecloud.mooo.com:~/setup_files/deb/py2deb/py2deb/
