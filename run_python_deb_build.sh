@@ -34,7 +34,7 @@ sudo dpkg -i ~/py2deb/python-theano_*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling
-./docker_scripts/build_python_deb.sh pystan seaborn patsy enum34 executor
+./docker_scripts/build_python_deb.sh pystan seaborn patsy enum34 executor pip
 ./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j setuptools pytz python-dateutil
 ./docker_scripts/build_python_deb.sh scikit-learn scikit-image blaze gensim nltk
 ./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
