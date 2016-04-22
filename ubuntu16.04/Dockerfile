@@ -1,4 +1,4 @@
-FROM		ubuntu:wily
+FROM		ubuntu:xenial
 MAINTAINER	Daniel Boline <ddboline@gmail.com>
 
 RUN mkdir -p /home/ubuntu
