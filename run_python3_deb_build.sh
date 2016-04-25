@@ -7,8 +7,9 @@ cd ~/
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev
 
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pip-accel.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git
-sudo dpkg -i ~/py2deb3/python3-deb-pkg-tools_*.deb
+sudo dpkg -i ~/py2deb3/python3-pip-accel_*.deb ~/py2deb3/python3-deb-pkg-tools_*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh cython
