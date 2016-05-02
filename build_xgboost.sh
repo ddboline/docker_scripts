@@ -22,7 +22,7 @@ sudo bash -c "echo deb ssh://ubuntu@ddbolineinthecloud.mooo.com/var/www/html/deb
 sudo apt-get update
 sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev libblas-dev \
                                dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
-                               python-setuptools python-py2deb python-numpy=1.9\* python-scipy
+                               python-setuptools python-py2deb python-numpy=1.\* python-scipy
 mkdir -p /home/ubuntu/py2deb
 cd python-package/
 if [ -e "/home/ubuntu/py2deb" ]; then

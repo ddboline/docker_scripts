@@ -85,6 +85,6 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git
 
-./docker_scripts/build_xgboost.sh
+# ./docker_scripts/build_xgboost.sh
 
 scp ~/py2deb3/*.deb ubuntu@ddbolineinthecloud.mooo.com:~/setup_files/deb/py2deb3/py2deb3/
