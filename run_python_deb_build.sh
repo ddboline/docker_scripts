@@ -53,7 +53,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh pdfkit ptyprocess python-debian pyyaml requests-toolbelt
 ./docker_scripts/build_python_deb.sh protobuf protobuf-setuptools setuptools_scm
 ./docker_scripts/build_python_deb.sh psycopg2 scalafunctional python-Levenshtein futures boxsdk
-./docker_scripts/build_python_deb.sh records dask-array validictory pydrive
+./docker_scripts/build_python_deb.sh records dask-array validictory pydrive hypothesis
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pulp.git

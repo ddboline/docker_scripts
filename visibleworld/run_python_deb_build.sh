@@ -32,4 +32,4 @@ sudo apt-get install -f -y --force-yes
 ./build_python_deb.sh mock pbr sklearn-compiledtrees sklearn-pandas wrapt pyyaml
 ./build_python_deb.sh git+https://github.com/rsteca/sklearn-deap.git
 ./build_python_deb.sh py4j pyprof2calltree python-Levenshtein sharedarray
-./build_python_deb.sh records pytest html
+./build_python_deb.sh records pytest html hypothesis
