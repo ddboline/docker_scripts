@@ -1,4 +1,4 @@
-FROM		ubuntu:14.04.2
+FROM		ubuntu:trusty
 MAINTAINER	Daniel Boline <danielb@visibleworld.com>
 
 RUN mkdir -p /home/ubuntu
@@ -9,7 +9,8 @@ ADD     build_python_deb.sh /home/ubuntu/
 ADD	run_python_deb_build.sh /home/ubuntu
 ADD	build_universe_api.sh /home/ubuntu
 
-RUN apt-get update && apt-get install -y git sudo postgresql-server-dev-9.3 npm
+RUN apt-get update && apt-get dist-upgrade
+RUN apt-get install -y git sudo postgresql-server-dev-9.3 npm
 RUN cp -a /home/ubuntu/.ssh /root/ && chown -R root:root /root
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
