@@ -14,7 +14,7 @@ COPY    run_testing_local_python3.sh /home/ubuntu/run_testing_local_python3.sh
 ADD     keys_20151018.tar.gz /home/ubuntu/
 ADD     keys_20151018.tar.gz /root/
 
-RUN apt-get update && apt-get dist-upgrade
+RUN apt-get update && apt-get dist-upgrade -y
 RUN apt-get install -y git sudo python-minimal
 RUN cp -a /home/ubuntu/.ssh /root/ && chown -R root:root /root
 
