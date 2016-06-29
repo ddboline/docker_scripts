@@ -7,16 +7,13 @@ cd ~/
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pip-accel.git
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git
-sudo dpkg -i ~/py2deb/python-pip-accel_*.deb ~/py2deb/python-deb-pkg-tools_*.deb
-sudo apt-get install -f -y --force-yes
-
+### Need recent cython installed to build numpy, need numpy for various other projects...
 ./docker_scripts/build_python_deb.sh cython
 sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.0-1
+### Use forked repos to handle annoying bugs...
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.1-1
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -63,6 +60,8 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/security_log_analysis.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/sync_app.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/movie_collection_app.git
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pip-accel.git@0.43-2
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@1.36-1
 
 OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
