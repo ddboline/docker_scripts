@@ -84,6 +84,9 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git
 
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
+./docker_scripts/build_python_deb.sh jupyter
+
 ./docker_scripts/build_xgboost.sh
 
 scp ~/py2deb/*.deb ubuntu@ddbolineinthecloud.mooo.com:~/setup_files/deb/py2deb/py2deb/
