@@ -85,6 +85,10 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git
+
+### For the record, I really don't like python packages that depend on f***ing node...
+sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 ./docker_scripts/build_python3_deb.sh jupyter
 
 scp ~/py2deb3/*.deb ubuntu@ddbolineinthecloud.mooo.com:~/setup_files/deb/py2deb3/py2deb3/
