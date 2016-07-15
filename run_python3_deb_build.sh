@@ -87,7 +87,7 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git
 
 ### For the record, I really don't like python packages that depend on f***ing node...
-sudo apt-get install npm
+sudo apt-get install -y npm
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ./docker_scripts/build_python3_deb.sh jupyter
 
