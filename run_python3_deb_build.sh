@@ -17,11 +17,10 @@ sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.1-1
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.0-1
 sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh scipy
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.0-1
 sudo dpkg -i ~/py2deb3/python3-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
