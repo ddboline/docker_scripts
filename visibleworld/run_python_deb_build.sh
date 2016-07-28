@@ -4,6 +4,9 @@ sudo apt-get install -y postgresql-server-dev-9.3
 sudo apt-get install -y libhdf5-dev
 sudo apt-get install -y freetds-bin freetds-dev
 
+./build_python_deb.sh git+https://github.com/ddboline/pip-accel.git@0.43-2
+./build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@1.36-1
+
 ./build_python_deb.sh setuptools
 sudo dpkg -i ~/py2deb/python-setuptools_*.deb
 sudo apt-get install -f -y --force-yes
