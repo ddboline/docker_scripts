@@ -5,7 +5,7 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev
+sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pip-accel.git@@pip-8.1-upgrade
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@1.36-1
