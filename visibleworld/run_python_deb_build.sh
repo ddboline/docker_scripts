@@ -46,5 +46,5 @@ sudo apt-get install -f -y --force-yes
 ./build_python_deb.sh jupyter
 
 ./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v0.4.3-1
-./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v0.0.5-1
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v0.0.5-2
 ./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwpy.git@v1.0.12-1
