@@ -12,5 +12,5 @@ fi
 
 for REPO in $REPOS; # theano_test;
 do
-    $SUDO docker run --name=\"${REPO}_${D}\" -d ddboline/ddboline_keys:latest /home/ubuntu/run_testing_ssh.sh ${REPO}
+    $SUDO docker run --name=${REPO}_${D} -d ddboline/ddboline_keys:latest /home/ubuntu/run_testing_ssh.sh ${REPO}
 done

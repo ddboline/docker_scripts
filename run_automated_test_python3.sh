@@ -12,5 +12,5 @@ fi
 
 for REPO in $REPOS;
 do
-    $SUDO docker run --name=\"${REPO}_${D}\" -d ddboline/ddboline_keys:latest /home/ubuntu/run_testing_python3.sh ${REPO}
+    $SUDO docker run --name=${REPO}_${D} -d ddboline/ddboline_keys:latest /home/ubuntu/run_testing_python3.sh ${REPO}
 done
