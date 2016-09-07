@@ -7,7 +7,7 @@ cd ~/
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pip-accel.git@@pip-8.1-upgrade
+./docker_scripts/build_python3_deb.sh git+https://github.com/paylogic/pip-accel.git@pip-8.1-upgrade
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@1.36-1
 
 ### Need recent cython installed to build numpy, need numpy for various other projects...
@@ -56,8 +56,8 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh records dask validictory pydrive hypothesis retrying
 ./docker_scripts/build_python3_deb.sh attrs
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git@1.8.0-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/garmin_app.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/roku_app.git

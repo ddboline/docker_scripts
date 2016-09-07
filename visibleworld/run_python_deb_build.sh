@@ -42,6 +42,7 @@ sudo apt-get install -f -y --force-yes
 ./build_python_deb.sh records pytest html hypothesis dask
 ./build_python_deb.sh slackclient retrying attrs
 
+./build_python_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
 ./build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
 ./build_python_deb.sh jupyter
 
