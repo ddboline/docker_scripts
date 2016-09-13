@@ -58,7 +58,7 @@ sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git@1.8.0-1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git@rel-0.6rc3
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/garmin_app.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/roku_app.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/security_log_analysis.git
