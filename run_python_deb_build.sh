@@ -16,7 +16,7 @@ sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.1-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2rc1-1
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
