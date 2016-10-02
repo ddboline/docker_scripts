@@ -19,7 +19,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
-./build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.0-1
+./build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.1-1
 sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
