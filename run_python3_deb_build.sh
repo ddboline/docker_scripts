@@ -16,7 +16,7 @@ sudo dpkg -i ~/py2deb3/cython3_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2rc1-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2-1
 sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -56,7 +56,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh records dask validictory pydrive hypothesis retrying
 ./docker_scripts/build_python3_deb.sh attrs
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git@1.8.0-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git@1.8.1-1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pylearn2.git@rel-0.6rc3
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/garmin_app.git
@@ -84,7 +84,7 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
 ./docker_scripts/build_fit2tcx.sh
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-1
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git
 
