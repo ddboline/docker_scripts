@@ -31,8 +31,8 @@ sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh scikit-learn
-./build_python_deb.sh pymssql sqlacodegen
-./build_python_deb.sh bitstring deap funcsigs functools32 
+./build_python_deb.sh pymssql sqlacodegen pathos
+./build_python_deb.sh bitstring deap funcsigs functools32
 sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-dateutil_*.deb ~/py2deb/python-tz_*.deb ~/py2deb/python-sklearn_*.deb
 sudo apt-get install -f -y --force-yes
 
