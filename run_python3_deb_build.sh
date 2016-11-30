@@ -93,4 +93,10 @@ sudo apt-get install -y npm
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ./docker_scripts/build_python3_deb.sh jupyter
 
-scp ~/py2deb3/*.deb ubuntu@ddbolineinthecloud.mooo.com:~/setup_files/deb/py2deb3/py2deb3/
+md5sum /home/${USER}/py2deb3/*.deb > modified.log
+MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+if [ -n "$MODIFIED" ]; then
+    ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ubuntu/setup_files/deb/py2deb3/py2deb3"
+    scp $MODIFIED ubuntu@ddbolineinthecloud.mooo.com:/home/ubuntu/setup_files/deb/py2deb3/py2deb3/
+    scp $MODIFIED ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+fi
