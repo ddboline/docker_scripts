@@ -31,7 +31,7 @@ if [ -z "$REPOS" ]; then
 fi
 
 if [ ! -e "/usr/bin/py2deb" ]; then
-    sudo bash -c "echo deb ssh://ubuntu@ddbolineinthecloud.mooo.com/var/www/html/deb/trusty/python3/devel ./ > /etc/apt/sources.list.d/py2deb3.list"
+    sudo bash -c "echo deb ssh://ubuntu@ddbolineinthecloud.mooo.com/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb3.list"
 
     sudo apt-get update
     sudo apt-get install -y --force-yes python3-pip python3-py2deb python3-dev lintian liblapack-dev libblas-dev \

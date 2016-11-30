@@ -1,4 +1,4 @@
-FROM		ubuntu:trusty
+FROM		ubuntu:xenial
 MAINTAINER	Daniel Boline <danielb@visibleworld.com>
 
 RUN mkdir -p /home/ubuntu

@@ -1,7 +1,7 @@
 all:
 	cp ../run_testing*.sh .
 	cp ../keys_20151018.tar.gz .
-	docker build --no-cache=true -t ddboline/ddboline_keys:xenial_v0.0.2 .
+	docker build --no-cache=true -t ddboline/ddboline_keys:v0.8.0.0 .
 
 clean:
 	rm run_testing*.sh keys_20151018.tar.gz

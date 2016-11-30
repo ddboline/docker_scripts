@@ -20,7 +20,7 @@ if [ -z "$REPOS" ]; then
 fi
 
 if [ ! -e "/usr/bin/py2deb" ]; then
-    sudo bash -c "echo deb file:///var/www/html/deb/trusty/solver_python/ / > /etc/apt/sources.list.d/py2deb.list"
+    sudo bash -c "echo deb file:///var/www/html/deb/xenial/solver_python/ / > /etc/apt/sources.list.d/py2deb.list"
     sudo apt-get update
     sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev libopenblas-dev \
                                 dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
