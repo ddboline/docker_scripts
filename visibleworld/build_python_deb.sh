@@ -30,5 +30,5 @@ fi
 
 for REPO in $REPOS;
 do
-    py2deb -r /home/${USER}/py2deb -y $OPTS -- $REPO
+    py2deb -r /home/${USER}/py2deb -y --upgrade $OPTS -- $REPO
 done
