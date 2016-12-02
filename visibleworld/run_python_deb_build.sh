@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install -y postgresql-server-dev-9.3
+sudo apt-get install -y postgresql-server-dev-9.5
 sudo apt-get install -y libhdf5-dev libpython2.7-dev
 sudo apt-get install -y freetds-bin freetds-dev
 
