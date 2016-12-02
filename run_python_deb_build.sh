@@ -5,10 +5,13 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev
+sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev
 
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/cached-property.git@1.3.0.1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@1.36-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@3.0-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/py2deb.git@0.24.3.1
 
 ### Need recent cython installed to build numpy, need numpy for various other projects...
 ./docker_scripts/build_python_deb.sh cython
@@ -36,7 +39,7 @@ sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling
 ./docker_scripts/build_python_deb.sh pystan seaborn patsy enum34 executor pip
-./docker_scripts/build_python_deb.sh py2deb youtube-dl py4j setuptools pytz python-dateutil
+./docker_scripts/build_python_deb.sh youtube-dl py4j setuptools pytz python-dateutil
 ./docker_scripts/build_python_deb.sh scikit-learn scikit-image blaze gensim nltk
 ./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
 ./docker_scripts/build_python_deb.sh asyncio boltons beautifulsoup4 cssselect cytoolz lxml pandasql pillow
