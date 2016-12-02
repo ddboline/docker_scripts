@@ -4,8 +4,11 @@ sudo apt-get install -y postgresql-server-dev-9.3
 sudo apt-get install -y libhdf5-dev libpython2.7-dev
 sudo apt-get install -y freetds-bin freetds-dev
 
+./build_python_deb.sh git+https://github.com/ddboline/cached-property.git@1.3.0.1
+./build_python_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
 ./build_python_deb.sh git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
-./build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@1.36-1
+./build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@3.0-1
+./build_python_deb.sh git+https://github.com/ddboline/py2deb.git@0.24.3.1
 
 ./build_python_deb.sh setuptools
 sudo dpkg -i ~/py2deb/python-setuptools_*.deb
@@ -48,4 +51,3 @@ sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v0.4.3-1
 ./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v0.1.2-1
-./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwpy.git@v1.0.15-1

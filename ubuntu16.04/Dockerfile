@@ -17,7 +17,7 @@ ADD     keys_20161201.tar.gz /root/
 RUN apt-get update && apt-get dist-upgrade -y
 RUN apt-get install -y git sudo python-minimal
 RUN apt-key add /root/ddboline_711C1DEB.gpg
-RUN cp -a /home/ubuntu/.ssh /root/ && chown -R root:root /root
+RUN chown -R root:root /root
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /etc/sudoers.d && \
