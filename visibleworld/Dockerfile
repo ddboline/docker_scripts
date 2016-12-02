@@ -10,7 +10,7 @@ ADD	run_python_deb_build.sh /home/ubuntu
 ADD	build_universe_api.sh /home/ubuntu
 
 RUN apt-get update && apt-get dist-upgrade -y
-RUN apt-get install -y git sudo postgresql-server-dev-9.5 npm
+RUN apt-get install -y git sudo postgresql-server-dev-9.5
 RUN apt-key add /root/ddboline_711C1DEB.gpg
 RUN chown -R root:root /root
 RUN ln -s /usr/bin/nodejs /usr/bin/node
