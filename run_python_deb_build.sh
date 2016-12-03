@@ -37,6 +37,10 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-theano_*.deb
 sudo apt-get install -f -y --force-yes
 
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
+sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
+sudo apt-get install -f -y --force-yes
+
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling
 ./docker_scripts/build_python_deb.sh pystan seaborn patsy enum34 executor pip
 ./docker_scripts/build_python_deb.sh youtube-dl py4j setuptools pytz python-dateutil
@@ -88,8 +92,6 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_fit2tcx.sh
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-1
-
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
 
 ### For the record, I really don't like python packages that depend on f***ing node...
 sudo apt-get install -y npm

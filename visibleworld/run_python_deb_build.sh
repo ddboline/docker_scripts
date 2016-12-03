@@ -26,6 +26,10 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
+./build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
+sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
+sudo apt-get install -f -y --force-yes
+
 ./build_python_deb.sh openpyxl pika psycopg2 requests pandas python-logstash jsonschema test-helper
 ./build_python_deb.sh futures scipy matplotlib spyder sqlalchemy statsmodels tables vcrpy vcrpy-unittest
 ./build_python_deb.sh jinja2 pyparsing wheel py2deb pip
@@ -46,7 +50,6 @@ sudo apt-get install -f -y --force-yes
 ./build_python_deb.sh slackclient retrying attrs
 
 ./build_python_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
-./build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
 ./build_python_deb.sh jupyter
 
 ./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v0.4.3-1
