@@ -87,7 +87,7 @@ sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
 ./docker_scripts/build_fit2tcx.sh
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-2
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git
 
