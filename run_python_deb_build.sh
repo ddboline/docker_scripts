@@ -5,7 +5,7 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev
+sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev udev
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/cached-property.git@1.3.0.1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
@@ -78,8 +78,11 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
       --rename=google-api-python-client,python-googleapi --rename=cython,cython
       --rename=pytz,python-tz --rename=pillow,python-pil
-      --rename=beautifulsoup4,python-bs4"
+      --rename=beautifulsoup4,python-bs4 --rename=compose,python-docker-compose
+      --rename=pyzmq,python-zmq --rename=spyder,spyder --rename=ipython,ipython
+      --rename=pylint,pylint"
 
+sudo apt-get install -y udev
 
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
 sudo dpkg -i ~/py2deb/python-usb_*.deb
@@ -96,9 +99,7 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-2
 
 ### For the record, I really don't like python packages that depend on f***ing node...
-sudo apt-get install -y npm
-sudo ln -s /usr/bin/nodejs /usr/bin/node
-./docker_scripts/build_python_deb.sh jupyter
+# ./docker_scripts/build_python_deb.sh jupyter
 
 ./docker_scripts/build_xgboost.sh
 
