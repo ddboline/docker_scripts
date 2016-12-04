@@ -30,8 +30,10 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
 sudo apt-get install -f -y --force-yes
 
+./build_python_deb.sh git+https://github.com/spyder-ide/spyder.git@v2.3.9
+
 ./build_python_deb.sh openpyxl pika psycopg2 requests pandas python-logstash jsonschema test-helper
-./build_python_deb.sh futures scipy matplotlib spyder sqlalchemy statsmodels tables vcrpy vcrpy-unittest
+./build_python_deb.sh futures scipy matplotlib sqlalchemy statsmodels tables vcrpy vcrpy-unittest
 ./build_python_deb.sh jinja2 pyparsing wheel py2deb pip
 
 sudo dpkg -i ~/py2deb/python-scipy_*.deb

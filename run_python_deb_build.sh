@@ -41,6 +41,8 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
 sudo apt-get install -f -y --force-yes
 
+./docker_scripts/build_python_deb.sh git+https://github.com/spyder-ide/spyder.git@v2.3.9
+
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling
 ./docker_scripts/build_python_deb.sh pystan seaborn patsy enum34 executor pip
 ./docker_scripts/build_python_deb.sh youtube-dl py4j setuptools pytz python-dateutil
@@ -48,7 +50,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh lasagne nolearn scikit-neuralnetwork keras gdbn h5py
 ./docker_scripts/build_python_deb.sh asyncio boltons beautifulsoup4 cssselect cytoolz lxml pandasql pillow
 ./docker_scripts/build_python_deb.sh units xray sqlacodegen
-./docker_scripts/build_python_deb.sh fuzzywuzzy spyder pymonad pyquery click pyscaffold onedrivesdk
+./docker_scripts/build_python_deb.sh fuzzywuzzy pymonad pyquery click pyscaffold onedrivesdk
 ./docker_scripts/build_python_deb.sh pytest pytest-xdist pytest-instafail pyprof2calltree getlyrics wget
 ./docker_scripts/build_python_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
 ./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox eventlet
@@ -91,7 +93,7 @@ sudo chown ${USER}:${USER} ~/py2deb/*.deb
 
 ./docker_scripts/build_fit2tcx.sh
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-2
 
 ### For the record, I really don't like python packages that depend on f***ing node...
 sudo apt-get install -y npm
