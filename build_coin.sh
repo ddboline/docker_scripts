@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install -y subversion g++ make zlib1g-dev pkg-config \
                         checkinstall
 
-svn co https://projects.coin-or.org/svn/Cbc/stable/${VERSION} coin_Cbc
+svn co --trust-server-cert-failures=unknown-ca https://projects.coin-or.org/svn/Cbc/stable/${VERSION} coin_Cbc
 
 cd coin_Cbc
 
