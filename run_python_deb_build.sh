@@ -74,19 +74,9 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/sync_app.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/movie_collection_app.git
 
-OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
-      --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
-      --rename=google-api-python-client,python-googleapi --rename=cython,cython
-      --rename=pytz,python-tz --rename=pillow,python-pil
-      --rename=beautifulsoup4,python-bs4 --rename=compose,python-docker-compose
-      --rename=pyzmq,python-zmq --rename=spyder,spyder --rename=ipython,ipython
-      --rename=pylint,pylint"
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/openant.git
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/antfs-cli.git
 
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
-sudo dpkg -i ~/py2deb/python-usb_*.deb
-sudo dpkg -i ~/py2deb/python-openant_*.deb
-sudo apt-get install -f -y --force-yes
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/antfs-cli.git
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy preshed
 
 sudo chown ${USER}:${USER} ~/py2deb/*.deb
