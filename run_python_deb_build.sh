@@ -11,7 +11,7 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@3.0-1
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/py2deb.git@0.24.3.1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/py2deb.git@0.24.3.2
 
 ### Need recent cython installed to build numpy, need numpy for various other projects...
 ./docker_scripts/build_python_deb.sh cython
@@ -19,7 +19,7 @@ sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0b1-1
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -37,7 +37,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-theano_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
 sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -55,7 +55,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
 ./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox eventlet
 ./docker_scripts/build_python_deb.sh jinja2 nuitka numexpr pexpect tables
-./docker_scripts/build_python_deb.sh deap tpot pyusb imagehash
+./docker_scripts/build_python_deb.sh deap tpot pyusb imagehash pylint
 ./docker_scripts/build_python_deb.sh cloudpickle et_xmlfile flexx greenlet ipython_genutils
 ./docker_scripts/build_python_deb.sh jdcal lockfile markupsafe odfpy openpyxl
 ./docker_scripts/build_python_deb.sh wheel traitlets simplegeneric pickleshare path.py
@@ -65,7 +65,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh records validictory pydrive hypothesis dask retrying
 ./docker_scripts/build_python_deb.sh attrs
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git@1.9.0-rc4-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git@1.9.0.1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pylearn2.git
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/garmin_app.git
@@ -81,8 +81,6 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=beautifulsoup4,python-bs4 --rename=compose,python-docker-compose
       --rename=pyzmq,python-zmq --rename=spyder,spyder --rename=ipython,ipython
       --rename=pylint,pylint"
-
-sudo apt-get install -y udev
 
 sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
 sudo dpkg -i ~/py2deb/python-usb_*.deb

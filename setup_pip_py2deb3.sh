@@ -2,7 +2,7 @@
 
 sudo cp -a /home/ubuntu/.ssh /root/
 sudo chown -R root:root /root/.ssh
-sudo bash -c "echo deb ssh://ubuntu@ddbolineinthecloud.mooo.com/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb.list"
+sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb.list"
 sudo apt-get update
 sudo apt-get install -y --force-yes python3-pip python3-dev lintian liblapack-dev libblas-dev \
                                         dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
