@@ -27,6 +27,10 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
+./docker_scripts/build_python_deb.sh dateutil pytz cycler
+sudo dpkg -i ~/py2deb/*dateutil*.deb ~/py2deb/*tz*.deb ~/py2deb/*cycler*.deb
+sudo apt-get install -f -y --force-yes
+
 ./docker_scripts/build_python_deb.sh pandas matplotlib mock nose pyparsing pbr
 sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
         ~/py2deb/python-mock_*.deb ~/py2deb/python-nose_*.deb ~/py2deb/python-pyparsing_*.deb \
