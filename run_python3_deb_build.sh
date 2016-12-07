@@ -5,7 +5,7 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.3 libhdf5-dev libxml2-dev libxslt1-dev libpython3.4-dev udev
+sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython3.4-dev udev
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/cached-property.git@1.3.0.1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
@@ -19,7 +19,7 @@ sudo dpkg -i ~/py2deb3/cython3_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0b1-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2-1
 sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
