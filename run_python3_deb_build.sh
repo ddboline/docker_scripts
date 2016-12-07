@@ -72,32 +72,18 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/sync_app.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/movie_collection_app.git
 
-OPTS="--rename=pyyaml,python3-yaml --rename=pyusb,python3-usb --rename=websockify,websockify 
-      --rename=scikit-learn,python3-sklearn --rename=scikit-image,python3-skimage 
-      --rename=google-api-python3-client,python3-googleapi --rename=cython,cython3
-      --rename=pytz,python3-tz --rename=pillow,python3-pil --rename=python-debian,python3-debian
-      --rename=beautifulsoup4,python3-bs4 --rename=compose,python3-docker-compose
-      --rename=pyzmq,python3-zmq --rename=spyder,spyder3 --rename=ipython,ipython3
-      --rename=pylint,pylint3"
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/openant.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/antfs-cli.git
 
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/openant.git
-sudo dpkg -i ~/py2deb3/python3-usb_*.deb
-sudo dpkg -i ~/py2deb3/python3-openant_*.deb
-sudo apt-get install -f -y --force-yes
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade git+https://github.com/Tigge/antfs-cli.git
-sudo py2deb -r /home/${USER}/py2deb -y $OPTS -- --upgrade spacy preshed
-
-sudo chown ${USER}:${USER} ~/py2deb3/*.deb
-
-
+./docker_scripts/build_coin.sh
 ./docker_scripts/build_fit2tcx.sh
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-2
 
 ### For the record, I really don't like python packages that depend on f***ing node...
-sudo apt-get install -y npm
-sudo ln -s /usr/bin/nodejs /usr/bin/node
-./docker_scripts/build_python3_deb.sh jupyter
+# sudo apt-get install -y npm
+# sudo ln -s /usr/bin/nodejs /usr/bin/node
+# ./docker_scripts/build_python3_deb.sh jupyter
 
 md5sum /home/${USER}/py2deb3/*.deb > modified.log
 MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
