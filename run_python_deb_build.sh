@@ -87,7 +87,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_coin.sh
 ./docker_scripts/build_fit2tcx.sh
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-2
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.5-1
 
 ### For the record, I really don't like python packages that depend on f***ing node...
 # ./docker_scripts/build_python_deb.sh jupyter

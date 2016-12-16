@@ -37,7 +37,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb3/python3-theano_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
 sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
 sudo apt-get install -f -y --force-yes
 
