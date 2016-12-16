@@ -23,7 +23,11 @@ RUN export uid=1000 gid=1000 && \
     chmod 0440 /etc/sudoers.d/ubuntu && \
     mkdir /home/ubuntu/tmp && \
     git clone https://github.com/ddboline/docker_scripts.git /home/ubuntu/docker_scripts && \
+    mkdir -p /home/ubuntu/.pip && \
+    printf "[global]\n\nindex-url = https://repos.visibleworld.com/artifactory/api/pypi/pypi-virtual/simple\n" >> /home/ubuntu/.pip/pip.conf && \
     chown ${uid}:${gid} -R /home/ubuntu
+
+RUN printf "[global]\n\nindex-url = https://repos.visibleworld.com/artifactory/api/pypi/pypi-virtual/simple\n" >> /home/ubuntu/.pip/pip.conf
 
 USER ubuntu
 ENV USER ubuntu
