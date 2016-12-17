@@ -75,9 +75,6 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/openant.git
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/antfs-cli.git
 
-./docker_scripts/build_coin.sh
-./docker_scripts/build_fit2tcx.sh
-
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.3-2
 
 ### For the record, I really don't like python packages that depend on f***ing node...

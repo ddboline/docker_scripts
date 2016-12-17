@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,websockify 
       --rename=scikit-learn,python-sklearn --rename=scikit-image,python-skimage 
       --rename=google-api-python-client,python-googleapi --rename=cython,cython
