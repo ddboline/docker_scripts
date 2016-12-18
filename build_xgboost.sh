@@ -17,7 +17,7 @@ git clone https://github.com/dmlc/dmlc-core .
 make
 
 cd ../rabit
-git clone https://github.com/dmlc/rabit
+git clone https://github.com/dmlc/rabit .
 make
 
 cd ../
