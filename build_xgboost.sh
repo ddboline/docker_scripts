@@ -24,6 +24,7 @@ make
 printf "XGBoost: Fast Gradient Boosted Decision Trees\n" > description-pak
 sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
 sudo chown ${USER}:${USER} xgboost*.deb
+mkdir -p ~/py2deb/
 mv xgboost*.deb ~/py2deb/
 
 sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/xenial/devel ./ > /etc/apt/sources.list.d/py2deb2.list"
