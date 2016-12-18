@@ -4,7 +4,7 @@ set -e
 
 VERSION="0.60"
 RELEASE="1"
-REPO="https://github.com/dmlc/xgboost.git"
+REPO="https://github.com/ddboline/xgboost.git"
 
 sudo apt-get update
 sudo apt-get install -y checkinstall
