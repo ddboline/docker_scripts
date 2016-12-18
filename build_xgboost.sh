@@ -1,16 +1,24 @@
 #!/bin/bash
 
-VERSION="0.41"
+VERSION="0.60"
 RELEASE="1"
-REPO="https://github.com/ddboline/xgboost.git"
+REPO="https://github.com/dmlc/xgboost.git"
 
 sudo apt-get update
 sudo apt-get install -y checkinstall
 
 git clone $REPO
-
 cd xgboost
 
+cd dmlc-core
+git clone https://github.com/dmlc/dmlc-core .
+make
+
+cd ../rabit
+git clone https://github.com/dmlc/rabit
+make
+
+cd ../
 make
 ### this part is sadly interactive
 printf "XGBoost: Fast Gradient Boosted Decision Trees\n" > description-pak
