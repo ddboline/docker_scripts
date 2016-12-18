@@ -21,6 +21,7 @@ git clone https://github.com/dmlc/rabit .
 make
 
 cd ../
+printf "\ninstall:\n\tcp lib/libxgboost*.so /usr/lib/\n" >> Makefile
 make
 ### this part is sadly interactive
 printf "XGBoost: Fast Gradient Boosted Decision Trees\n" > description-pak
