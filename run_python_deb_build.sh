@@ -19,7 +19,7 @@ sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -92,8 +92,9 @@ sudo apt-get install -f -y --force-yes
 ### For the record, I really don't like python packages that depend on f***ing node...
 # ./docker_scripts/build_python_deb.sh jupyter
 
-md5sum /home/${USER}/py2deb/*.deb > modified.log
-MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+# md5sum /home/${USER}/py2deb/*.deb > modified.log
+# MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+MODIFIED=/home/${USER}/py2deb/*.deb
 if [ -n "$MODIFIED" ]; then
     ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ubuntu/setup_files/deb/py2deb/py2deb"
     scp $MODIFIED ubuntu@ddbolineinthecloud.mooo.com:/home/ubuntu/setup_files/deb/py2deb/py2deb/

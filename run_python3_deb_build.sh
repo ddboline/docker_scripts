@@ -19,7 +19,7 @@ sudo dpkg -i ~/py2deb3/cython3_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
 sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
