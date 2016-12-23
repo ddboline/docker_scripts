@@ -61,7 +61,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools setuptools_scm
 ./docker_scripts/build_python3_deb.sh psycopg2 scalafunctional python-Levenshtein futures boxsdk
 ./docker_scripts/build_python3_deb.sh records dask validictory pydrive hypothesis retrying
-./docker_scripts/build_python3_deb.sh attrs
+./docker_scripts/build_python3_deb.sh attrs mypy-lang
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git@1.9.0.1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
@@ -82,8 +82,9 @@ sudo apt-get install -f -y --force-yes
 # sudo ln -s /usr/bin/nodejs /usr/bin/node
 # ./docker_scripts/build_python3_deb.sh jupyter
 
-md5sum /home/${USER}/py2deb3/*.deb > modified.log
-MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+# md5sum /home/${USER}/py2deb3/*.deb > modified.log
+# MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+MODIFIED=/home/${USER}/py2deb/*.deb
 if [ -n "$MODIFIED" ]; then
     ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ubuntu/setup_files/deb/py2deb3/py2deb3"
     scp $MODIFIED ubuntu@ddbolineinthecloud.mooo.com:/home/ubuntu/setup_files/deb/py2deb3/py2deb3/
