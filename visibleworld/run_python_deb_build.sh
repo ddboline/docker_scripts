@@ -57,6 +57,6 @@ sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh jupyter
 
-./build_python_deb.sh util_python==1.0.2
-./build_python_deb.sh vwasync==1.0.0
-./build_python_deb.sh pulp==1.1.0
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v1.0.2-2
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v1.0.0-2
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/pulp.git@v1.1.0-2
