@@ -67,7 +67,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh protobuf protobuf-setuptools setuptools_scm
 ./docker_scripts/build_python_deb.sh psycopg2 scalafunctional python-Levenshtein futures boxsdk
 ./docker_scripts/build_python_deb.sh records validictory pydrive hypothesis dask retrying
-./docker_scripts/build_python_deb.sh attrs
+./docker_scripts/build_python_deb.sh attrs mypy-lang sphinx
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/compose.git@1.9.0.1
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
@@ -87,7 +87,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_coin.sh
 ./docker_scripts/build_fit2tcx.sh
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.5-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/stravalib.git@0.6.6
 
 ### For the record, I really don't like python packages that depend on f***ing node...
 # ./docker_scripts/build_python_deb.sh jupyter
