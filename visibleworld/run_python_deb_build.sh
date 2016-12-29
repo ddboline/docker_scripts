@@ -19,7 +19,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
-./build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.2-1
+./build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -39,7 +39,7 @@ sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh openpyxl pika psycopg2 requests pandas python-logstash jsonschema test-helper
 ./build_python_deb.sh futures scipy matplotlib sqlalchemy statsmodels tables vcrpy vcrpy-unittest
-./build_python_deb.sh jinja2 pyparsing wheel py2deb pip
+./build_python_deb.sh jinja2 pyparsing wheel py2deb pip sphinx
 
 sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
@@ -57,6 +57,6 @@ sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh jupyter
 
-./build_python_deb.sh util_python==1.0.2
-./build_python_deb.sh vwasync==1.0.0
-./build_python_deb.sh pulp==1.1.0
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v1.0.2-2
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v1.0.0-2
+./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/pulp.git@v1.1.0-2
