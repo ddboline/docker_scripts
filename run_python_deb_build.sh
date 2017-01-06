@@ -31,9 +31,9 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/*dateutil*.deb ~/py2deb/*tz*.deb ~/py2deb/*cycler*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python_deb.sh pandas matplotlib mock nose2 pyparsing pbr
+./docker_scripts/build_python_deb.sh pandas matplotlib mock pyparsing pbr
 sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
-        ~/py2deb/python-mock_*.deb ~/py2deb/python-nose2_*.deb ~/py2deb/python-pyparsing_*.deb \
+        ~/py2deb/python-mock_*.deb ~/py2deb/python-pyparsing_*.deb \
         ~/py2deb/python-pbr_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -57,7 +57,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh fuzzywuzzy pymonad pyquery click pyscaffold onedrivesdk
 ./docker_scripts/build_python_deb.sh pytest pytest-xdist pytest-instafail pyprof2calltree getlyrics wget
 ./docker_scripts/build_python_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
-./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox eventlet
+./docker_scripts/build_python_deb.sh onedrivesdk boxsdk dropbox eventlet pytest-cov
 ./docker_scripts/build_python_deb.sh jinja2 nuitka numexpr pexpect tables
 ./docker_scripts/build_python_deb.sh deap tpot pyusb imagehash pylint
 ./docker_scripts/build_python_deb.sh cloudpickle et_xmlfile flexx greenlet ipython_genutils

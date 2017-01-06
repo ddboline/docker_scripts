@@ -51,7 +51,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh fuzzywuzzy spyder pymonad pyquery click pyscaffold onedrivesdk
 ./docker_scripts/build_python3_deb.sh pytest pytest-xdist pytest-instafail pyprof2calltree getlyrics wget
 ./docker_scripts/build_python3_deb.sh ipython coverage openpyxl pika python-logstash jsonschema test-helper
-./docker_scripts/build_python3_deb.sh onedrivesdk boxsdk dropbox eventlet
+./docker_scripts/build_python3_deb.sh onedrivesdk boxsdk dropbox eventlet pytest-cov
 ./docker_scripts/build_python3_deb.sh jinja2 nuitka numexpr pexpect tables
 ./docker_scripts/build_python3_deb.sh deap tpot pyusb imagehash pylint
 ./docker_scripts/build_python3_deb.sh cloudpickle et_xmlfile flexx greenlet ipython_genutils
