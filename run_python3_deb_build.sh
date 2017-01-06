@@ -27,9 +27,9 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb3/python3-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh pandas matplotlib mock nose pyparsing pbr
+./docker_scripts/build_python3_deb.sh pandas matplotlib mock nose2 pyparsing pbr
 sudo dpkg -i ~/py2deb3/python3-pandas_*.deb ~/py2deb3/python3-matplotlib_*.deb \
-        ~/py2deb3/python3-mock_*.deb ~/py2deb3/python3-nose_*.deb ~/py2deb3/python3-pyparsing_*.deb \
+        ~/py2deb3/python3-mock_*.deb ~/py2deb3/python3-nose2_*.deb ~/py2deb3/python3-pyparsing_*.deb \
         ~/py2deb3/python3-pbr_*.deb
 sudo apt-get install -f -y --force-yes
 
