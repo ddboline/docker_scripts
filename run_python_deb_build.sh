@@ -47,6 +47,8 @@ sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/spyder-ide/spyder.git@v2.3.9
 
+./docker_scripts/build_python_deb.sh git+https://github.com/matplotlib/basemap.git
+
 ./docker_scripts/build_python_deb.sh statsmodels websockify sharedarray requests pysparkling
 ./docker_scripts/build_python_deb.sh pystan seaborn patsy enum34 executor pip
 ./docker_scripts/build_python_deb.sh youtube-dl py4j setuptools pytz python-dateutil
