@@ -61,7 +61,7 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python3_deb.sh protobuf protobuf-setuptools setuptools_scm
 ./docker_scripts/build_python3_deb.sh psycopg2 python-Levenshtein futures boxsdk
 ./docker_scripts/build_python3_deb.sh records dask validictory pydrive hypothesis retrying
-./docker_scripts/build_python3_deb.sh attrs mypy-lang
+./docker_scripts/build_python3_deb.sh attrs mypy-lang hangups
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/compose.git@1.9.0.1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pulp.git@1.6.1-1
