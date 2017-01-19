@@ -31,35 +31,19 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/*dateutil*.deb ~/py2deb/*tz*.deb ~/py2deb/*cycler*.deb
 sudo apt-get install -f -y --force-yes
 
+./build_python_deb.sh pandas matplotlib mock pyparsing pbr
+sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
+        ~/py2deb/python-mock_*.deb ~/py2deb/python-pyparsing_*.deb \
+        ~/py2deb/python-pbr_*.deb
+sudo apt-get install -f -y --force-yes
+
 ./build_python_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
 sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh git+https://github.com/spyder-ide/spyder.git@v2.3.9
 
-./build_python_deb.sh openpyxl pika psycopg2 requests pandas python-logstash jsonschema test-helper
-./build_python_deb.sh futures scipy matplotlib sqlalchemy statsmodels tables vcrpy vcrpy-unittest
-./build_python_deb.sh jinja2 pyparsing wheel py2deb pip sphinx
-
-sudo dpkg -i ~/py2deb/python-scipy_*.deb
-sudo apt-get install -f -y --force-yes
-
-./build_python_deb.sh scikit-learn
-./build_python_deb.sh pymssql sqlacodegen pathos
-./build_python_deb.sh bitstring deap funcsigs functools32
-sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-dateutil_*.deb ~/py2deb/python-tz_*.deb ~/py2deb/python-sklearn_*.deb
-sudo apt-get install -f -y --force-yes
-
-./build_python_deb.sh mock pbr sklearn-compiledtrees sklearn-pandas wrapt pyyaml
-./build_python_deb.sh py4j pyprof2calltree python-Levenshtein sharedarray
-./build_python_deb.sh records pytest html hypothesis dask mypy-lang
-./build_python_deb.sh slackclient retrying attrs pytest-cov
-
-./build_python_deb.sh jupyter
-
-./build_python_deb.sh git+https://github.com/ddboline/PyFunctional.git@v0.8.0-1
-
-./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwpy.git@v1.2.6-1
-./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v1.0.2-2
-./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v1.0.0-2
-./build_python_deb.sh git+http://GitLab02.visibleworld.com/Data_Analytics/pulp.git@v1.1.0-2
+for PKG in `cat run_python_deb_pkgs.txt`;
+do
+    ./docker_scripts/build_python_deb.sh $PKG
+done
