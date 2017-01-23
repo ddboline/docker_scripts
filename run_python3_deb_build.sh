@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~/docker_scripts/
 
 git pull
@@ -6,6 +8,10 @@ cd ~/
 
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython3.5-dev udev
+
+./docker_scripts/build_python3_deb.sh packaging appdirs
+sudo dpkg -i ~/py2deb3/*.deb
+sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/cached-property.git@1.3.0.1
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
