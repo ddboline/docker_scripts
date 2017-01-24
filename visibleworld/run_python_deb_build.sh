@@ -44,5 +44,5 @@ sudo apt-get install -f -y --force-yes
 
 for PKG in `cat run_python_deb_pkgs.txt`;
 do
-    ./docker_scripts/build_python_deb.sh $PKG
+    ./build_python_deb.sh $PKG
 done
