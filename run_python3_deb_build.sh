@@ -25,7 +25,7 @@ sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
+./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0-1
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -45,7 +45,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
-for PKG in `cat run_python3_deb_pkgs.txt`;
+for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python3_deb.sh $PKG
 done

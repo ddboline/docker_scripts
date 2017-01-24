@@ -49,7 +49,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
-for PKG in `cat run_python_deb_pkgs.txt`;
+for PKG in `cat ./docker_scripts/run_python_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python_deb.sh $PKG
 done
