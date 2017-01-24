@@ -21,34 +21,28 @@ sudo apt-get install -f -y --force-yes
 
 ### Need recent cython installed to build numpy, need numpy for various other projects...
 ./docker_scripts/build_python3_deb.sh cython
-sudo dpkg -i ~/py2deb3/cython3_*.deb
+sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
-sudo dpkg -i ~/py2deb3/python3-numpy_*.deb
+sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.1-1
-sudo dpkg -i ~/py2deb3/python3-scipy_*.deb
+sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh python-dateutil pytz cycler
-sudo dpkg -i ~/py2deb3/*dateutil*.deb ~/py2deb3/*tz*.deb ~/py2deb3/*cycler*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python3_deb.sh pandas matplotlib mock pyparsing pbr
-sudo dpkg -i ~/py2deb3/python3-pandas_*.deb ~/py2deb3/python3-matplotlib_*.deb \
-        ~/py2deb3/python3-mock_*.deb ~/py2deb3/python3-nose2_*.deb ~/py2deb3/python3-pyparsing_*.deb \
-        ~/py2deb3/python3-pbr_*.deb
+./docker_scripts/build_python3_deb.sh pandas matplotlib mock pyparsing pbr cycler
+sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh theano
-sudo dpkg -i ~/py2deb3/python3-theano_*.deb
+sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
-sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
+sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
 for PKG in `cat run_python3_deb_pkgs.txt`;
