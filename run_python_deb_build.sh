@@ -25,7 +25,7 @@ sudo dpkg -i ~/py2deb/cython_*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0-1
 sudo dpkg -i ~/py2deb/python-numpy_*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -33,7 +33,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/python-scipy_*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python_deb.sh dateutil pytz cycler
+./docker_scripts/build_python_deb.sh python-dateutil pytz cycler
 sudo dpkg -i ~/py2deb/*dateutil*.deb ~/py2deb/*tz*.deb ~/py2deb/*cycler*.deb
 sudo apt-get install -f -y --force-yes
 
