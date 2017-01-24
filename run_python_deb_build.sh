@@ -21,34 +21,32 @@ sudo apt-get install -f -y --force-yes
 
 ### Need recent cython installed to build numpy, need numpy for various other projects...
 ./docker_scripts/build_python_deb.sh cython
-sudo dpkg -i ~/py2deb/cython_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
-sudo dpkg -i ~/py2deb/python-numpy_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.1-1
-sudo dpkg -i ~/py2deb/python-scipy_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh dateutil pytz cycler
-sudo dpkg -i ~/py2deb/*dateutil*.deb ~/py2deb/*tz*.deb ~/py2deb/*cycler*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh pandas matplotlib mock pyparsing pbr
-sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
-        ~/py2deb/python-mock_*.deb ~/py2deb/python-pyparsing_*.deb \
-        ~/py2deb/python-pbr_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh theano
-sudo dpkg -i ~/py2deb/python-theano_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
-sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 for PKG in `cat run_python_deb_pkgs.txt`;

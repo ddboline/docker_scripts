@@ -15,29 +15,27 @@ sudo apt-get install -f -y --force-yes
 ./build_python_deb.sh git+https://github.com/ddboline/py2deb.git@0.24.3.2
 
 ./build_python_deb.sh cython
-sudo dpkg -i ~/py2deb/cython_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.11.3-1
-sudo dpkg -i ~/py2deb/python-numpy_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.1-1
-sudo dpkg -i ~/py2deb/python-scipy_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh dateutil pytz cycler
-sudo dpkg -i ~/py2deb/*dateutil*.deb ~/py2deb/*tz*.deb ~/py2deb/*cycler*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
-./build_python_deb.sh pandas matplotlib mock pyparsing pbr
-sudo dpkg -i ~/py2deb/python-pandas_*.deb ~/py2deb/python-matplotlib_*.deb \
-        ~/py2deb/python-mock_*.deb ~/py2deb/python-pyparsing_*.deb \
-        ~/py2deb/python-pbr_*.deb
+./build_python_deb.sh pandas matplotlib mock pyparsing pbr subprocess32
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
-sudo dpkg -i ~/py2deb/python-entrypoints_*.deb
+sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ./build_python_deb.sh git+https://github.com/spyder-ide/spyder.git@v2.3.9
