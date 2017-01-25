@@ -7,7 +7,8 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev udev
+sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython2.7-dev \
+                        freetds-bin freetds-dev udev
 
 ./docker_scripts/build_python_deb.sh packaging appdirs
 sudo dpkg -i ~/py2deb/*.deb
@@ -48,6 +49,8 @@ sudo apt-get install -f -y --force-yes
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
 sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
+
+./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/openant.git
 
 for PKG in `cat run_python_deb_pkgs.txt`;
 do
