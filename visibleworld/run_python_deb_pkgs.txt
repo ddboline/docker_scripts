@@ -6,7 +6,6 @@ click
 cython
 cytoolz
 dask
-dateutil
 deap
 eventlet
 flask

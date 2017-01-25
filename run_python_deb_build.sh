@@ -52,7 +52,7 @@ sudo apt-get install -f -y --force-yes
 
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/openant.git
 
-for PKG in `cat run_python_deb_pkgs.txt`;
+for PKG in `cat ./docker_scripts/run_python_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python_deb.sh $PKG
 done
