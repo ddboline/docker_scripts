@@ -4,7 +4,6 @@ MAINTAINER	Daniel Boline <danielb@visibleworld.com>
 RUN mkdir -p /home/ubuntu
 ADD     keys_vworld.tar.gz /home/ubuntu/
 ADD     keys_vworld.tar.gz /root/
-ADD     hosts /home/ubuntu/hosts
 ADD     build_python_deb.sh /home/ubuntu/
 ADD	run_python_deb_build.sh /home/ubuntu
 ADD	build_universe_api.sh /home/ubuntu
