@@ -12,6 +12,7 @@ cython
 cytoolz
 dask
 deap
+delegator.py
 dropbox
 enum34
 et_xmlfile

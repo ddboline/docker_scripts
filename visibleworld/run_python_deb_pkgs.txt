@@ -7,6 +7,7 @@ cython
 cytoolz
 dask
 deap
+delegator.py
 eventlet
 flask
 flask-script
