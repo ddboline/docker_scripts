@@ -15,6 +15,7 @@ funcsigs
 functools32
 futures
 futures_then
+gunicorn
 html
 hypothesis
 ipython
