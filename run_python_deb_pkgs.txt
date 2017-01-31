@@ -4,6 +4,8 @@ bitstring
 blaze
 boltons
 boxsdk
+cached-property
+chardet
 click
 cloudpickle
 coverage
@@ -18,6 +20,8 @@ enum34
 et_xmlfile
 eventlet
 executor
+flask
+flask-script
 flexx
 funcsigs
 functools32
@@ -28,7 +32,9 @@ gdbn
 gensim
 getlyrics
 greenlet
+gunicorn
 h5py
+html
 hypothesis
 imagehash
 ipython
@@ -53,8 +59,8 @@ onedrivesdk
 openpyxl
 pandas
 pandasql
-path.py
 pathos
+path.py
 patsy
 pbr
 pdfkit
@@ -63,10 +69,12 @@ pickleshare
 pika
 pillow
 pip
+pip-accel
 protobuf
 protobuf-setuptools
 psycopg2
 ptyprocess
+py2deb
 py4j
 pydrive
 pylint
@@ -84,6 +92,7 @@ pytest-instafail
 pytest-xdist
 python-dateutil
 python-debian
+python-deb-pkg-tools
 python-Levenshtein
 python-logstash
 pytz
@@ -106,7 +115,6 @@ slackclient
 sphinx
 sqlacodegen
 sqlalchemy
-statsmodels
 tables
 test-helper
 theano
@@ -132,6 +140,7 @@ git+https://github.com/ddboline/pulp.git@1.6.1-1
 git+https://github.com/ddboline/PyFunctional.git@v0.8.0-1
 git+https://github.com/ddboline/roku_app.git
 git+https://github.com/ddboline/security_log_analysis.git
+git+https://github.com/ddboline/statsmodels.git@v0.8.0rc1
 git+https://github.com/ddboline/stravalib.git@0.6.6
 git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git

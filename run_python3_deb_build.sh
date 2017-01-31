@@ -10,18 +10,12 @@ sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython3.5-dev \
                         freetds-bin freetds-dev udev
 
-./docker_scripts/build_python3_deb.sh packaging appdirs
+./docker_scripts/build_python3_deb.sh packaging appdirs cython
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/cached-property.git@1.3.0.1
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/chardet.git@2.3.0.1
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/python-deb-pkg-tools.git@3.0-1
-./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/py2deb.git@0.24.3.2
-
 ### Need recent cython installed to build numpy, need numpy for various other projects...
-./docker_scripts/build_python3_deb.sh cython
+./docker_scripts/build_python3_deb.sh setuptools
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
@@ -34,11 +28,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python3_deb.sh pandas matplotlib mock pyparsing pbr cycler
-sudo dpkg -i ~/py2deb3/*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python3_deb.sh theano
+./docker_scripts/build_python3_deb.sh python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
