@@ -1,3 +1,4 @@
+git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+http://GitLab02.visibleworld.com/Data_Analytics/pulp.git@v1.1.0-2
 git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v1.0.2-2
 git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@v1.0.0-2
@@ -58,7 +59,6 @@ pickleshare
 pika
 pillow
 pip
-pip-accel
 protobuf
 protobuf-setuptools
 psycopg2
