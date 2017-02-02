@@ -31,7 +31,8 @@ fi
 if [ ! -e "/usr/bin/py2deb" ]; then
     sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/xenial/devel/ ./ > /etc/apt/sources.list.d/py2deb.list"
     sudo apt-get update
-    sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev libopenblas-dev \
+    sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
+                                python-pip python-dev lintian liblapack-dev libopenblas-dev \
                                 dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
                                 python-setuptools python-py2deb
     mkdir -p /home/${USER}/py2deb
