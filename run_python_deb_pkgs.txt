@@ -143,4 +143,5 @@ wget
 wheel
 wrapt
 xray
+yapf
 youtube-dl

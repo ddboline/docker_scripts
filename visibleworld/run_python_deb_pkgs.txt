@@ -111,3 +111,4 @@ voluptuous
 wget
 wheel
 wrapt
+yapf
