@@ -45,7 +45,6 @@ lxml
 markupsafe
 matplotlib
 mock
-mypy-lang
 openpyxl
 pandas
 pandasql

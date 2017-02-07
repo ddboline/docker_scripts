@@ -64,7 +64,6 @@ lxml
 markupsafe
 matplotlib
 mock
-mypy-lang
 nltk
 nolearn
 nuitka
