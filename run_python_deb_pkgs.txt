@@ -104,7 +104,7 @@ pytest-instafail
 pytest-xdist
 python-dateutil
 python-debian
-python-deb-pkg-tools
+deb-pkg-tools
 python-Levenshtein
 python-logstash
 pytz

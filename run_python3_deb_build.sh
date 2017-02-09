@@ -14,11 +14,6 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
-### Need recent cython installed to build numpy, need numpy for various other projects...
-./docker_scripts/build_python3_deb.sh setuptools
-sudo dpkg -i ~/py2deb3/*.deb
-sudo apt-get install -f -y --force-yes
-
 ### Use forked repos to handle annoying bugs...
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0-1
 sudo dpkg -i ~/py2deb3/*.deb

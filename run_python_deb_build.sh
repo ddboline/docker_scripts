@@ -14,10 +14,6 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
 sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
-./docker_scripts/build_python_deb.sh setuptools
-sudo dpkg -i ~/py2deb/*.deb
-sudo apt-get install -f -y --force-yes
-
 ### Use forked repos to handle annoying bugs...
 ./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0-1
 sudo dpkg -i ~/py2deb/*.deb
