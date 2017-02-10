@@ -53,6 +53,7 @@ path.py
 patsy
 pbr
 pdfkit
+pep8
 pexpect
 pickleshare
 pika
@@ -64,6 +65,7 @@ psycopg2
 ptyprocess
 py2deb
 py4j
+pyflakes
 pylint
 pymonad
 pymssql

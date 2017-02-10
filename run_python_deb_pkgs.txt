@@ -78,6 +78,7 @@ path.py
 patsy
 pbr
 pdfkit
+pep8
 pexpect
 pickleshare
 pika
@@ -90,6 +91,7 @@ ptyprocess
 py2deb
 py4j
 pydrive
+pyflakes
 pylint
 pymonad
 pymssql
