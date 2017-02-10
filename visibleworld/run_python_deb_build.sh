@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt-get update
+sudo apt-get dist-upgrade -y
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev \
                         libxslt1-dev libpython2.7-dev freetds-bin freetds-dev udev
 
