@@ -12,6 +12,7 @@ beautifulsoup4
 bitstring
 boltons
 cached-property
+celery
 chardet
 click
 coverage

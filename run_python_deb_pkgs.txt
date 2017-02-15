@@ -21,6 +21,7 @@ blaze
 boltons
 boxsdk
 cached-property
+celery
 chardet
 click
 cloudpickle
