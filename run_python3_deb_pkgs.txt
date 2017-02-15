@@ -1,3 +1,4 @@
+git+https://github.com/ddboline/pytest.git@3.0.6.1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/compose.git@1.9.0.1
@@ -13,7 +14,6 @@ git+https://github.com/ddboline/statsmodels.git@v0.8.0rc1
 git+https://github.com/ddboline/stravalib.git@0.6.6
 git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
-git+https://github.com/ddboline/pytest.git@3.0.6.1
 asyncio
 attrs
 beautifulsoup4
