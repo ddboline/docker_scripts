@@ -33,6 +33,7 @@ futures
 futures_then
 fuzzywuzzy
 greenlet
+gspread
 gunicorn
 html
 hypothesis

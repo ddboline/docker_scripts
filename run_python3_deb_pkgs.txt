@@ -45,6 +45,7 @@ fuzzywuzzy
 gdbn
 gensim
 getlyrics
+gspread
 greenlet
 gunicorn
 h5py
