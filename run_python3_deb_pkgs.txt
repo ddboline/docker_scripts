@@ -32,6 +32,7 @@ cytoolz
 dask
 deap
 delegator.py
+docker
 dropbox
 enum34
 et_xmlfile

@@ -6,7 +6,7 @@ OPTS="--rename=pyyaml,python-yaml --rename=pyusb,python-usb --rename=websockify,
       --rename=pytz,python-tz --rename=pillow,python-pil
       --rename=beautifulsoup4,python-bs4 --rename=compose,python-docker-compose
       --rename=pyzmq,python-zmq --rename=spyder,spyder --rename=ipython,ipython
-      --rename=pylint,pylint --rename=pyflakes,pyflakes"
+      --rename=pylint,pylint --rename=pyflakes,pyflakes --rename=python-dateutil,python-dateutil"
 
 REPOS="py2deb youtube-dl py4j setuptools docker-compose
        numpy scipy pandas scikit-learn scikit-image
