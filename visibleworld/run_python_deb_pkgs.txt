@@ -21,6 +21,7 @@ cytoolz
 dask
 deap
 delegator.py
+docker
 enum34
 et_xmlfile
 eventlet
