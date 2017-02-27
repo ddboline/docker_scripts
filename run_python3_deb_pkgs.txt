@@ -1,4 +1,5 @@
 git+https://github.com/ddboline/pytest.git@3.0.6.1
+git+https://github.com/ddboline/ipython@5.3.0-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/compose.git@1.9.0.1
@@ -53,7 +54,6 @@ h5py
 html
 hypothesis
 imagehash
-ipython
 jdcal
 jinja2
 jsonschema
