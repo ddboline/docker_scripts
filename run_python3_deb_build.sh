@@ -39,8 +39,6 @@ do
     ./docker_scripts/build_python3_deb.sh $PKG
 done
 
-./docker_scripts/build_fit2tcx.sh
-
 ### For the record, I really don't like python packages that depend on f***ing node...
 # sudo apt-get install -y npm
 # sudo ln -s /usr/bin/nodejs /usr/bin/node
