@@ -12,7 +12,7 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
                         freetds-bin freetds-dev udev libfreetype6-dev libpng12-dev pkg-config
 
 ./docker_scripts/build_python3_deb.sh git+https://github.com/ddboline/packaging.git@16.8-2
-./docker_scripts/build_python3_deb.sh yarl appdirs git+https://github.com/ddboline/cython@0.25.2.1
+./docker_scripts/build_python3_deb.sh yarl aiohttp appdirs git+https://github.com/ddboline/cython@0.25.2.1
 sudo dpkg -i ~/py2deb3/*.deb
 sudo apt-get install -f -y --force-yes
 
