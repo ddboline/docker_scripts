@@ -3,7 +3,8 @@
 sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" dist-upgrade -y
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev \
-                        libxslt1-dev libpython2.7-dev freetds-bin freetds-dev udev
+                        libxslt1-dev libpython2.7-dev freetds-bin freetds-dev \
+                        udev libgeos++-dev
 
 ./build_python_deb.sh git+https://github.com/ddboline/packaging.git@16.8-2
 ./build_python_deb.sh appdirs git+https://github.com/ddboline/cython@0.25.2.1
@@ -15,7 +16,7 @@ sudo apt-get install -f -y --force-yes
 sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
-./build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.18.1-1
+./build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.19.0-1
 sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
