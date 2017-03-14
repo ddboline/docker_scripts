@@ -41,6 +41,7 @@ enum34
 et_xmlfile
 eventlet
 executor
+fitbit
 flask
 flask-script
 flexx
