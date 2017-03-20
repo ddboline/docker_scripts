@@ -12,7 +12,7 @@ sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
 ### Use forked repos to handle annoying bugs...
-./build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.0-1
+./build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.1-1
 sudo dpkg -i ~/py2deb/*.deb
 sudo apt-get install -f -y --force-yes
 
