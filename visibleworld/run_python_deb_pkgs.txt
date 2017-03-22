@@ -9,6 +9,7 @@ git+http://GitLab02.visibleworld.com/Data_Analytics/vwpy.git@v1.2.6-1
 git+https://github.com/ddboline/PyFunctional.git@v1.0.0-1
 git+https://github.com/ddboline/statsmodels.git@v0.8.0rc1
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
+thrift==0.9.3
 attrs
 beautifulsoup4
 bitstring
@@ -41,6 +42,7 @@ gunicorn
 html
 hypothesis
 imagehash
+impyla
 jedi
 jinja2
 jsonschema
@@ -102,6 +104,7 @@ simplegeneric
 sklearn-compiledtrees
 sklearn-pandas
 slackclient
+snakebite
 sphinx
 sqlacodegen
 sqlalchemy
