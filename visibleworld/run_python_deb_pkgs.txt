@@ -80,6 +80,7 @@ pyprof2calltree
 pyquery
 pyscaffold
 pysparkling
+pytest_click
 pytest-cov
 pytest-instafail
 pytest-xdist

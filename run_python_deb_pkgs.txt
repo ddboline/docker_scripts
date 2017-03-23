@@ -106,6 +106,7 @@ pyquery
 pyscaffold
 pysparkling
 pystan
+pytest_click
 pytest-cov
 pytest-instafail
 pytest-xdist
