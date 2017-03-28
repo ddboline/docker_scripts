@@ -25,6 +25,7 @@ boxsdk
 cached-property
 celery
 chardet
+cherrypy
 click
 cloudpickle
 coverage
