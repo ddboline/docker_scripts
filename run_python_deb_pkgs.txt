@@ -44,6 +44,7 @@ fitbit
 flask
 flask-script
 flexx
+fn.py
 funcsigs
 functools32
 futures
