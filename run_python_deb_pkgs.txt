@@ -109,6 +109,7 @@ pysparkling
 pystan
 pytest_click
 pytest-cov
+pytest-flask
 pytest-instafail
 pytest-xdist
 python-dateutil
