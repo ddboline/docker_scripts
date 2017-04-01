@@ -45,6 +45,7 @@ fitbit
 flask
 flask-script
 flexx
+fn.py
 futures_then
 fuzzywuzzy
 gdbn
