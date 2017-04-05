@@ -105,6 +105,7 @@ pyparsing
 pyprof2calltree
 pyquery
 pyscaffold
+pyshp
 pysparkling
 pystan
 pytest_click
