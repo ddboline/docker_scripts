@@ -15,7 +15,7 @@ for PKG in `cat ./docker_scripts/run_python_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python_deb.sh $PKG
     sudo dpkg -i ~/py2deb/*.deb
-    sudo apt-get install -f -y --force-yes
+    sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
 done
 
 ./docker_scripts/build_coin.sh

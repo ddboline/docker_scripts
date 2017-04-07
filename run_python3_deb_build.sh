@@ -16,7 +16,7 @@ for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python3_deb.sh $PKG
     sudo dpkg -i ~/py2deb3/*.deb
-    sudo apt-get install -f -y --force-yes
+    sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
 done
 
 ### For the record, I really don't like python packages that depend on f***ing node...

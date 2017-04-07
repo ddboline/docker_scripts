@@ -10,5 +10,5 @@ for PKG in `cat run_python_deb_pkgs.txt`;
 do
     ./build_python_deb.sh $PKG
     sudo dpkg -i ~/py2deb/*.deb
-    sudo apt-get install -f -y --force-yes
+    sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
 done
