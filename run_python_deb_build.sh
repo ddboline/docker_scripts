@@ -11,33 +11,11 @@ sudo apt-get -o Dpkg::Options::="--force-overwrite" dist-upgrade -y
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev \
                         libpython2.7-dev freetds-bin freetds-dev udev libgeos++-dev
 
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/packaging.git@16.8-2
-./docker_scripts/build_python_deb.sh appdirs git+https://github.com/ddboline/cython@0.25.2.1
-sudo dpkg -i ~/py2deb/*.deb
-sudo apt-get install -f -y --force-yes
-
-### Use forked repos to handle annoying bugs...
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/numpy.git@v1.12.1-1
-sudo dpkg -i ~/py2deb/*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/scipy.git@v0.19.0-1
-sudo dpkg -i ~/py2deb/*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python_deb.sh python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
-sudo dpkg -i ~/py2deb/*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/entrypoints.git@0.2.2-1
-sudo dpkg -i ~/py2deb/*.deb
-sudo apt-get install -f -y --force-yes
-
-./docker_scripts/build_python_deb.sh git+https://github.com/ddboline/openant.git
-
 for PKG in `cat ./docker_scripts/run_python_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python_deb.sh $PKG
+    sudo dpkg -i ~/py2deb/*.deb
+    sudo apt-get install -f -y --force-yes
 done
 
 ./docker_scripts/build_coin.sh
