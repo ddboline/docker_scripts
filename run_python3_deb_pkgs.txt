@@ -1,5 +1,5 @@
 git+https://github.com/ddboline/packaging.git@16.8-2
-aiohttp
+git+https://github.com/aio-libs/aiohttp.git@2.0.6
 appdirs
 yarl
 git+https://github.com/ddboline/cython@0.25.2.1
