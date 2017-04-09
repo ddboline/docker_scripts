@@ -1,7 +1,19 @@
 git+https://github.com/ddboline/packaging.git@16.8-2
+aiohttp
+appdirs
+yarl
 git+https://github.com/ddboline/cython@0.25.2.1
 git+https://github.com/ddboline/numpy.git@v1.12.1-1
 git+https://github.com/ddboline/scipy.git@v0.19.0-1
+python-dateutil
+pytz
+cycler
+pandas
+matplotlib
+mock
+pyparsing
+pbr
+theano
 git+https://github.com/ddboline/entrypoints.git@0.2.2-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pytest.git@3.0.7.1
@@ -21,8 +33,6 @@ git+https://github.com/ddboline/statsmodels.git@v0.8.0
 git+https://github.com/ddboline/stravalib.git@0.6.6
 git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
-aiohttp
-appdirs
 asyncio
 attrs
 beautifulsoup4
@@ -38,7 +48,6 @@ click
 cloudpickle
 coverage
 cssselect
-cycler
 cytoolz
 dask
 deap
@@ -77,8 +86,6 @@ lasagne
 lockfile
 lxml
 markupsafe
-matplotlib
-mock
 mypy-lang
 nltk
 nolearn
@@ -87,12 +94,10 @@ numexpr
 odfpy
 onedrivesdk
 openpyxl
-pandas
 pandasql
 pathos
 path.py
 patsy
-pbr
 pdfkit
 pep8
 pexpect
@@ -110,7 +115,6 @@ pyflakes
 pylint
 pymonad
 pymssql
-pyparsing
 pyprof2calltree
 pyquery
 pyscaffold
@@ -122,12 +126,10 @@ pytest-cov
 pytest-flask
 pytest-instafail
 pytest-xdist
-python-dateutil
 python-debian
 deb-pkg-tools
 python-Levenshtein
 python-logstash
-pytz
 pyusb
 pyyaml
 records
@@ -151,7 +153,6 @@ sqlalchemy
 tables
 test-helper
 testpath
-theano
 tpot
 traitlets
 units
@@ -165,5 +166,4 @@ wheel
 wrapt
 xray
 yapf
-yarl
 youtube-dl

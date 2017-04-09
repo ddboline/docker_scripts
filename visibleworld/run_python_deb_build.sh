@@ -6,9 +6,13 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev \
                         libxslt1-dev libpython2.7-dev freetds-bin freetds-dev \
                         udev libgeos++-dev
 
+md5sum /home/${USER}/py2deb/*.deb > existing.log
 for PKG in `cat run_python_deb_pkgs.txt`;
 do
     ./build_python_deb.sh $PKG
-    sudo dpkg -i ~/py2deb/*.deb
+    md5sum /home/${USER}/py2deb/*.deb > modified.log
+    MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+    sudo dpkg -i $MODIFIED
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
+    mv modified.log existing.log
 done

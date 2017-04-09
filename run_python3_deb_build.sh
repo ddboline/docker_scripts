@@ -12,11 +12,15 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
                         freetds-bin freetds-dev udev libfreetype6-dev libpng12-dev pkg-config \
                         libgeos++-dev
 
+md5sum /home/${USER}/py2deb3/*.deb > existing.log
 for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python3_deb.sh $PKG
-    sudo dpkg -i ~/py2deb3/*.deb
+    md5sum /home/${USER}/py2deb3/*.deb > modified.log
+    MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+    sudo dpkg -i $MODIFIED
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
+    mv modified.log existing.log
 done
 
 ### For the record, I really don't like python packages that depend on f***ing node...
