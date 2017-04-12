@@ -54,6 +54,7 @@ impyla
 jedi
 jinja2
 jsonschema
+jupyter_client
 jupyter
 lockfile
 lxml
