@@ -11,7 +11,7 @@ git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@0.24.4-2
 git+http://GitLab02.visibleworld.com/Data_Analytics/pulp.git@test_v1.1.1
 git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@v1.0.2-2
-git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@test_v1.0.2
+git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@test_v1.0.3
 git+http://GitLab02.visibleworld.com/Data_Analytics/vwpy.git@test_v1.2.9
 git+https://github.com/ddboline/PyFunctional.git@v1.0.0-1
 git+https://github.com/ddboline/statsmodels.git@v0.8.0
