@@ -23,6 +23,7 @@ git+https://github.com/ddboline/statsmodels.git@v0.8.0
 git+https://github.com/ddboline/stravalib.git@0.6.6
 git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
+git+https://github.com/ddboline/testpath.git@0.3-1
 asyncio
 attrs
 beautifulsoup4
@@ -63,7 +64,6 @@ greenlet
 gspread
 gunicorn
 h5py
-html
 hypothesis
 imagehash
 jdcal
@@ -143,7 +143,6 @@ sqlacodegen
 sqlalchemy
 tables
 test-helper
-testpath
 tpot
 traitlets
 units
