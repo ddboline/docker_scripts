@@ -98,6 +98,7 @@ pyusb
 pyyaml
 records
 requests
+requests-cache
 requests-mock
 requests-toolbelt
 retrying
