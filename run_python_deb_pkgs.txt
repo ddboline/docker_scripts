@@ -24,6 +24,9 @@ git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3-1
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
+git+https://github.com/ddboline/jupyter_console.git@5.1.0-1
+git+https://github.com/ddboline/ipykernel.git@4.6.1-1
+git+https://github.com/ddboline/jupyter.git@1.1.0-1
 attrs
 beautifulsoup4
 bitstring
@@ -74,8 +77,6 @@ jdcal
 jedi
 jinja2
 jsonschema
-jupyter_client
-jupyter
 keras
 lasagne
 lockfile
@@ -133,6 +134,7 @@ requests-cache
 requests-mock
 requests-toolbelt
 retrying
+rocker
 scikit-image
 scikit-learn
 scikit-neuralnetwork

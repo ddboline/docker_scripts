@@ -129,6 +129,7 @@ requests-cache
 requests-mock
 requests-toolbelt
 retrying
+rocker
 scikit-image
 scikit-learn
 scikit-neuralnetwork
