@@ -108,6 +108,7 @@ ptyprocess
 py4j
 pydrive
 pyflakes
+pyhive
 pylint
 pymonad
 pymssql

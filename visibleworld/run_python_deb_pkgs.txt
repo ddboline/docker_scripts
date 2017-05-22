@@ -80,6 +80,7 @@ psycopg2
 ptyprocess
 py4j
 pyflakes
+pyhive
 pylint
 pymonad
 pymssql
