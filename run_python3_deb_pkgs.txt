@@ -65,6 +65,7 @@ gunicorn
 h5py
 hypothesis
 imagehash
+ipython
 ipykernel
 jdcal
 jedi
