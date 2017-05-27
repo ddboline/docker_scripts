@@ -54,6 +54,7 @@ flask
 flask-script
 flexx
 fn.py
+funcy
 futures_then
 fuzzywuzzy
 gdbn
@@ -132,6 +133,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
+rx
 scikit-image
 scikit-learn
 scikit-neuralnetwork

@@ -60,6 +60,7 @@ flexx
 fn.py
 funcsigs
 functools32
+funcy
 futures
 futures_then
 fuzzywuzzy
@@ -137,6 +138,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
+rx
 scikit-image
 scikit-learn
 scikit-neuralnetwork

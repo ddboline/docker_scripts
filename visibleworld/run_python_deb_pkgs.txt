@@ -46,6 +46,7 @@ flask-script
 fn.py
 funcsigs
 functools32
+funcy
 futures
 futures_then
 fuzzywuzzy
@@ -107,6 +108,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
+rx
 scikit-learn
 setuptools
 setuptools_scm
