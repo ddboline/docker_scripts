@@ -4,7 +4,8 @@ ECHO=""
 SUDO=""
 $SUDO echo ""
 D=`date +%Y%m%d%H%M%S`
-TMP="/tmp/tmp.docker.`head -c1000 /dev/urandom | tr -dc [:alpha:][:digit:] | head -c 12; echo ;`"
+UNIQ=`head -c1000 /dev/urandom | tr -dc [:alpha:][:digit:] | head -c 12; echo ;`
+TMP="/tmp/tmp.docker.${UNIQ}"
 echo $1
 if [ -z $1 ]; then
     $SUDO docker run -it --name=bash_${D} --cidfile="$TMP" \
