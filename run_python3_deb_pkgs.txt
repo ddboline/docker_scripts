@@ -68,12 +68,12 @@ h5py
 hypothesis
 imagehash
 ipython
+jupyter_client
 ipykernel
 jdcal
 jedi
 jinja2
 jsonschema
-jupyter_client
 jupyter
 keras
 lasagne

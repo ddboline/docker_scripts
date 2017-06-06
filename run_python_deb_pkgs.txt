@@ -25,6 +25,7 @@ git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-1
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
 jupyter_client
+git+https://github.com/ddboline/ipywidgets.git@6.0.0-1
 git+https://github.com/ddboline/jupyter_console.git@5.1.0-1
 git+https://github.com/ddboline/ipykernel.git@4.6.1-1
 git+https://github.com/ddboline/jupyter.git@1.1.0-1
@@ -73,6 +74,7 @@ gspread
 gunicorn
 h5py
 html
+html5lib
 hypothesis
 imagehash
 ipykernel
@@ -161,6 +163,7 @@ validictory
 vcrpy
 vcrpy-unittest
 voluptuous
+webencodings
 websockify
 wget
 wheel
