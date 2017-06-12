@@ -110,6 +110,7 @@ pyhive
 pylint
 pymonad
 pymssql
+pypandoc
 pyprof2calltree
 pyquery
 pyscaffold

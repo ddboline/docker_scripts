@@ -10,7 +10,7 @@ sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" dist-upgrade -y
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev libpython3.5-dev \
                         freetds-bin freetds-dev udev libfreetype6-dev libpng12-dev pkg-config \
-                        libgeos++-dev
+                        libgeos++-dev pandoc
 
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
 for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
