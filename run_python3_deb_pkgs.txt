@@ -1,10 +1,10 @@
 git+https://github.com/ddboline/packaging.git@16.8-2
 aiohttp appdirs yarl
 git+https://github.com/ddboline/cython@0.25.2.1
-git+https://github.com/ddboline/numpy.git@v1.12.1-1
+git+https://github.com/ddboline/numpy.git@v1.13.0-1
 git+https://github.com/ddboline/scipy.git@v0.19.0-1
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
-git+https://github.com/ddboline/entrypoints.git@0.2.2-1
+git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pytest.git@3.1.1-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
@@ -68,12 +68,12 @@ h5py
 hypothesis
 imagehash
 ipython
+jupyter_client
 ipykernel
 jdcal
 jedi
 jinja2
 jsonschema
-jupyter_client
 jupyter
 keras
 lasagne
@@ -134,6 +134,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
+rustypy
 rx
 scikit-image
 scikit-learn
