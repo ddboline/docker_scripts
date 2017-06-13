@@ -108,6 +108,7 @@ pydrive
 pyflakes
 pyhive
 pylint
+pymc3
 pymonad
 pymssql
 pypandoc

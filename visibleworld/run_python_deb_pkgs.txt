@@ -86,6 +86,7 @@ py4j
 pyflakes
 pyhive
 pylint
+pymc3
 pymonad
 pymssql
 pyprof2calltree
