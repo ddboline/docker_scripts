@@ -6,7 +6,7 @@ git+https://github.com/ddboline/scipy.git@v0.19.0-1
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/openant.git
-git+https://github.com/ddboline/pytest.git@3.1.1-1
+git+https://github.com/ddboline/pytest.git@3.1.2-1
 git+https://github.com/ddboline/ipython@5.4.0-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@0.25-1
@@ -14,7 +14,7 @@ git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/compose.git@1.13.0-1
 git+https://github.com/ddboline/garmin_app.git
 git+https://github.com/ddboline/movie_collection_app.git
-git+https://github.com/ddboline/pulp.git@1.6.4
+git+https://github.com/ddboline/pulp.git@1.6.5
 git+https://github.com/ddboline/PyFunctional.git@v1.0.0-1
 git+https://github.com/ddboline/roku_app.git
 git+https://github.com/ddboline/security_log_analysis.git
