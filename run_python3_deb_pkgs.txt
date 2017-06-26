@@ -68,6 +68,7 @@ gunicorn
 h5py
 hypothesis
 imagehash
+imdbpie
 jupyter_client
 ipykernel
 jdcal

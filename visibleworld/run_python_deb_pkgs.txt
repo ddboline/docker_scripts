@@ -58,6 +58,7 @@ gunicorn
 html
 hypothesis
 imagehash
+imdbpie
 impyla
 ipykernel
 jedi
