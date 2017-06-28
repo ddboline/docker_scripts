@@ -137,7 +137,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
-rustypy
+git+https://github.com/iduartgomez/rustypy.git
 rx
 scikit-image
 scikit-learn
