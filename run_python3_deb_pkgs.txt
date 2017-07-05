@@ -26,6 +26,7 @@ git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-1
 jupyter_client
 git+https://github.com/ddboline/ipywidgets.git@6.0.0-1
+git+https://github.com/ddboline/pymc3.git@v3.1-1
 asyncio
 attrs
 beautifulsoup4
@@ -110,7 +111,6 @@ pydrive
 pyflakes
 pyhive
 pylint
-pymc3
 pymonad
 pymssql
 pypandoc
