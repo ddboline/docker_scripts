@@ -114,6 +114,7 @@ retrying
 rocker
 rx
 scikit-learn
+scikit-plot
 setuptools
 setuptools_scm
 sharedarray

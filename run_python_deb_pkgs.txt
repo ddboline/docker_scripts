@@ -147,6 +147,7 @@ rx
 scikit-image
 scikit-learn
 scikit-neuralnetwork
+scikit-plot
 seaborn
 setuptools
 setuptools_scm
