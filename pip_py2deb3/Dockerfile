@@ -10,3 +10,5 @@ RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y \
                                         python3-setuptools python3-py2deb
 RUN mkdir -p /home/ubuntu/py2deb3
 RUN sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
+# This is a terrible hack...
+RUN sudo rm -rf /usr/lib/python3/dist-packages/pkg_resources
