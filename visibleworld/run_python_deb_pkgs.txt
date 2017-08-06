@@ -22,7 +22,6 @@ git+https://github.com/ddboline/ipywidgets.git@6.0.0-1
 git+https://github.com/ddboline/jupyter_console.git@5.1.0-1
 git+https://github.com/ddboline/ipykernel.git@4.6.1
 git+https://github.com/ddboline/jupyter.git@1.1.0-1
-git+https://github.com/ddboline/requests.git@v2.18.1-1
 thrift==0.9.3
 attrs
 beautifulsoup4

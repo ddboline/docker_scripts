@@ -27,7 +27,6 @@ git+https://github.com/ddboline/testpath.git@0.3.1-1
 jupyter_client
 git+https://github.com/ddboline/ipywidgets.git@6.0.0-1
 git+https://github.com/ddboline/pymc3.git@v3.1-1
-git+https://github.com/ddboline/requests.git@v2.18.1-1
 asyncio
 attrs
 beautifulsoup4
@@ -133,6 +132,7 @@ python-logstash
 pyusb
 pyyaml
 records
+requests
 requests-cache
 requests-mock
 requests-toolbelt
