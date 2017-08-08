@@ -153,6 +153,8 @@ setuptools
 setuptools_scm
 sharedarray
 simplegeneric
+sklearn-compiledtrees
+sklearn-pandas
 slackclient
 sphinx
 sqlacodegen

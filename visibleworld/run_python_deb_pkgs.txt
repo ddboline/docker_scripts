@@ -11,3 +11,5 @@ git+http://GitLab02.visibleworld.com/Data_Analytics/util_python.git@test_1.0.5
 git+http://GitLab02.visibleworld.com/Data_Analytics/vwasync.git@test_v1.0.4
 git+http://GitLab02.visibleworld.com/Data_Analytics/vwpy.git@test_v1.2.18
 thrift==0.9.3
+impyla
+snakebite
