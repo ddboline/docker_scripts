@@ -28,6 +28,9 @@ RUN export uid=1000 gid=1000 && \
 
 RUN printf "[global]\n\nindex-url = https://repos.visibleworld.com/artifactory/api/pypi/pypi-virtual/simple\n" >> /home/ubuntu/.pip/pip.conf
 
+RUN sudo bash -c "echo deb ssh://danielb@alg-dev01.visibleworld.com/home/danielb/setup_files/var/www/html/deb/xenial/solver_python ./ > /etc/apt/sources.list.d/py2deb.list"
+RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y python-vwpy python-vwasync python-util-python
+
 USER ubuntu
 ENV USER ubuntu
 ENV HOME /home/ubuntu
