@@ -45,6 +45,7 @@ cherrypy
 click
 cloudpickle
 coverage
+cryptography
 cssselect
 cymem
 cytoolz
