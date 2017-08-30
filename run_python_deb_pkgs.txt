@@ -79,6 +79,7 @@ gspread
 gunicorn
 h5py
 html
+webencodings
 html5lib
 httpretty
 httpretty_fixtures
@@ -188,7 +189,6 @@ validictory
 vcrpy
 vcrpy-unittest
 voluptuous
-webencodings
 websockify
 wget
 wheel
