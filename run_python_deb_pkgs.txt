@@ -24,7 +24,7 @@ git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-1
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
-jupyter_client
+jupyter_client webencodings html5lib
 git+https://github.com/ddboline/ipywidgets.git@6.0.1-1
 git+https://github.com/ddboline/jupyter_console.git@5.1.0-1
 git+https://github.com/ddboline/ipykernel.git@4.6.1-1
@@ -79,8 +79,6 @@ gspread
 gunicorn
 h5py
 html
-webencodings
-html5lib
 httpretty
 httpretty_fixtures
 hypothesis
