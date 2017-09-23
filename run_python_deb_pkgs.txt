@@ -1,6 +1,6 @@
 git+https://github.com/ddboline/packaging.git@16.8-2
 appdirs
-git+https://github.com/ddboline/cython@0.26.1-1
+git+https://github.com/ddboline/cython@0.27-1
 git+https://github.com/ddboline/numpy.git@v1.13.1-2
 git+https://github.com/ddboline/scipy.git@v0.19.1-2
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
@@ -127,6 +127,7 @@ py4j
 pydrive
 pyflakes
 pyhive
+pyinstaller
 pylint
 pymc3
 pymonad
@@ -164,6 +165,7 @@ scikit-neuralnetwork
 scikit-plot
 seaborn
 setuptools
+setuptools-rust
 setuptools_scm
 sharedarray
 simplegeneric
