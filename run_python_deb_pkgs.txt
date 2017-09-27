@@ -75,6 +75,8 @@ gdbn
 gensim
 getlyrics
 greenlet
+grpcio
+grpcio-tools
 gspread
 gunicorn
 h5py
