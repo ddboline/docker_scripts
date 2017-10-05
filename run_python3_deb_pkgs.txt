@@ -181,6 +181,7 @@ test-helper
 thinc
 tpot
 traitlets
+trakt
 ujson
 units
 validictory
