@@ -9,6 +9,7 @@ git+https://github.com/ddboline/pytest.git@3.2.3-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/ipython@5.5.0-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
+git+https://github.com/ddboline/py2deb.git@1.0-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/compose.git@1.16.1-1
 git+https://github.com/ddboline/garmin_app.git
@@ -123,7 +124,6 @@ psycopg2
 ptyprocess
 pulp
 py2-ipaddress
-py2deb
 py4j
 pydrive
 pyflakes
