@@ -11,7 +11,7 @@ svn co --non-interactive --trust-server-cert-failures=unknown-ca https://project
 
 cd coin_Cbc
 
-./configure --enable-cbc-parallel --prefix=/usr
+./configure --enable-cbc-parallel=yes --prefix=/usr
 make
 # printf "\ninstall:\n\tmv fit2tcx /usr/bin/\n" >> Makefile
 printf "COIN-OR Linear Program Solver\n" > description-pak
