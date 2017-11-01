@@ -106,7 +106,6 @@ path.py
 patsy
 pbr
 pdfkit
-pep8
 pexpect
 pickleshare
 pika
@@ -119,6 +118,7 @@ psycopg2
 ptyprocess
 pulp
 py4j
+pycodestyle
 pydrive
 pyflakes
 pyhive

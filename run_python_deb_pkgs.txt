@@ -111,7 +111,6 @@ path.py
 patsy
 pbr
 pdfkit
-pep8
 pexpect
 pickleshare
 pika
@@ -125,6 +124,7 @@ ptyprocess
 pulp
 py2-ipaddress
 py4j
+pycodestyle
 pydrive
 pyflakes
 pyhive
