@@ -1,6 +1,6 @@
 git+https://github.com/ddboline/packaging.git@16.8-2
 aiohttp appdirs yarl
-git+https://github.com/ddboline/cython@0.27.1-1
+git+https://github.com/ddboline/cython@0.27.3-1
 git+https://github.com/ddboline/numpy.git@v1.13.3-1
 git+https://github.com/ddboline/scipy.git@v1.0.0-1
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
@@ -11,7 +11,6 @@ git+https://github.com/ddboline/ipython@6.2.1-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@1.0-1
 git+https://github.com/ddboline/antfs-cli.git
-git+https://github.com/ddboline/compose.git@1.16.1-1
 git+https://github.com/ddboline/garmin_app.git
 git+https://github.com/ddboline/hangups.git@v0.4.3-1
 git+https://github.com/ddboline/movie_collection_app.git
@@ -22,7 +21,7 @@ git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-1
 jupyter_client
-git+https://github.com/ddboline/ipywidgets.git@7.0.1-1
+git+https://github.com/ddboline/ipywidgets.git@7.0.3-1
 git+https://github.com/ddboline/pymc3.git@v3.1-1
 argparse
 asyncio
@@ -49,6 +48,7 @@ deap
 delegator.py
 distributed
 docker
+docker-compose
 docutils
 dropbox
 editdistance
