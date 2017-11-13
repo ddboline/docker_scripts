@@ -25,11 +25,6 @@ done
 ./docker_scripts/build_coin.sh
 ./docker_scripts/build_fit2tcx.sh
 
-### For the record, I really don't like python packages that depend on f***ing node...
-# ./docker_scripts/build_python_deb.sh jupyter
-
-# md5sum /home/${USER}/py2deb/*.deb > modified.log
-# MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
 MODIFIED=/home/${USER}/py2deb/*.deb
 if [ -n "$MODIFIED" ]; then
     ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ubuntu/setup_files/deb/py2deb/py2deb"

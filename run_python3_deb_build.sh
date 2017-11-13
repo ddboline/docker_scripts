@@ -23,13 +23,6 @@ do
     mv modified.log existing.log
 done
 
-### For the record, I really don't like python packages that depend on f***ing node...
-# sudo apt-get install -y npm
-# sudo ln -s /usr/bin/nodejs /usr/bin/node
-# ./docker_scripts/build_python3_deb.sh jupyter
-
-# md5sum /home/${USER}/py2deb3/*.deb > modified.log
-# MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
     ssh ubuntu@ddbolineinthecloud.mooo.com "mkdir -p /home/ubuntu/setup_files/deb/py2deb3/py2deb3"

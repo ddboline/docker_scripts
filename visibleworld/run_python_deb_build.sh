@@ -16,3 +16,8 @@ do
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
     mv modified.log existing.log
 done
+
+MODIFIED=/home/${USER}/py2deb/*.deb
+if [ -n "$MODIFIED" ]; then
+    scp $MODIFIED ddboline@danielb.visibleworld.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+fi

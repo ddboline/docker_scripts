@@ -25,6 +25,8 @@ git+https://github.com/ddboline/ipywidgets.git@7.0.3-1
 git+https://github.com/ddboline/pymc3.git@v3.1-1
 argparse
 asyncio
+asyncpg
+asyncpgsa
 attrs
 beautifulsoup4
 bitstring
