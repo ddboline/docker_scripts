@@ -23,6 +23,7 @@ git+https://github.com/ddboline/testpath.git@0.3.1-1
 jupyter_client
 git+https://github.com/ddboline/ipywidgets.git@7.0.5-1
 git+https://github.com/ddboline/pymc3.git@v3.2-1
+git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
 argparse
 asyncio
 asyncpg
