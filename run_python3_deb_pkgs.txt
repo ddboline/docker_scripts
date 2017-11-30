@@ -5,7 +5,7 @@ git+https://github.com/ddboline/numpy.git@v1.13.3-1
 git+https://github.com/ddboline/scipy.git@v1.0.0-1
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
-git+https://github.com/ddboline/pytest.git@3.2.5-1
+git+https://github.com/ddboline/pytest.git@3.3.0-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/ipython@6.2.1-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
