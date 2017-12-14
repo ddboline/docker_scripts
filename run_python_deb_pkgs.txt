@@ -147,6 +147,7 @@ pytest-flask
 pytest-instafail
 pytest-xdist
 python-debian
+pytype
 deb-pkg-tools
 python-Levenshtein
 python-logstash
