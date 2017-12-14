@@ -25,6 +25,7 @@ git+https://github.com/ddboline/ipywidgets.git@7.0.5-1
 git+https://github.com/ddboline/pymc3.git@v3.2-1
 asyncpg
 git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
+git+https://github.com/ddboline/featuretools.git@v0.1.14-1
 argparse
 asyncio
 asyncpgsa
