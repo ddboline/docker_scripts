@@ -137,6 +137,7 @@ pyscaffold
 pyshp
 pysparkling
 pystan
+pystemmer
 pytest_click
 pytest-cov
 pytest-flask

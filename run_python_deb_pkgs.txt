@@ -149,6 +149,7 @@ pytest-instafail
 pytest-xdist
 python-debian
 deb-pkg-tools
+pystemmer
 python-Levenshtein
 python-logstash
 pyusb
