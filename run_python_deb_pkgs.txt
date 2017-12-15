@@ -150,6 +150,7 @@ pytest-xdist
 python-debian
 pytype
 deb-pkg-tools
+pystemmer
 python-Levenshtein
 python-logstash
 pyusb
