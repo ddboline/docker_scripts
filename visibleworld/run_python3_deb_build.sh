@@ -9,7 +9,7 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
 for PKG in `cat run_python_deb_pkgs.txt`;
 do
-    ./build_python_deb.sh $PKG
+    ./build_python3_deb.sh $PKG
     md5sum /home/${USER}/py2deb/*.deb > modified.log
     MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
     sudo dpkg --force-overwrite -i $MODIFIED
