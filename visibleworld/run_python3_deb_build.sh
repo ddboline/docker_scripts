@@ -6,7 +6,7 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
                         freetds-bin freetds-dev udev libfreetype6-dev libpng12-dev pkg-config \
                         libgeos++-dev pandoc
 
-md5sum /home/${USER}/py2deb/*.deb > existing.log
+md5sum /home/${USER}/py2deb3/*.deb > existing.log
 for PKG in `cat run_python_deb_pkgs.txt`;
 do
     ./build_python_deb.sh $PKG
@@ -16,3 +16,8 @@ do
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
     mv modified.log existing.log
 done
+
+MODIFIED=/home/${USER}/py2deb3/*.deb
+if [ -n "$MODIFIED" ]; then
+    scp $MODIFIED ddboline@danielb.visibleworld.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
+fi
