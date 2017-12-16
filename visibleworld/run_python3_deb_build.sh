@@ -7,7 +7,7 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
                         libgeos++-dev pandoc
 
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
-for PKG in `cat run_python_deb_pkgs.txt`;
+for PKG in `cat run_python3_deb_pkgs.txt`;
 do
     ./build_python3_deb.sh $PKG
     md5sum /home/${USER}/py2deb3/*.deb > modified.log
