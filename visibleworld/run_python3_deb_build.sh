@@ -10,7 +10,7 @@ md5sum /home/${USER}/py2deb3/*.deb > existing.log
 for PKG in `cat run_python_deb_pkgs.txt`;
 do
     ./build_python3_deb.sh $PKG
-    md5sum /home/${USER}/py2deb/*.deb > modified.log
+    md5sum /home/${USER}/py2deb3/*.deb > modified.log
     MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
     sudo dpkg --force-overwrite -i $MODIFIED
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
