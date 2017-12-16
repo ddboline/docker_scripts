@@ -27,7 +27,7 @@ RUN export uid=1000 gid=1000 && \
     chown ${uid}:${gid} -R /home/ubuntu
 
 RUN sudo bash -c "echo deb ssh://danielb@alg-dev01.visibleworld.com/home/danielb/setup_files/var/www/html/deb/xenial/solver_python ./ > /etc/apt/sources.list.d/py2deb.list"
-RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y python-vwpy python-vwasync python-util-python
+RUN sudo bash -c "echo deb ssh://danielb@alg-dev01.visibleworld.com/home/danielb/setup_files/var/www/html/deb/xenial/python3/solver_python ./ > /etc/apt/sources.list.d/py2deb3.list"
 
 USER ubuntu
 ENV USER ubuntu
