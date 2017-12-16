@@ -32,5 +32,5 @@ fi
 
 for REPO in $REPOS;
 do
-    py2deb -r /home/${USER}/py2deb3 -y $OPTS -- --upgrade $REPO
+    py2deb -r /home/${USER}/py2deb3 -y $OPTS --name-prefix=python3 -- --upgrade $REPO
 done
