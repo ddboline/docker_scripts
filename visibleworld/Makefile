@@ -1,7 +1,7 @@
 all:
 	cp ../run_testing_local.sh .
 	cp ../keys_vworld.tar.gz .
-	docker build -t danielb/danielb_keys:v1.0.0.3 .
+	docker build -t danielb/danielb_keys:v1.0.0.4 .
 
 clean:
 	rm run_testing*.sh keys_vworld.tar.gz
