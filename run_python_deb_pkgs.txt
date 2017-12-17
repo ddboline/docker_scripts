@@ -27,6 +27,7 @@ git+https://github.com/ddboline/ipykernel.git@4.6.1-1
 git+https://github.com/ddboline/jupyter.git@1.1.0-1
 git+https://github.com/ddboline/pymc3.git@v3.2-1
 git+https://github.com/ddboline/featuretools.git@v0.1.14-1
+git+https://github.com/ddboline/stravalib.git@0.7.0-2
 argparse
 asyncio
 attrs
@@ -184,7 +185,6 @@ sputnik
 sqlacodegen
 sqlalchemy
 statsmodels
-stravalib
 tables
 test-helper
 thinc

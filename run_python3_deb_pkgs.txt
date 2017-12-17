@@ -26,6 +26,7 @@ git+https://github.com/ddboline/pymc3.git@v3.2-1
 asyncpg
 git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
 git+https://github.com/ddboline/featuretools.git@v0.1.14-1
+git+https://github.com/ddboline/stravalib.git@0.7.0-2
 argparse
 asyncio
 asyncpgsa
@@ -179,7 +180,6 @@ spyder
 sqlacodegen
 sqlalchemy
 statsmodels
-stravalib
 tables
 test-helper
 thinc
