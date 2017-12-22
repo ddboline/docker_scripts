@@ -94,6 +94,7 @@ lasagne
 lockfile
 lxml
 markupsafe
+mssql-cli
 murmurhash
 mypy-lang
 nbsphinx

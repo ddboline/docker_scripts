@@ -97,6 +97,7 @@ lasagne
 lockfile
 lxml
 markupsafe
+mssql-cli
 murmurhash
 nbsphinx
 nltk
