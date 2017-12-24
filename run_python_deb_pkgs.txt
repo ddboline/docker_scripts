@@ -191,7 +191,7 @@ test-helper
 thinc
 tpot
 traitlets
-trakt
+trakt.py
 ujson
 units
 validictory
