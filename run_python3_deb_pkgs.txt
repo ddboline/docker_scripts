@@ -30,7 +30,6 @@ git+https://github.com/ddboline/featuretools.git@v0.1.16-1
 git+https://github.com/ddboline/stravalib.git@0.7.0-2
 argparse
 asyncio
-asyncpgsa
 attrs
 beautifulsoup4
 bitstring
