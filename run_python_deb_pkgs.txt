@@ -76,6 +76,7 @@ fuzzywuzzy
 gdbn
 gensim
 getlyrics
+gmusicapi
 greenlet
 grpcio
 grpcio-tools
