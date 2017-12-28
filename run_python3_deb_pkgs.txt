@@ -9,7 +9,7 @@ git+https://github.com/ddboline/pytest.git@3.3.1-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/ipython@6.2.1-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
-git+https://github.com/ddboline/py2deb.git@1.0-1
+git+https://github.com/ddboline/py2deb.git@1.0-2
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/garmin_app.git
 git+https://github.com/ddboline/hangups.git@v0.4.3-1
@@ -21,8 +21,8 @@ git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-2
 jupyter_client
-git+https://github.com/ddboline/jedi.git@v0.12.0-1
-git+https://github.com/ddboline/ipywidgets.git@7.0.5-1
+git+https://github.com/ddboline/jedi.git@v0.12.0-2
+ipywidgets
 git+https://github.com/ddboline/pymc3.git@v3.2-1
 asyncpg
 git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
