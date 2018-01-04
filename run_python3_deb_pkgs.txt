@@ -126,6 +126,7 @@ ptyprocess
 pulp
 py4j
 pycodestyle
+pydocstyle
 pydrive
 pyflakes
 pyhive

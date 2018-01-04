@@ -129,6 +129,7 @@ pulp
 py2-ipaddress
 py4j
 pycodestyle
+pydocstyle
 pydrive
 pyflakes
 pyhive
