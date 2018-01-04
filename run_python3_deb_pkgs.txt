@@ -99,6 +99,7 @@ mssql-cli
 murmurhash
 mypy-lang
 nbsphinx
+networkx
 nltk
 nolearn
 nuitka
@@ -118,6 +119,7 @@ pickleshare
 pika
 pillow
 pip
+pomegranate
 preshed
 protobuf
 protobuf-setuptools
