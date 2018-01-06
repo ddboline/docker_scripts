@@ -152,7 +152,6 @@ pytest-flask
 pytest-instafail
 pytest-xdist
 python-debian
-pytype
 deb-pkg-tools
 pystemmer
 python-Levenshtein

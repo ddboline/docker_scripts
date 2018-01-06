@@ -9,3 +9,4 @@ sudo apt-get install -y --force-yes python3-pip python3-dev lintian liblapack-de
                                         python3-setuptools python3-py2deb
 mkdir -p /home/ubuntu/py2deb3
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
+sudo rm -rf /usr/lib/python3/dist-packages/pkg_resources
