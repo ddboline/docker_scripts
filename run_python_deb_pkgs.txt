@@ -121,7 +121,6 @@ pickleshare
 pika
 pillow
 pip
-pomegranate
 preshed
 protobuf
 protobuf-setuptools
