@@ -36,15 +36,15 @@ if [ ! -e "/usr/bin/py2deb" ]; then
 
     sudo apt-get update
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
-                                        python3-pip python3-py2deb python3-dev lintian liblapack-dev libblas-dev \
-                                        dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
-                                        python3-setuptools
-    mkdir -p /home/ubuntu/py2deb3
+                                python3-pip python3-py2deb python3-dev lintian liblapack-dev libblas-dev \
+                                dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
+                                python3-setuptools
+    mkdir -p /home/${USER}/py2deb3
 fi
 
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
 
 for REPO in $REPOS;
 do
-    py2deb -r /home/ubuntu/py2deb3 -y $OPTS --name-prefix=python3 -- --upgrade $REPO
+    py2deb -r /home/${USER}/py2deb3 -y $OPTS --name-prefix=python3 -- --upgrade $REPO
 done

@@ -14,6 +14,7 @@ md5sum /home/${USER}/py2deb/*.deb > existing.log
 for PKG in `cat ./docker_scripts/run_python_deb_pkgs.txt`;
 do
     ./docker_scripts/build_python_deb.sh $PKG
+    rm -rf /tmp/pip-*-build
     md5sum /home/${USER}/py2deb/*.deb > modified.log
     MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
     sudo dpkg --force-overwrite -i $MODIFIED
