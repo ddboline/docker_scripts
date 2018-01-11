@@ -66,6 +66,7 @@ flask
 flask-script
 flexx
 fn.py
+freezegun
 funcsigs
 functools32
 funcy

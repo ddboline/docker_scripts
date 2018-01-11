@@ -67,6 +67,7 @@ flask
 flask-script
 flexx
 fn.py
+freezegun
 funcy
 futures_then
 fuzzywuzzy
