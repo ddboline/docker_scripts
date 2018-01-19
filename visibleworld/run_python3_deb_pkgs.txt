@@ -11,6 +11,7 @@ git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/util_python.git@test_1.0.
 git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/vwasync.git@test_v1.0.4
 git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/vwpy.git@test_python3
 git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/vw_formats@test_python3
+git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/hy_inventory@test_1.0.10
 thrift==0.9.3
 impyla
 snakebite
