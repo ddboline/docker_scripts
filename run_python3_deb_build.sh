@@ -11,10 +11,11 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
                         freetds-bin freetds-dev udev libfreetype6-dev libpng12-dev pkg-config \
                         libgeos++-dev pandoc
 
+touch build.log
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
 for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
 do
-    ./docker_scripts/build_python3_deb.sh $PKG
+    ./docker_scripts/build_python3_deb.sh $PKG 2>&1 >> build.log
     rm -rf /tmp/pip-*-build
     md5sum /home/${USER}/py2deb3/*.deb > modified.log
     MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
@@ -25,5 +26,5 @@ done
 
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
-    scp $MODIFIED ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
+    scp $MODIFIED build.log ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
 fi
