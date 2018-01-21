@@ -143,7 +143,6 @@ pymssql
 pypandoc
 pyprof2calltree
 pyquery
-pyscaffold
 pyshp
 pysparkling
 pystan
