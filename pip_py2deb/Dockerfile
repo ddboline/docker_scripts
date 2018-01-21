@@ -10,3 +10,4 @@ RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y \
                                         python-setuptools python-py2deb git-buildpackage
 RUN mkdir -p /home/ubuntu/py2deb
 RUN sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
+RUN cd /home/ubuntu/docker_scripts && sudo -u ubuntu git pull

@@ -12,3 +12,4 @@ RUN mkdir -p /home/ubuntu/py2deb3
 RUN sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
 # This is a terrible hack...
 RUN sudo rm -rf /usr/lib/python3/dist-packages/pkg_resources
+RUN cd /home/ubuntu/docker_scripts && sudo -u ubuntu git pull
