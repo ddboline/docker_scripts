@@ -1,5 +1,11 @@
 #!/bin/bash
 
+cd ~/docker_scripts/
+
+git pull
+
+cd ~/docker_scripts/visibleworld
+
 sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" dist-upgrade -y
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev \
