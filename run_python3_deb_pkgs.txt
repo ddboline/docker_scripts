@@ -20,7 +20,8 @@ git+https://github.com/ddboline/security_log_analysis.git
 git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-2
-jupyter_client
+git+https://github.com/ddboline/spyder.git@v3.2.6-1
+jupyter_client webencodings html5lib jupyterlab
 git+https://github.com/ddboline/jedi.git@v0.12.0-2
 ipywidgets
 git+https://github.com/ddboline/pymc3.git@v3.2-1
@@ -184,6 +185,7 @@ sputnik
 sqlacodegen
 sqlalchemy
 statsmodels
+stldecompose
 tables
 test-helper
 thinc

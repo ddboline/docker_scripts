@@ -187,6 +187,7 @@ sputnik
 sqlacodegen
 sqlalchemy
 statsmodels
+stldecompose
 tables
 test-helper
 thinc
