@@ -24,7 +24,7 @@ git+https://github.com/ddboline/jedi.git@v0.12.0-2
 ipywidgets
 git+https://github.com/ddboline/jupyter_console.git@5.1.0-1
 git+https://github.com/ddboline/jupyter.git@1.1.0-1
-git+https://github.com/ddboline/pymc3.git@v3.2-1
+git+https://github.com/ddboline/pymc3.git@v3.3-1
 git+https://github.com/ddboline/featuretools.git@v0.1.17-1
 git+https://github.com/ddboline/stravalib.git@0.7.0-2
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
