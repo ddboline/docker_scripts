@@ -48,6 +48,7 @@ cryptography
 cssselect
 cymem
 cytoolz
+dash
 dask
 deap
 delegator.py
@@ -122,6 +123,7 @@ pickleshare
 pika
 pillow
 pip
+plotly
 preshed
 protobuf
 protobuf-setuptools
