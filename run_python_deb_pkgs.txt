@@ -101,6 +101,7 @@ lxml
 markupsafe
 mssql-cli
 murmurhash
+mysqlclient
 nbsphinx
 networkx
 nltk

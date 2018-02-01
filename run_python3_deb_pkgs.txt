@@ -104,6 +104,7 @@ markupsafe
 mssql-cli
 murmurhash
 mypy-lang
+mysqlclient
 nbsphinx
 networkx
 nltk
