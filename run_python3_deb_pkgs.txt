@@ -32,6 +32,7 @@ git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
 git+https://github.com/ddboline/featuretools.git@v0.1.17-1
 git+https://github.com/ddboline/stravalib.git@0.7.0-2
 git+https://github.com/ddboline/spyder.git@v3.2.6-1
+git+https://github.com/ddboline/compose.git@1.19.0-1
 argparse
 asyncio
 attrs
@@ -58,7 +59,6 @@ deap
 delegator.py
 distributed
 docker
-docker-compose
 docutils
 dropbox
 editdistance
@@ -88,6 +88,7 @@ h5py
 httpretty
 httpretty_fixtures
 hypothesis
+idna
 imagehash
 imdbpie
 ipykernel
@@ -142,6 +143,7 @@ pyinstaller
 pylint
 pymonad
 pymssql
+pyopenssl
 pypandoc
 pyprof2calltree
 pyquery
