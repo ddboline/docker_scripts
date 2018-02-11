@@ -1,3 +1,4 @@
 run_testing_ssh.sh~
 *.gz
 hosts
+*.gpg
