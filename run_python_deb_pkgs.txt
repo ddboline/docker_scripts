@@ -170,6 +170,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
+rpyc
 rx
 scikit-image
 scikit-learn

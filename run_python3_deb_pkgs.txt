@@ -169,6 +169,7 @@ requests-mock
 requests-toolbelt
 retrying
 rocker
+rpyc
 git+https://github.com/iduartgomez/rustypy.git
 rx
 scikit-image
