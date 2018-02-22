@@ -1,11 +1,11 @@
 git+https://github.com/ddboline/packaging.git@16.8-2
 appdirs
 git+https://github.com/ddboline/cython@0.27.3-1
-git+https://github.com/ddboline/numpy.git@v1.14.0-1
+git+https://github.com/ddboline/numpy.git@v1.14.1-1
 git+https://github.com/ddboline/scipy.git@v1.0.0-1
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
-git+https://github.com/ddboline/pytest.git@3.4.0-1
+git+https://github.com/ddboline/pytest.git@3.4.1-1
 git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/pulp.git@test_v1.1.1
 git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/util_python.git@test_1.0.5
 git+ssh://git@GitLab02.visibleworld.com/Data_Analytics/vwasync.git@test_v1.0.4
