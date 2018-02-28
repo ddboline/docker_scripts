@@ -28,7 +28,6 @@ git+https://github.com/ddboline/pymc3.git@v3.3-1
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
 git+https://github.com/ddboline/compose.git@1.19.0-1
 argparse
-asyncio
 attrs
 beautifulsoup4
 bitstring
