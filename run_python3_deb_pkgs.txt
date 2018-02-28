@@ -29,7 +29,6 @@ ipywidgets
 git+https://github.com/ddboline/pymc3.git@v3.3-1
 asyncpg
 git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
-git+https://github.com/ddboline/featuretools.git@v0.1.17-1
 git+https://github.com/ddboline/spyder.git@v3.2.7-1
 git+https://github.com/ddboline/compose.git@1.19.0-1
 argparse
@@ -65,6 +64,7 @@ enum34
 et_xmlfile
 eventlet
 executor
+featuretools
 fitbit
 flask
 flask-script
