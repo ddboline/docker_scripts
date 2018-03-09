@@ -206,7 +206,7 @@ units
 validictory
 vcrpy
 vcrpy-unittest
-voluptuous
+voluptuous==0.10.5
 websockify
 wget
 wheel
