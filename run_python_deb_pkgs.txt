@@ -63,6 +63,9 @@ executor
 featuretools
 fitbit
 flask
+flask-gravatar
+flask-mail
+flask-paranoid
 flask-script
 flask-sqlalchemy
 flexx
