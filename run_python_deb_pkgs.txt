@@ -158,6 +158,7 @@ pytest_click
 pytest-cov
 pytest-flask
 pytest-instafail
+pytest-random-order
 pytest-xdist
 python-debian
 deb-pkg-tools
