@@ -4,12 +4,14 @@ VERSION="2.9"
 RELEASE="1"
 
 sudo apt-get update
-sudo apt-get install -y subversion g++ make zlib1g-dev pkg-config \
+sudo apt-get install -y git g++ make zlib1g-dev pkg-config \
                         checkinstall
 
-svn co --non-interactive --trust-server-cert-failures=unknown-ca https://projects.coin-or.org/svn/Cbc/stable/${VERSION} coin_Cbc
+git clone https://github.com/coin-or/Cbc.git coin_Cbc
 
 cd coin_Cbc
+
+git checkout releases/2.9.9
 
 ./configure --enable-cbc-parallel=yes --prefix=/usr
 make
