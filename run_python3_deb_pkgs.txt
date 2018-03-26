@@ -2,7 +2,7 @@ git+https://github.com/ddboline/packaging.git@16.8-2
 aiohttp appdirs yarl
 git+https://github.com/ddboline/cython@0.28.1-1
 git+https://github.com/ddboline/numpy.git@v1.14.2-1
-git+https://github.com/ddboline/scipy.git@v1.0.0-1
+git+https://github.com/ddboline/scipy.git@v1.0.1-1
 python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/pytest.git@3.5.0-1
