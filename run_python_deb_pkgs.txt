@@ -184,7 +184,6 @@ scikit-plot
 seaborn
 setuptools
 setuptools-rust
-setuptools_scm
 sharedarray
 simplegeneric
 simplejson
