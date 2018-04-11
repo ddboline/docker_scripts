@@ -33,8 +33,10 @@ git+https://github.com/ddboline/spyder.git@v3.2.8-1
 git+https://github.com/ddboline/compose.git@1.19.0-1
 alembic
 argparse
+arrow
 asyncio
 attrs
+auto-sklearn
 beautifulsoup4
 bitstring
 blaze
@@ -102,6 +104,7 @@ jsonschema
 jupyter
 keras
 lasagne
+lime
 lockfile
 lxml
 markupsafe
@@ -167,6 +170,7 @@ python-Levenshtein
 python-logstash
 pyusb
 pyyaml
+quiver_engine
 records
 requests
 requests-cache
@@ -202,8 +206,10 @@ tables
 test-helper
 thinc
 tpot
+traces
 traitlets
 trakt.py
+tsfresh
 ujson
 units
 validictory
@@ -218,4 +224,5 @@ wrapt
 xdis
 xray
 yapf
+yellowbrick
 youtube-dl

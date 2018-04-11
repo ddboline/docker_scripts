@@ -30,7 +30,9 @@ git+https://github.com/ddboline/compose.git@1.19.0-1
 git+https://github.com/ddboline/cached-property.git@1.4.0-1
 alembic
 argparse
+arrow
 attrs
+auto-sklearn
 beautifulsoup4
 bitstring
 blaze
@@ -100,6 +102,7 @@ jinja2
 jsonschema
 keras
 lasagne
+lime
 lockfile
 lxml
 markupsafe
@@ -167,6 +170,7 @@ python-Levenshtein
 python-logstash
 pyusb
 pyyaml
+quiver_engine
 records
 recommonmark
 requests
@@ -202,8 +206,10 @@ tables
 test-helper
 thinc
 tpot
+traces
 traitlets
 trakt.py
+tsfresh
 ujson
 units
 validictory
@@ -217,4 +223,5 @@ wrapt
 xdis
 xray
 yapf
+yellowbrick
 youtube-dl
