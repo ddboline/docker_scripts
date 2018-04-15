@@ -131,7 +131,6 @@ pexpect
 pickleshare
 pika
 pillow
-pip
 plotly
 preshed
 protobuf
