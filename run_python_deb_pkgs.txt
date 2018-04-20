@@ -46,6 +46,7 @@ chardet
 cherrypy
 click
 cloudpickle
+codemod
 coverage
 cryptography
 cssselect
@@ -98,6 +99,7 @@ hypothesis
 idna
 imagehash
 ipykernel
+jardin
 jdcal
 jinja2
 jsonschema
