@@ -196,6 +196,7 @@ simplejson
 sklearn-compiledtrees
 sklearn-pandas
 slackclient
+sortedcontainers
 spacy
 sphinx
 sputnik
