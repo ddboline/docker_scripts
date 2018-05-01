@@ -23,7 +23,7 @@ RUN export uid=1000 gid=1000 && \
     mkdir /home/ubuntu/tmp && \
     git clone https://github.com/ddboline/docker_scripts.git /home/ubuntu/docker_scripts && \
     mkdir -p /home/ubuntu/.pip && \
-    printf "[global]\n\nindex-url = https://repos.visibleworld.com/artifactory/api/pypi/pypi-virtual/simple\n" >> /home/ubuntu/.pip/pip.conf && \
+    printf "[global]\n\nindex-url = https://repos.visibleworld.com/artifactory/api/pypi/pypi-virtual/simple\nextra-index-url = https://pypi.python.org/simple\n" >> /home/ubuntu/.pip/pip.conf && \
     chown ${uid}:${gid} -R /home/ubuntu
 
 RUN sudo bash -c "echo deb ssh://danielb@alg-dev01.visibleworld.com/home/danielb/setup_files/var/www/html/deb/xenial/solver_python ./ > /etc/apt/sources.list.d/py2deb.list"
