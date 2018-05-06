@@ -209,7 +209,6 @@ tables
 test-helper
 thinc
 tpot
-traces
 traitlets
 tsfresh
 ujson
