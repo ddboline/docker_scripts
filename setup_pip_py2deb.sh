@@ -8,6 +8,6 @@ sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
                                         python-pip python-dev lintian liblapack-dev libblas-dev \
                                         dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
-                                        python-setuptools python-py2deb libpq-dev
+                                        python-setuptools python-py2deb libpq-dev libatlas-base-dev
 mkdir -p /home/ubuntu/py2deb
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
