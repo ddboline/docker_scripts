@@ -166,6 +166,7 @@ pytest-cov
 pytest-flask
 pytest-instafail
 pytest-random-order
+pytest-socket
 pytest-xdist
 python-debian
 deb-pkg-tools
