@@ -29,6 +29,7 @@ git+https://github.com/ddboline/jupyter.git@1.1.0-1
 git+https://github.com/spyder-ide/spyder.git@v2.3.9
 git+https://github.com/ddboline/compose.git@1.19.0-1
 git+https://github.com/ddboline/cached-property.git@1.4.0-1
+git+https://github.com/great-expectations/great_expectations.git
 alembic
 argparse
 arrow
@@ -85,7 +86,6 @@ gensim
 getlyrics
 gmusicapi
 greenlet
-great_expectations
 grpcio
 grpcio-tools
 gspread
