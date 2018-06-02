@@ -15,7 +15,7 @@ ADD     keys_20161201.tar.gz /home/ubuntu/
 ADD     keys_20161201.tar.gz /root/
 
 RUN apt-get update && apt-get dist-upgrade -y
-RUN apt-get install -y git sudo python-minimal
+RUN apt-get install -y git sudo python-minimal gnupg2
 RUN apt-key add /root/ddboline_711C1DEB.gpg
 RUN chown -R root:root /root
 
