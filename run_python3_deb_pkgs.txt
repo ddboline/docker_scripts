@@ -21,6 +21,7 @@ git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.3.1-2
 git+https://github.com/ddboline/trakt.py.git@2.14.1-1
+git+https://github.com/ddboline/requests.git@v2.18.4-1
 jupyter_client
 webencodings
 html5lib
@@ -176,7 +177,6 @@ python-logstash
 pyusb
 pyyaml
 records
-requests
 requests-cache
 requests-mock
 requests-toolbelt
