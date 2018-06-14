@@ -30,7 +30,6 @@ git+https://github.com/spyder-ide/spyder.git@v2.3.9
 git+https://github.com/ddboline/compose.git@1.19.0-1
 git+https://github.com/ddboline/cached-property.git@1.4.0-1
 git+https://github.com/great-expectations/great_expectations.git
-git+https://github.com/ddboline/requests.git@v2.18.4-1
 alembic
 argparse
 arrow
@@ -175,6 +174,7 @@ pyusb
 pyyaml
 records
 recommonmark
+requests
 requests-cache
 requests-mock
 requests-toolbelt
