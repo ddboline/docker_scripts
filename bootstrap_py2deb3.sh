@@ -25,9 +25,9 @@ sudo apt-get install -y python3-pip
 sudo pip3 install git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 sudo pip3 install git+https://github.com/ddboline/py2deb.git@1.1-1
 
-py2deb -r /home/${USER}/py2deb3 -y $OPTS -- \
+py2deb -r /home/${USER}/py2deb3 -y $OPTS --name-prefix=python3 -- \
     --upgrade git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1 2>&1 >> build.log
-py2deb -r /home/${USER}/py2deb3 -y $OPTS -- \
+py2deb -r /home/${USER}/py2deb3 -y $OPTS --name-prefix=python3 -- \
     --upgrade git+https://github.com/ddboline/py2deb.git@1.1-1 2>&1 >> build.log
 
 scp /home/${USER}/py2deb3/*.deb build.log \
