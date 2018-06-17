@@ -21,7 +21,7 @@ sudo apt-get install -y postgresql-server-dev-10 libhdf5-dev libxml2-dev libxslt
                         libpython2.7-dev freetds-bin freetds-dev udev libgeos++-dev pandoc \
                         libfreetype6-dev libpng-dev libmysqlclient-dev swig
 
-sudo apt-get install python-pip
+sudo apt-get install -y python-pip
 sudo pip install py2deb
 
 py2deb -r /home/${USER}/py2deb -y $OPTS -- \
