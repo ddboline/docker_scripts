@@ -22,7 +22,8 @@ sudo apt-get install -y postgresql-server-dev-10 libhdf5-dev libxml2-dev libxslt
                         libfreetype6-dev libpng-dev libmysqlclient-dev swig
 
 sudo apt-get install -y python-pip
-sudo pip install py2deb
+sudo pip3 install git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
+sudo pip3 install git+https://github.com/ddboline/py2deb.git@1.1-1
 
 py2deb -r /home/${USER}/py2deb -y $OPTS -- \
     --upgrade git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1 2>&1 >> build.log
