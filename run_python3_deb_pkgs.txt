@@ -31,7 +31,6 @@ git+https://github.com/ddboline/pymc3.git@v3.4.1-1
 asyncpg
 git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
 git+https://github.com/ddboline/spyder.git@v3.2.8-1
-git+https://github.com/ddboline/compose.git@1.19.0-1
 git+https://github.com/great-expectations/great_expectations.git
 alembic
 argparse
@@ -63,6 +62,7 @@ deap
 delegator.py
 distributed
 docker
+docker-compose
 docutils
 dropbox
 editdistance
