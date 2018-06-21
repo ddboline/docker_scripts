@@ -33,6 +33,8 @@ alembic
 argparse
 arrow
 attrs
+autopep8
+awscli
 beautifulsoup4
 bitstring
 blaze
@@ -64,6 +66,7 @@ enum34
 et_xmlfile
 eventlet
 executor
+fastavro
 featuretools
 fitbit
 flask
@@ -146,6 +149,7 @@ pycodestyle
 pydocstyle
 pydrive
 pyflakes
+pygal
 pyhive
 pyinstaller
 pylint
@@ -201,6 +205,7 @@ sphinx
 sputnik
 sqlacodegen
 sqlalchemy
+sqlparse
 statsmodels
 stldecompose
 stravalib
@@ -223,5 +228,6 @@ wrapt
 xdis
 xray
 yapf
+yattag
 yellowbrick
 youtube-dl

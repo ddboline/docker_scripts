@@ -37,7 +37,9 @@ argparse
 arrow
 asyncio
 attrs
+autopep8
 auto-sklearn
+awscli
 beautifulsoup4
 bitstring
 blaze
@@ -70,6 +72,7 @@ enum34
 et_xmlfile
 eventlet
 executor
+fastavro
 featuretools
 fitbit
 flask
@@ -138,6 +141,7 @@ pika
 pillow
 plotly
 preshed
+progressbar2
 protobuf
 protobuf-setuptools
 psycopg2
@@ -149,6 +153,7 @@ pycodestyle
 pydocstyle
 pydrive
 pyflakes
+pygal
 pyhive
 pyinstaller
 pylint
@@ -204,6 +209,7 @@ sphinx
 sputnik
 sqlacodegen
 sqlalchemy
+sqlparse
 statsmodels
 stldecompose
 stravalib
@@ -227,5 +233,6 @@ wrapt
 xdis
 xray
 yapf
+yattag
 yellowbrick
 youtube-dl
