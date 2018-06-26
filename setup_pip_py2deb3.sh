@@ -7,7 +7,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 25508FAF711C1DEB
 sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
                                         python3-pip python3-dev lintian liblapack-dev libblas-dev \
-                                        dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
+                                        dpkg-dev gfortran libfreetype6-dev libpng-dev pkg-config \
                                         python3-setuptools python3-py2deb libpq-dev libatlas-base-dev
 mkdir -p /home/ubuntu/py2deb3
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
