@@ -7,7 +7,9 @@ RUN sudo apt-get update
 RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y \
                                         python3-pip python3-dev lintian liblapack-dev libblas-dev \
                                         dpkg-dev gfortran libfreetype6-dev libpng-dev pkg-config \
-                                        python3-setuptools python3-py2deb
+                                        python3-setuptools python3-py2deb libhdf5-dev \
+                                        libexif-dev libjpeg-dev liblcms1-dev libtiff4-dev zlib1g-dev \
+                                        freetds-dev libmysqlclient-dev pandoc swig
 RUN mkdir -p /home/ubuntu/py2deb3
 RUN sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
 # This is a terrible hack...

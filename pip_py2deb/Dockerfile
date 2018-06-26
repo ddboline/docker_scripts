@@ -12,7 +12,9 @@ RUN sudo apt-get update
 RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y \
                                         python-pip python-dev lintian liblapack-dev libblas-dev \
                                         dpkg-dev gfortran libfreetype6-dev libpng-dev pkg-config \
-                                        python-setuptools python-py2deb git-buildpackage
+                                        python-setuptools python-py2deb git-buildpackage libhdf5-dev \
+                                        libexif-dev libjpeg-dev liblcms1-dev libtiff4-dev zlib1g-dev \
+                                        freetds-dev libmysqlclient-dev pandoc swig
 RUN mkdir -p /home/ubuntu/py2deb
 RUN sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
 RUN cd /home/ubuntu/docker_scripts && sudo -u ubuntu git pull
