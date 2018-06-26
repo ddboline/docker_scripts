@@ -221,6 +221,7 @@ validictory
 vcrpy
 vcrpy-unittest
 voluptuous==0.10.5
+watchtower
 websockify
 wget
 wheel
