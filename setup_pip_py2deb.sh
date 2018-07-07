@@ -9,7 +9,7 @@ sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
                                         python-pip python-dev lintian liblapack-dev libblas-dev \
                                         dpkg-dev gfortran libfreetype6-dev libpng-dev pkg-config \
                                         python-setuptools python-py2deb libpq-dev libatlas-base-dev \
-                                        libhdf5-dev \
+                                        libhdf5-dev libgeos-dev libgeos++-dev \
                                         libexif-dev libjpeg-dev liblcms2-dev libtiff5-dev zlib1g-dev \
                                         freetds-dev libmysqlclient-dev pandoc swig
 mkdir -p /home/ubuntu/py2deb
