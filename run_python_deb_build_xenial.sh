@@ -30,5 +30,5 @@ done
 
 MODIFIED=/home/${USER}/py2deb/*.deb
 if [ -n "$MODIFIED" ]; then
-    scp $MODIFIED build.log ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+    scp $MODIFIED build.log ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/xenial/py2deb/
 fi
