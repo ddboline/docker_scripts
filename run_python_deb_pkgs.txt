@@ -155,7 +155,6 @@ pyinstaller
 pylint
 pymc3
 pymonad
-pymssql
 pyopenssl
 pypandoc
 pyprof2calltree

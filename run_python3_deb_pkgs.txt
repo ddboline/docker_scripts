@@ -158,7 +158,6 @@ pyhive
 pyinstaller
 pylint
 pymonad
-pymssql
 pyopenssl
 pypandoc
 pyprof2calltree
