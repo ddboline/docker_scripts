@@ -68,7 +68,6 @@ docker-compose
 docutils
 dropbox
 editdistance
-enum34
 et_xmlfile
 eventlet
 executor
