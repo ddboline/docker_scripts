@@ -7,7 +7,7 @@ python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/pytest.git@3.6.4-1
 git+https://github.com/ddboline/openant.git
-git+https://github.com/ddboline/ipython@6.4.0-1
+git+https://github.com/ddboline/ipython@6.5.0-1
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@1.1-1
 git+https://github.com/ddboline/antfs-cli.git
