@@ -217,7 +217,6 @@ test-helper
 thinc
 tpot
 traitlets
-travis-encrypt
 tsfresh
 ujson
 units
