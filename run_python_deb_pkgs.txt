@@ -143,6 +143,7 @@ psycopg2
 ptyprocess
 pulp
 py2-ipaddress
+pyathena
 pybuilder
 py4j
 pycodestyle
