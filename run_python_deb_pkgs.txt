@@ -157,7 +157,6 @@ pylint
 pymc3
 pymonad
 pyopenssl
-pypandoc
 pyprof2calltree
 pyquery
 pyshp
@@ -234,3 +233,4 @@ yapf
 yattag
 yellowbrick
 youtube-dl
+pypandoc
