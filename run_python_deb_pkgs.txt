@@ -75,7 +75,6 @@ flask-mail
 flask-paranoid
 flask-script
 flask-sqlalchemy
-flexx
 fn.py
 freezegun
 funcsigs
@@ -161,7 +160,6 @@ pyprof2calltree
 pyquery
 pyshp
 pysparkling
-pystan
 pytest_click
 pytest-cov
 pytest-flask
@@ -201,7 +199,6 @@ sklearn-compiledtrees
 sklearn-pandas
 slackclient
 sortedcontainers
-spacy
 sphinx
 sputnik
 sqlacodegen
@@ -233,4 +230,6 @@ yapf
 yattag
 yellowbrick
 youtube-dl
+spacy
+pystan
 pypandoc
