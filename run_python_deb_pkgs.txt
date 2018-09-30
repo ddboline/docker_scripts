@@ -231,5 +231,3 @@ yattag
 yellowbrick
 youtube-dl
 spacy
-pystan
-pypandoc

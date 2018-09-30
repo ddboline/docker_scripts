@@ -25,6 +25,10 @@ do
     mv modified.log existing.log
 done
 
+./docker_scripts/build_coin.sh 2>&1 >> build.log
+./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
+./docker_scripts/build_efs_utils.sh 2>&1 >> build.lot
+
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
     scp $MODIFIED build.log ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb3/py2deb3/
