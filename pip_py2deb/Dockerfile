@@ -7,7 +7,7 @@ RUN sudo /bin/bash -c "echo America/New_York > /etc/timezone" && \
     sudo ln -s /usr/share/zoneinfo/America/New_York /etc/localtime && \
     sudo apt-get update && sudo apt-get install -y tzdata
 
-RUN sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/bionic/devel ./ > /etc/apt/sources.list.d/py2deb.list"
+RUN sudo bash -c "echo deb ssh://ddboline@home.ddboline.net/var/www/html/deb/bionic/devel ./ > /etc/apt/sources.list.d/py2deb.list"
 RUN sudo apt-get update
 RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y \
                                         python-pip python-dev lintian liblapack-dev libblas-dev \

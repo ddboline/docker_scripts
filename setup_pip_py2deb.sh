@@ -2,7 +2,7 @@
 
 sudo cp -a /home/ubuntu/.ssh /root/
 sudo chown -R root:root /root/.ssh
-sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/bionic/devel ./ > /etc/apt/sources.list.d/py2deb.list"
+sudo bash -c "echo deb ssh://ddboline@home.ddboline.net/var/www/html/deb/bionic/devel ./ > /etc/apt/sources.list.d/py2deb.list"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 25508FAF711C1DEB
 sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \

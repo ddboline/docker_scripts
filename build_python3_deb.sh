@@ -32,7 +32,7 @@ if [ -z "$REPOS" ]; then
 fi
 
 if [ ! -e "/usr/bin/py2deb" ]; then
-    sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb3.list"
+    sudo bash -c "echo deb ssh://ddboline@home.ddboline.net/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb3.list"
 
     sudo apt-get update
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \

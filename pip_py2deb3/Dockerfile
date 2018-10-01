@@ -2,7 +2,7 @@
 FROM ddboline/ddboline_keys:v1.0.0.0
 MAINTAINER Daniel Boline <ddboline@gmail.com>
 
-RUN sudo bash -c "echo deb ssh://ddboline@ddbolineathome.mooo.com/var/www/html/deb/bionic/python3/devel ./ > /etc/apt/sources.list.d/py2deb.list"
+RUN sudo bash -c "echo deb ssh://ddboline@home.ddboline.net/var/www/html/deb/bionic/python3/devel ./ > /etc/apt/sources.list.d/py2deb.list"
 RUN sudo apt-get update
 RUN sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y \
                                         python3-pip python3-dev lintian liblapack-dev libblas-dev \

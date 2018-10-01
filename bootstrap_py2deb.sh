@@ -31,4 +31,4 @@ py2deb -r /home/${USER}/py2deb -y $OPTS -- \
     --upgrade git+https://github.com/ddboline/py2deb.git@1.1-1 2>&1 >> build.log
 
 scp /home/${USER}/py2deb/*.deb build.log \
-    ddboline@ddbolineathome.mooo.com:/home/ddboline/setup_files/deb/py2deb/py2deb/
+    ddboline@home.ddboline.net:/home/ddboline/setup_files/deb/py2deb/py2deb/
