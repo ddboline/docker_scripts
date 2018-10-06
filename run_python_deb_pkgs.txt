@@ -18,7 +18,7 @@ git+https://github.com/ddboline/roku_app.git
 git+https://github.com/ddboline/security_log_analysis.git
 git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
-git+https://github.com/ddboline/testpath.git@0.4.1-1
+git+https://github.com/ddboline/testpath.git@0.4.2-1
 jupyter_client webencodings html5lib jupyterlab
 git+https://github.com/ddboline/jedi.git@v0.12.0-2
 git+https://github.com/ddboline/imdbpie.git@5.4.3-1
@@ -217,7 +217,6 @@ units
 validictory
 vcrpy
 vcrpy-unittest
-voluptuous==0.10.5
 watchtower
 websockify
 wget
