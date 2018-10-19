@@ -27,7 +27,7 @@ done
 
 ./docker_scripts/build_coin.sh 2>&1 >> build.log
 ./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
-./docker_scripts/build_efs_utils.sh 2>&1 >> build.lot
+./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
