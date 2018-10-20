@@ -1,9 +1,17 @@
-git+https://github.com/ddboline/packaging.git@16.8-2
+packaging
 aiohttp appdirs yarl
-git+https://github.com/ddboline/cython@0.29-1
+git+https://github.com/ddboline/botocore.git@1.12.28-1
+cython
 git+https://github.com/ddboline/numpy.git@v1.15.2-1
 git+https://github.com/ddboline/scipy.git@v1.1.0-1
-python-dateutil pytz cycler pandas matplotlib mock pyparsing pbr theano
+python-dateutil
+pytz cycler
+pandas
+matplotlib
+mock
+pyparsing
+pbr
+theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/pytest.git@3.8.1-1
 git+https://github.com/ddboline/openant.git
@@ -47,6 +55,7 @@ bitstring
 blaze
 boltons
 boto
+boto3
 boxsdk
 cached-property
 celery
@@ -102,7 +111,6 @@ httpretty
 httpretty_fixtures
 hypothesis
 idna
-imdbpie
 ipykernel
 jardin
 jdcal
