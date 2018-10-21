@@ -14,4 +14,5 @@ cd efs-utils
 
 make deb
 
-mv build/amazon-efs-utils*.deb ~/py2deb/
+cp build/amazon-efs-utils*.deb ~/py2deb/
+cp build/amazon-efs-utils*.deb ~/py2deb3/

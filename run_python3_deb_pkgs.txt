@@ -13,7 +13,6 @@ pyparsing
 pbr
 theano
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
-git+https://github.com/ddboline/pytest.git@3.8.1-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@1.1-1
@@ -173,6 +172,7 @@ pyquery
 pyshp
 pysparkling
 pystemmer
+pytest
 pytest_click
 pytest-cov
 pytest-flask

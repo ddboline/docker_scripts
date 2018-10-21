@@ -20,4 +20,5 @@ printf "COIN-OR Linear Program Solver\n" > description-pak
 ### this part is sadly interactive
 sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
 sudo chown ${USER}:${USER} coin-cbc_${VERSION}-${RELEASE}*.deb
-mv coin-cbc_${VERSION}-${RELEASE}*.deb ~/py2deb/
+cp coin-cbc_${VERSION}-${RELEASE}*.deb ~/py2deb/
+cp coin-cbc_${VERSION}-${RELEASE}*.deb ~/py2deb3/
