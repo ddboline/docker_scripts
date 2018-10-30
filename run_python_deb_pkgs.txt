@@ -239,3 +239,4 @@ yattag
 yellowbrick
 youtube-dl
 spacy
+bokeh
