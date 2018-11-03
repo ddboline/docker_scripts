@@ -57,6 +57,7 @@ click
 cloudpickle
 codemod
 coverage
+cpplint
 cryptography
 cssselect
 cymem
