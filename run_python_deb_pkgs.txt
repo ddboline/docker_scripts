@@ -2,7 +2,7 @@ packaging
 appdirs
 git+https://github.com/ddboline/botocore.git@1.12.28-1
 cython
-git+https://github.com/ddboline/numpy.git@v1.15.3-1
+git+https://github.com/ddboline/numpy.git@v1.15.4-1
 git+https://github.com/ddboline/scipy.git@v1.1.0-1
 python-dateutil
 pytz
@@ -21,7 +21,7 @@ git+https://github.com/ddboline/py2deb.git@1.1-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/garmin_app.git
 git+https://github.com/ddboline/movie_collection_app.git
-git+https://github.com/ddboline/PyFunctional.git@v1.1.3-1
+git+https://github.com/ddboline/PyFunctional.git@v1.2.0-1
 git+https://github.com/ddboline/roku_app.git
 git+https://github.com/ddboline/security_log_analysis.git
 git+https://github.com/ddboline/sync_app.git
