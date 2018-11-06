@@ -20,6 +20,7 @@ do
     rm -rf /home/${USER}/py2deb3/python3-pip_10*.deb
     md5sum /home/${USER}/py2deb3/*.deb > modified.log
     MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+    sudo sed -i 's/numpy (<< 1:/numpy (<< /g' /var/lib/dpkg/status
     sudo dpkg --force-overwrite -i $MODIFIED
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
     mv modified.log existing.log
