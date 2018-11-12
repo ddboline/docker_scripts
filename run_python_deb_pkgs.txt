@@ -1,6 +1,5 @@
 packaging
 appdirs
-git+https://github.com/ddboline/botocore.git@1.12.28-1
 cython
 git+https://github.com/ddboline/numpy.git@v1.15.4-1
 git+https://github.com/ddboline/scipy.git@v1.1.0-1
@@ -47,6 +46,7 @@ beautifulsoup4
 bitstring
 blaze
 boltons
+botocore
 boto
 boto3
 boxsdk
@@ -183,6 +183,7 @@ deb-pkg-tools
 pystemmer
 python-Levenshtein
 python-logstash
+python-snappy
 pyusb
 pyyaml
 records
