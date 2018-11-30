@@ -82,6 +82,7 @@ editdistance
 et_xmlfile
 eventlet
 executor
+python-snappy
 fastavro
 featuretools
 fitbit
@@ -137,6 +138,7 @@ numpydoc
 odfpy
 onedrivesdk
 openpyxl
+pampy
 pandasql
 pathos
 path.py
@@ -186,7 +188,6 @@ python-debian
 deb-pkg-tools
 python-Levenshtein
 python-logstash
-python-snappy
 pyusb
 pyyaml
 records

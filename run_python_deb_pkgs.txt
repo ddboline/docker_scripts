@@ -76,6 +76,7 @@ enum34
 et_xmlfile
 eventlet
 executor
+python-snappy
 fastavro
 featuretools
 fitbit
@@ -183,7 +184,6 @@ deb-pkg-tools
 pystemmer
 python-Levenshtein
 python-logstash
-python-snappy
 pyusb
 pyyaml
 records
