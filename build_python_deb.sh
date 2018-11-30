@@ -34,7 +34,7 @@ if [ ! -e "/usr/bin/py2deb" ]; then
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
                                 python-pip python-dev lintian liblapack-dev libopenblas-dev \
                                 dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
-                                python-setuptools python-py2deb
+                                python-setuptools python-py2deb libsnappy-dev
     mkdir -p /home/${USER}/py2deb
 fi
 
