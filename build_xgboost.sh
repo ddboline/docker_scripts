@@ -30,15 +30,13 @@ sudo chown ${USER}:${USER} xgboost*.deb
 mkdir -p ~/py2deb/
 mv xgboost*.deb ~/py2deb/
 
-sudo bash -c "echo deb ssh://ddboline@home.ddboline.net/var/www/html/deb/xenial/devel ./ > /etc/apt/sources.list.d/py2deb2.list"
+sudo bash -c "echo deb [trusted=yes] https://py2deb-repo.s3.amazonaws.com/deb/bionic/python3 bionic main ./ > /etc/apt/sources.list.d/py2deb2.list"
 sudo apt-get update
-sudo apt-get install -y --force-yes python-pip python-dev lintian liblapack-dev libblas-dev \
+sudo apt-get install -y --force-yes python3-pip python3-dev lintian liblapack-dev libblas-dev \
                                dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
-                               python-setuptools python-py2deb python-numpy=1.\* python-scipy
+                               python3-setuptools python3-py2deb python3-numpy=1.\* python3-scipy
 mkdir -p /home/ubuntu/py2deb
 cd python-package/
-if [ -e "/home/ubuntu/py2deb" ]; then
-    ~/docker_scripts/build_python_deb.sh .
-elif [ -e "/home/ubuntu/py2deb3" ]; then
-    ~/docker_scripts/build_python3_deb.sh .
-fi
+mkdir -p /home/ubuntu/py2deb3/py2deb3/
+
+~/docker_scripts/build_python3_deb.sh .

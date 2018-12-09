@@ -2,7 +2,7 @@
 
 sudo cp -a /home/ubuntu/.ssh /root/
 sudo chown -R root:root /root/.ssh
-sudo bash -c "echo deb ssh://ubuntu@cloud.ddboline.net/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb.list"
+sudo bash -c "echo deb [trusted=yes] https://py2deb-repo.s3.amazonaws.com/deb/xenial/python3 xenial main > /etc/apt/sources.list.d/py2deb.list"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 25508FAF711C1DEB
 sudo apt-get update
 sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
