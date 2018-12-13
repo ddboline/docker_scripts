@@ -11,7 +11,9 @@ sudo apt-get install -y opencl-headers libprotobuf-dev \
                         liblpsolve55-dev lzma-dev libarchive-dev liblzo2-dev \
                         python-sip-dev swig cmake
 
-git clone $REPO
+cd ~/
+
+git clone $REPO shogun
 
 cd shogun
 
@@ -22,3 +24,7 @@ printf "SHOGUN machine learning toolbox\n" > description-pak
 sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
 sudo chown ${USER}:${USER} shogun_${VERSION}-${RELEASE}*.deb
 mv shogun_${VERSION}-${RELEASE}*.deb ~/py2deb/
+
+cd ~/
+
+rm -rf ~/shogun

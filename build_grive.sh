@@ -10,7 +10,9 @@ apt-get install -y libcurl3-dev libjson0-dev libjson-c-dev libjson-glib-dev \
                    libboost-thread1.54-dev cmake dpkg-dev libexpat1-dev libqt4-dev \
                    checkinstall
 
-git clone $REPO
+cd ~/
+
+git clone $REPO grive
 
 cd grive
 
@@ -18,3 +20,7 @@ cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr .
 make
 ### this part is sadly interactive
 checkinstall
+
+cd ~/
+
+rm -rf ~/grive

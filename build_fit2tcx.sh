@@ -8,7 +8,9 @@ sudo apt-get update
 sudo apt-get install -y libtinyxml-dev pkg-config \
                         checkinstall
 
-git clone $REPO
+cd ~/
+
+git clone $REPO Fit2Tcx
 
 cd Fit2Tcx
 
@@ -21,3 +23,7 @@ sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
 sudo chown ${USER}:${USER} fit2tcx_${VERSION}-${RELEASE}*.deb
 cp fit2tcx_${VERSION}-${RELEASE}*.deb ~/py2deb/
 cp fit2tcx_${VERSION}-${RELEASE}*.deb ~/py2deb3/
+
+cd ~/
+
+rm -rf ~/Fit2Tcx

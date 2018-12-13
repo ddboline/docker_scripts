@@ -9,7 +9,9 @@ REPO="https://github.com/ddboline/xgboost.git"
 sudo apt-get update
 sudo apt-get install -y checkinstall
 
-git clone $REPO
+cd ~/
+
+git clone $REPO xgboost
 cd xgboost
 
 cd dmlc-core
@@ -40,3 +42,7 @@ cd python-package/
 mkdir -p /home/ubuntu/py2deb3/py2deb3/
 
 ~/docker_scripts/build_python3_deb.sh .
+
+cd ~/
+
+rm -rf ~/xgboost
