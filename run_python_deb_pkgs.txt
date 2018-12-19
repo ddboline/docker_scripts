@@ -2,7 +2,7 @@ packaging
 appdirs
 cython
 git+https://github.com/ddboline/numpy.git@v1.15.4-1
-git+https://github.com/ddboline/scipy.git@v1.1.0-1
+git+https://github.com/ddboline/scipy.git@v1.2.0-1
 python-dateutil
 pytz
 cycler
