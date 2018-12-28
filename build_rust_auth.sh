@@ -2,7 +2,7 @@
 
 VERSION="0.1.5"
 RELEASE="1"
-REPO="https://github.com/ddboline/garmin_rust.git"
+REPO="https://github.com/ddboline/rust-auth-server.git"
 
 apt-get update && \
 apt-get install -y curl pkg-config checkinstall gcc libssl-dev ca-certificates \
@@ -15,15 +15,15 @@ sh rustup.sh -y && \
 
 cd ~/
 
-git clone $REPO garmin_rust
+git clone $REPO rust-auth-server
 
-cd garmin_rust
+cd rust-auth-server
 
 sh scripts/build_deb_docker.sh
 
-cp garmin-rust*.deb ~/py2deb/
-cp garmin-rust*.deb ~/py2deb3/
+cp rust-auth*.deb ~/py2deb/
+cp rust-auth*.deb ~/py2deb3/
 
 cd ~/
 
-rm -rf ~/garmin_rust
+rm -rf ~/rust-auth-server
