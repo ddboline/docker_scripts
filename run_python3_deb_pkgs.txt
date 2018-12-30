@@ -46,7 +46,6 @@ arrow
 asyncio
 attrs
 autopep8
-auto-sklearn
 awscli
 beautifulsoup4
 bitstring

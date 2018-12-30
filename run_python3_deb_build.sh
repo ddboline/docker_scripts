@@ -26,7 +26,6 @@ do
     mv modified.log existing.log
 done
 
-./docker_scripts/build_coin.sh 2>&1 >> build.log
 ./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 ./docker_scripts/build_garmin_rust.sh 2>&1 >> build.log
