@@ -9,7 +9,7 @@ cd ~/
 sudo apt-get update
 sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxslt1-dev \
                         libpython2.7-dev freetds-bin freetds-dev udev libgeos++-dev pandoc \
-                        libfreetype6-dev libpng12-dev libmysqlclient-dev swig
+                        libfreetype6-dev libpng12-dev libmysqlclient-dev swig librdkafka-dev
 
 touch build.log
 md5sum /home/${USER}/py2deb/*.deb > existing.log
