@@ -1,7 +1,5 @@
 #!/bin/bash
 
-VERSION="0.1.5"
-RELEASE="1"
 REPO="https://github.com/ddboline/garmin_rust.git"
 
 apt-get update && \

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-VERSION="0.1.5"
-RELEASE="1"
 REPO="https://github.com/ddboline/rust-auth-server.git"
 
 apt-get update && \

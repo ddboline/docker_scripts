@@ -1,7 +1,7 @@
 packaging
 aiohttp appdirs yarl
 cython
-git+https://github.com/ddboline/numpy.git@v1.15.4-1
+git+https://github.com/ddboline/numpy.git@v1.16.0-1
 git+https://github.com/ddboline/scipy.git@v1.2.0-1
 python-dateutil
 pytz cycler
@@ -37,6 +37,7 @@ git+https://github.com/ddboline/spyder.git@v3.3.2-1
 git+https://github.com/ddboline/pywt.git@v1.0.1-1
 webencodings
 html5lib
+jupyter
 jupyterlab
 ipywidgets
 alembic
@@ -117,7 +118,6 @@ jardin
 jdcal
 jinja2
 jsonschema
-jupyter
 keras
 lasagne
 lime
