@@ -26,10 +26,10 @@ do
     mv modified.log existing.log
 done
 
-./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
-./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
-./docker_scripts/build_garmin_rust.sh 2>&1 >> build.log
-./docker_scripts/build_rust_auth.sh 2>&1 >> build.log
+# ./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
+# ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
+# ./docker_scripts/build_garmin_rust.sh 2>&1 >> build.log
+# ./docker_scripts/build_rust_auth.sh 2>&1 >> build.log
 
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-VERSION="0.4.3"
-RELEASE="2"
 REPO="https://github.com/aws/efs-utils.git"
 
 sudo apt-get update
