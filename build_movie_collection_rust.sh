@@ -2,11 +2,11 @@
 
 REPO="https://github.com/ddboline/movie_collection_rust.git"
 
-apt-get update && \
-apt-get install -y curl pkg-config checkinstall gcc libssl-dev ca-certificates \
+sudo apt-get update && \
+sudo apt-get install -y curl pkg-config checkinstall gcc libssl-dev ca-certificates \
         file build-essential autoconf automake autotools-dev libtool xutils-dev \
         libusb-dev libxml2-dev libpq-dev && \
-rm -rf /var/lib/apt/lists/* && \
+sudo rm -rf /var/lib/apt/lists/* && \
 curl https://sh.rustup.rs > rustup.sh && \
 sh rustup.sh -y && \
 . ~/.cargo/env
