@@ -6,6 +6,9 @@ git pull
 
 cd ~/
 
+sudo apt-get update
+sudo apt-get install -y awscli
+
 mkdir -p ~/py2deb/
 mkdir -p ~/py2deb3/
 
