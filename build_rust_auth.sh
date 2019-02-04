@@ -2,22 +2,13 @@
 
 REPO="https://github.com/ddboline/rust-auth-server.git"
 
-sudo apt-get update && \
-sudo apt-get install -y curl pkg-config checkinstall gcc libssl-dev ca-certificates \
-        file build-essential autoconf automake autotools-dev libtool xutils-dev \
-        libusb-dev libxml2-dev libpq-dev && \
-sudo rm -rf /var/lib/apt/lists/* && \
-curl https://sh.rustup.rs > rustup.sh && \
-sh rustup.sh -y && \
-. ~/.cargo/env
-
 cd ~/
 
 git clone $REPO rust-auth-server
 
 cd rust-auth-server
 
-sh scripts/build_deb_docker.sh
+make pull && make && make package
 
 cp rust-auth*.deb ~/py2deb/
 cp rust-auth*.deb ~/py2deb3/
