@@ -21,4 +21,4 @@ cp build/amazon-efs-utils*.deb ~/py2deb3/
 
 cd ~/
 
-rm -rf ~/efs-utils
+sudo rm -rf ~/efs-utils

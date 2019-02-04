@@ -15,4 +15,4 @@ cp movie-collection-rust*.deb ~/py2deb3/
 
 cd ~/
 
-rm -rf ~/movie_collection_rust
+sudo rm -rf ~/movie_collection_rust

@@ -27,4 +27,4 @@ cp fit2tcx_${VERSION}-${RELEASE}*.deb ~/py2deb3/
 
 cd ~/
 
-rm -rf ~/Fit2Tcx
+sudo rm -rf ~/Fit2Tcx

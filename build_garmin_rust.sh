@@ -15,4 +15,4 @@ cp garmin-rust*.deb ~/py2deb3/
 
 cd ~/
 
-rm -rf ~/garmin_rust
+sudo rm -rf ~/garmin_rust

@@ -15,4 +15,4 @@ cp rust-auth*.deb ~/py2deb3/
 
 cd ~/
 
-rm -rf ~/rust-auth-server
+sudo rm -rf ~/rust-auth-server
