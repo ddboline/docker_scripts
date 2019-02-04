@@ -92,6 +92,7 @@ funcy
 futures
 futures_then
 fuzzywuzzy
+gdbgui
 gdbn
 gensim
 getlyrics

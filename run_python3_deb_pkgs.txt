@@ -97,6 +97,7 @@ freezegun
 funcy
 futures_then
 fuzzywuzzy
+gdbgui
 gdbn
 gensim
 getlyrics
