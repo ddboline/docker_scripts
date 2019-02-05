@@ -7,11 +7,10 @@ RUN apt-get update && \
             git libusb-dev libxml2-dev libpq-dev && \
     rm -rf /var/lib/apt/lists/* && \
     curl https://sh.rustup.rs > rustup.sh && \
-    sh rustup.sh -y && \
+    sh rustup.sh -y --default-toolchain nightly && \
     . ~/.cargo/env
-
+    
 RUN . ~/.cargo/env && \
-    rustup component add rustfmt && \
-    rustup component add clippy
+    rustup component add rustfmt
 
 WORKDIR /workdir
