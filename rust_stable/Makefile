@@ -17,15 +17,15 @@ cleanup:
 
 push:
 	`aws ecr get-login --no-include-email`
-	docker tag rust_stable:xenial_latest 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:xenial_latest
-	docker push 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:xenial_latest
-	docker rmi 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:xenial_latest
-
-push_xenial:
-	`aws ecr get-login --no-include-email`
 	docker tag rust_stable:latest 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 	docker push 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 	docker rmi 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
+
+push_xenial:
+	`aws ecr get-login --no-include-email`
+	docker tag rust_stable:xenial_latest 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:xenial_latest
+	docker push 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:xenial_latest
+	docker rmi 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:xenial_latest
 
 pull:
 	`aws ecr get-login --no-include-email`
