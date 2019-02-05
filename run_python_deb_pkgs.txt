@@ -1,7 +1,7 @@
 packaging
 appdirs
 cython
-git+https://github.com/ddboline/numpy.git@v1.16.0-1
+git+https://github.com/ddboline/numpy.git@v1.16.1-1
 git+https://github.com/ddboline/scipy.git@v1.2.0-1
 python-dateutil
 pytz
@@ -160,7 +160,6 @@ pydrive
 pyflakes
 pygal
 pyhive
-pyinstaller
 pylint
 pymc3
 pymonad
@@ -192,7 +191,6 @@ requests-cache
 requests-mock
 requests-toolbelt
 retrying
-rocker
 rpyc
 rx
 scikit-image
