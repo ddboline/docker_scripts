@@ -13,7 +13,7 @@ sudo apt-get install -y postgresql-server-dev-9.5 libhdf5-dev libxml2-dev libxsl
 
 touch build.log
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
-for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
+for PKG in `cat ./docker_scripts/run_python3_deb_pkgs_xenial.txt`;
 do
     ./docker_scripts/build_python3_deb.sh $PKG 2>&1 >> build.log
     rm -rf /tmp/pip-*-build
