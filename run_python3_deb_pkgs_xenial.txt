@@ -14,7 +14,7 @@ python-debian==0.1.33
 git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
-git+https://github.com/ddboline/py2deb.git@2.1-1
+git+https://github.com/ddboline/py2deb.git@2.1-2
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/garmin_app.git
 git+https://github.com/ddboline/movie_collection_app.git
@@ -179,7 +179,6 @@ pytest-random-order
 pytest-socket
 pytest-sugar
 pytest-xdist
-deb-pkg-tools
 python-Levenshtein
 python-logstash
 pyusb
