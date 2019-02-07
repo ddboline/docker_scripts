@@ -155,7 +155,6 @@ protobuf
 protobuf-setuptools
 psycopg2
 ptyprocess
-pulp
 pybuilder
 py4j
 pyathena

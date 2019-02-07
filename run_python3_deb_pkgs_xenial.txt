@@ -17,7 +17,6 @@ git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@2.1-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/garmin_app.git
-git+https://github.com/ddboline/hangups.git@v0.4.6-1
 git+https://github.com/ddboline/movie_collection_app.git
 git+https://github.com/ddboline/PyFunctional.git@v1.2.0-1
 git+https://github.com/ddboline/roku_app.git
@@ -62,7 +61,6 @@ cherrypy
 click
 cloudpickle
 codemod
-confluent-kafka[avro]==0.11.4
 coverage
 cpplint
 cryptography
@@ -101,7 +99,6 @@ gdbgui
 gdbn
 gensim
 getlyrics
-gevent
 gmusicapi
 greenlet
 grpcio
@@ -155,7 +152,6 @@ protobuf
 protobuf-setuptools
 psycopg2
 ptyprocess
-pulp
 pybuilder
 py4j
 pyathena
