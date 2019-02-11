@@ -11,7 +11,6 @@ mock
 pyparsing
 pbr
 python-debian==0.1.33
-git+https://github.com/ddboline/entrypoints.git@0.2.3-1
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@2.1-2
@@ -32,7 +31,8 @@ git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
 ipython
 git+https://github.com/great-expectations/great_expectations.git
 git+https://github.com/iduartgomez/rustypy.git
-git+https://github.com/ddboline/spyder.git@v3.3.2-1
+jupyter_client
+git+https://github.com/ddboline/spyder.git@v3.3.3-1
 git+https://github.com/ddboline/pywt.git@v1.0.1-1
 webencodings
 html5lib
@@ -95,7 +95,6 @@ freezegun
 funcy
 futures_then
 fuzzywuzzy
-gdbgui
 gdbn
 gensim
 getlyrics
