@@ -17,7 +17,7 @@ git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@2.1-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/garmin_app.git
-git+https://github.com/ddboline/hangups.git@v0.4.6-1
+git+https://github.com/ddboline/hangups.git@v0.4.7-1
 git+https://github.com/ddboline/movie_collection_app.git
 git+https://github.com/ddboline/PyFunctional.git@v1.2.0-1
 git+https://github.com/ddboline/roku_app.git
@@ -28,6 +28,7 @@ git+https://github.com/ddboline/testpath.git@0.4.2-1
 git+https://github.com/ddboline/trakt.py.git@2.14.1-1
 git+https://github.com/ddboline/python-fitbit.git@0.3.0-1
 git+https://github.com/ddboline/jedi.git@v0.12.0-2
+git+https://github.com/ddboline/compose.git@1.23.2-1
 asyncpg
 git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
 ipython
@@ -76,7 +77,6 @@ deap
 delegator.py
 distributed
 docker
-docker-compose
 docutils
 dropbox
 editdistance
