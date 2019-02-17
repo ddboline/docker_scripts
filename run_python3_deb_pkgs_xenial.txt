@@ -148,6 +148,7 @@ pillow
 plotly
 preshed
 progressbar2
+prometheus_client
 protobuf
 protobuf-setuptools
 psycopg2
