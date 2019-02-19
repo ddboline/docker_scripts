@@ -10,6 +10,7 @@ matplotlib
 mock
 pyparsing
 pbr
+entrypoints
 python-debian==0.1.33
 git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
