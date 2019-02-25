@@ -11,7 +11,8 @@ sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
                                         python3-setuptools python3-py2deb libpq-dev libatlas-base-dev \
                                         libhdf5-dev libgeos-dev libgeos++-dev \
                                         libexif-dev libjpeg-dev liblcms2-dev libtiff5-dev zlib1g-dev \
-                                        freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev
+                                        freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev \
+                                        python3-cffi
 mkdir -p /home/ubuntu/py2deb3
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
 sudo rm -rf /usr/lib/python3/dist-packages/pkg_resources

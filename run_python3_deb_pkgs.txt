@@ -3,6 +3,7 @@ aiohttp appdirs yarl
 cython
 git+https://github.com/ddboline/numpy.git@v1.16.1-1
 git+https://github.com/ddboline/scipy.git@v1.2.1-1
+gevent
 python-dateutil
 pytz cycler
 pandas
@@ -101,7 +102,6 @@ gdbgui
 gdbn
 gensim
 getlyrics
-gevent
 gmusicapi
 greenlet
 grpcio
