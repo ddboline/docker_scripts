@@ -32,12 +32,12 @@ if [ -z "$REPOS" ]; then
 fi
 
 if [ ! -e "/usr/bin/py2deb" ]; then
-    sudo bash -c "echo deb ssh://ddboline@home.ddboline.net/var/www/html/deb/xenial/python3/devel ./ > /etc/apt/sources.list.d/py2deb3.list"
+    sudo bash -c "echo deb [trusted=yes] https://py2deb-repo.s3.amazonaws.com/deb/bionic/python3 bionic main > /etc/apt/sources.list.d/py2deb3.list"
 
     sudo apt-get update
     sudo apt-get -o Dpkg::Options::="--force-overwrite" install -y --force-yes \
                                 python3-pip python3-py2deb python3-dev lintian liblapack-dev libblas-dev \
-                                dpkg-dev gfortran libfreetype6-dev libpng12-dev pkg-config \
+                                dpkg-dev gfortran libfreetype6-dev libpng-dev pkg-config \
                                 python3-setuptools libsnappy-dev
     mkdir -p /home/${USER}/py2deb3
 fi
