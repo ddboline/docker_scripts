@@ -17,7 +17,7 @@ git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@2.1-1
 git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/garmin_app.git
-git+https://github.com/ddboline/hangups.git@v0.4.7-1
+git+https://github.com/ddboline/hangups.git@v0.4.9-1
 git+https://github.com/ddboline/movie_collection_app.git
 git+https://github.com/ddboline/PyFunctional.git@v1.2.0-1
 git+https://github.com/ddboline/roku_app.git
