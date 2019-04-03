@@ -217,6 +217,7 @@ sputnik
 sqlacodegen
 sqlalchemy
 sqlparse
+spavro
 statsmodels
 stldecompose
 stravalib
