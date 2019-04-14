@@ -36,7 +36,7 @@ git+https://github.com/great-expectations/great_expectations.git
 git+https://github.com/iduartgomez/rustypy.git
 jupyter_client
 git+https://github.com/ddboline/spyder.git@v3.3.4-1
-git+https://github.com/ddboline/pywt.git@v1.0.2-1
+git+https://github.com/ddboline/pywt.git@v1.0.3-1
 webencodings
 html5lib
 jupyter
