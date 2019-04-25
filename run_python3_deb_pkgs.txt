@@ -1,7 +1,7 @@
 packaging
 aiohttp appdirs yarl
 cython
-git+https://github.com/ddboline/numpy.git@v1.16.2-1
+git+https://github.com/ddboline/numpy.git@v1.16.3-1
 git+https://github.com/ddboline/scipy.git@v1.2.1-1
 gevent
 python-dateutil
@@ -27,10 +27,10 @@ git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.4.2-1
 git+https://github.com/ddboline/trakt.py.git@2.14.1-1
 git+https://github.com/ddboline/python-fitbit.git@0.3.0-1
-git+https://github.com/ddboline/jedi.git@v0.12.0-2
+jedi
 git+https://github.com/ddboline/compose.git@1.24.0-1
 asyncpg
-git+https://github.com/ddboline/asyncpgsa.git@test_0.18.1
+asyncpgsa
 ipython
 git+https://github.com/great-expectations/great_expectations.git
 git+https://github.com/iduartgomez/rustypy.git
