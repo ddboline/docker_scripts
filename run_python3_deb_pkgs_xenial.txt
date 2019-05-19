@@ -2,7 +2,7 @@ packaging
 aiohttp appdirs yarl
 cython
 git+https://github.com/ddboline/numpy.git@v1.16.3-1
-git+https://github.com/ddboline/scipy.git@v1.3.0-1
+git+https://github.com/ddboline/scipy.git@v1.3.0-2
 gevent
 python-dateutil
 pytz cycler
