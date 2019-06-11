@@ -3,8 +3,8 @@ aiohttp appdirs yarl
 cython
 git+https://github.com/ddboline/numpy.git@v1.16.4-1
 git+https://github.com/ddboline/scipy.git@v1.3.0-1
-git+https://github.com/ddboline/botocore.git@1.12.159-1
-git+https://github.com/ddboline/aws-cli.git@1.16.169-1
+git+https://github.com/ddboline/botocore.git@1.12.164-1
+git+https://github.com/ddboline/aws-cli.git@1.16.174-1
 gevent
 python-dateutil
 pytz cycler
@@ -28,7 +28,7 @@ git+https://github.com/ddboline/sync_app.git
 git+https://github.com/matplotlib/basemap.git
 git+https://github.com/ddboline/testpath.git@0.4.2-1
 git+https://github.com/ddboline/trakt.py.git@2.14.1-1
-git+https://github.com/ddboline/python-fitbit.git@0.3.0-1
+fitbit
 jedi
 git+https://github.com/ddboline/compose.git@1.24.0-1
 asyncpg

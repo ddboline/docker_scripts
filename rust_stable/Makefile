@@ -1,4 +1,4 @@
-version := "0.0.1"
+version := "0.0.2"
 release := "1"
 build_type := release
 
