@@ -7,7 +7,11 @@ git pull
 cd ~/
 
 sudo apt-get update
-sudo apt-get install -y awscli
+sudo DEBIAN_FRONTEND=noninteractive apt-get \
+    -o Dpkg::Options::=--force-confold \
+    -o Dpkg::Options::=--force-confdef \
+    -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
+    install -yq awscli
 
 mkdir -p ~/py2deb/
 mkdir -p ~/py2deb3/
