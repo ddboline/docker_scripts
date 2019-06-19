@@ -103,7 +103,7 @@ fuzzywuzzy
 gdbn
 gensim
 getlyrics
-gmusicapi
+google-music
 greenlet
 grpcio
 grpcio-tools
