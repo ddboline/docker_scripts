@@ -24,6 +24,7 @@ mkdir -p ~/py2deb3/
 ./docker_scripts/build_gcsf.sh 2>&1 >> build.log
 ./docker_scripts/build_sync_app_rust.sh 2>&1 >> build.log
 ./docker_scripts/build_podcatch_rust.sh 2>&1 >> build.log
+./docker_scripts/build_security_log_analysis_rust.sh 2>&1 >> build.log
 
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
