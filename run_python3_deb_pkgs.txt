@@ -3,8 +3,8 @@ aiohttp appdirs yarl
 cython
 git+https://github.com/ddboline/numpy.git@v1.16.4-1
 git+https://github.com/ddboline/scipy.git@v1.3.0-1
-git+https://github.com/ddboline/botocore.git@1.12.182-1
-git+https://github.com/ddboline/aws-cli.git@1.16.192-1
+git+https://github.com/ddboline/botocore.git@1.12.183-1
+git+https://github.com/ddboline/aws-cli.git@1.16.193-1
 gevent
 python-dateutil
 pytz cycler
@@ -34,7 +34,6 @@ git+https://github.com/ddboline/compose.git@1.24.1-1
 asyncpg
 asyncpgsa
 ipython
-git+https://github.com/great-expectations/great_expectations.git
 git+https://github.com/iduartgomez/rustypy.git
 jupyter_client
 git+https://github.com/ddboline/spyder.git@v3.3.5-1
@@ -42,6 +41,7 @@ git+https://github.com/ddboline/pywt.git@v1.0.3-1
 git+https://github.com/ddboline/audio-metadata.git@0.4.0-1
 git+https://github.com/ddboline/google-music-proto.git@2.4.0-2
 git+https://github.com/ddboline/google-music.git@3.0.1-1
+git+https://github.com/great-expectations/great_expectations.git
 webencodings
 html5lib
 jupyter
