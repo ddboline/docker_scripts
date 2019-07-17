@@ -85,6 +85,7 @@ eventlet
 executor
 python-snappy
 fastavro
+fastparquet
 featuretools
 flask
 flask-gravatar
