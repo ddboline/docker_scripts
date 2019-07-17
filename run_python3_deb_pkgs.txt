@@ -143,6 +143,7 @@ onedrivesdk
 openpyxl
 pampy
 pandasql
+parquet
 pathos
 path.py
 patsy
