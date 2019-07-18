@@ -4,7 +4,7 @@ cython
 git+https://github.com/ddboline/numpy.git@v1.16.4-1
 git+https://github.com/ddboline/scipy.git@v1.3.0-1
 botocore
-git+https://github.com/ddboline/aws-cli.git@1.16.199-1
+git+https://github.com/ddboline/aws-cli.git@1.16.200-1
 gevent
 python-dateutil
 pytz cycler
@@ -18,13 +18,9 @@ git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@2.1-1
 git+https://github.com/ddboline/antfs-cli.git
-git+https://github.com/ddboline/garmin_app.git
 git+https://github.com/ddboline/hangups.git@v0.4.9-1
 git+https://github.com/ddboline/movie_collection_app.git
 git+https://github.com/ddboline/PyFunctional.git@v1.2.0-1
-git+https://github.com/ddboline/roku_app.git
-git+https://github.com/ddboline/security_log_analysis.git
-git+https://github.com/ddboline/sync_app.git
 git+https://github.com/ddboline/testpath.git@0.4.2-1
 git+https://github.com/ddboline/trakt.py.git@2.14.1-1
 fitbit
@@ -35,7 +31,7 @@ asyncpgsa
 ipython
 git+https://github.com/iduartgomez/rustypy.git
 jupyter_client
-git+https://github.com/ddboline/spyder.git@v3.3.5-1
+git+https://github.com/ddboline/spyder.git@v3.3.6-1
 git+https://github.com/ddboline/pywt.git@v1.0.3-1
 git+https://github.com/ddboline/audio-metadata.git@0.4.0-1
 git+https://github.com/ddboline/google-music-proto.git@2.4.0-2
