@@ -13,7 +13,10 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
     install -yq postgresql-server-dev-10 libhdf5-dev libxml2-dev libxslt1-dev libpython3.6-dev \
                 freetds-bin freetds-dev udev libfreetype6-dev libpng-dev pkg-config \
-                libgeos-dev pandoc libmysqlclient-dev swig librdkafka-dev libproj-dev
+                libgeos-dev pandoc libmysqlclient-dev swig librdkafka-dev llvm-7 \
+                libproj-dev proj-bin
+
+sudo ln -s /usr/bin/llvm-config-7 /usr/bin/llvm-config
 
 touch build.log
 md5sum /home/${USER}/py2deb3/*.deb > existing.log
