@@ -33,6 +33,7 @@ jupyter_client
 git+https://github.com/ddboline/spyder.git@v3.3.6-1
 git+https://github.com/ddboline/pywt.git@v1.0.3-1
 git+https://github.com/great-expectations/great_expectations.git
+git+https://github.com/duo-labs/dlint.git@0.5.0
 webencodings
 html5lib
 jupyter
@@ -70,7 +71,6 @@ dask
 deap
 delegator.py
 distributed
-dlint
 docker
 docutils
 dropbox
