@@ -10,7 +10,7 @@ RUN apt-get update && \
     sh rustup.sh -y --default-toolchain nightly && \
     . ~/.cargo/env
     
-RUN . ~/.cargo/env && \
-    rustup component add rustfmt
+# RUN . ~/.cargo/env && \
+#    rustup component add rustfmt
 
 WORKDIR /workdir
