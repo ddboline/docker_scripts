@@ -22,6 +22,7 @@ git+https://github.com/ddboline/antfs-cli.git
 git+https://github.com/ddboline/PyFunctional.git@v1.2.0-1
 git+https://github.com/ddboline/testpath.git@0.4.2-1
 git+https://github.com/ddboline/trakt.py.git@2.14.1-1
+git+https://github.com/ddboline/trakt_instance.git
 fitbit
 jedi
 git+https://github.com/ddboline/compose.git@1.24.1-1
