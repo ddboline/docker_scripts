@@ -3,8 +3,8 @@ aiohttp appdirs yarl
 cython
 git+https://github.com/ddboline/numpy.git@v1.17.0-1
 git+https://github.com/ddboline/scipy.git@v1.3.1-1
-git+https://github.com/ddboline/botocore.git@1.12.205-1
-git+https://github.com/ddboline/aws-cli.git@1.16.215-1
+git+https://github.com/ddboline/botocore.git@1.12.208-1
+git+https://github.com/ddboline/aws-cli.git@1.16.218-1
 gevent
 python-dateutil
 pytz cycler
