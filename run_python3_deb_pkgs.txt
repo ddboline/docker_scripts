@@ -59,6 +59,7 @@ boto3
 boxsdk
 cached-property
 celery
+cfn-lint
 chardet
 cherrypy
 click
