@@ -1,15 +1,15 @@
-version := "0.0.4"
+version := "0.0.5"
 release := "1"
 build_type := release
 
 all:
 	cp Dockerfile.bionic Dockerfile
-	docker build -t rust_stable:${version} .
+	docker build --no-cache -t rust_stable:${version} .
 	docker tag rust_stable:${version} rust_stable:latest
 
 xenial:
 	cp Dockerfile.xenial Dockerfile
-	docker build -t rust_stable:xenial_${version} .
+	docker build --no-cache -t rust_stable:xenial_${version} .
 	docker tag rust_stable:xenial_${version} rust_stable:xenial_latest
 
 cleanup:
