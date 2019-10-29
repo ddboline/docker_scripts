@@ -7,6 +7,11 @@ all:
 	docker build --no-cache -t rust_stable:${version} .
 	docker tag rust_stable:${version} rust_stable:latest
 
+amazon:
+	cp Dockerfile.amazon Dockerfile
+	docker build --no-cache -t rust_stable:${version} .
+	docker tag rust_stable:${version} rust_stable:latest
+
 cleanup:
 	docker rmi `docker images | python -c "import sys; print('\n'.join(l.split()[2] for l in sys.stdin if '<none>' in l))"`
 

@@ -1,0 +1,10 @@
+FROM amazonlinux:2018.03
+MAINTAINER Daniel Boline
+
+RUN yum install -y gcc && curl https://sh.rustup.rs > rustup.sh && \
+    sh rustup.sh -y && \
+    . ~/.cargo/env && \
+    rustup component add rustfmt && \
+    rustup component add clippy
+
+WORKDIR /workdir
