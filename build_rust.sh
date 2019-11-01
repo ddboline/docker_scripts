@@ -14,6 +14,18 @@ docker rmi `docker images | awk '/rust_stable/ && /amazon/' | python -c "import 
 
 make && make push
 
+for PKGS in "fd-find,fd" "exa,exa" "bat,bat" "du-dust,dust";
+do
+    PACKAGE=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
+    EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
+    UNIQ=`head -c1000 /dev/urandom | sha512sum | head -c 12 ; echo`;
+    CIDFILE="/tmp/.tmp.docker.${UNIQ}";
+    docker run --cidfile ${CIDFILE} rust_stable:latest /root/build_rust_pkg.sh ${PACKAGE} ${EXE}
+    docker cp `cat ${CIDFILE}`:/root/${PACKAGE}/${EXE}_${VERSION}-${RELEASE}_amd64.deb .
+    docker rm `cat ${CIDFILE}`
+    rm ${CIDFILE}
+done
+
 cd ~/
 
 sudo rm -rf ~/docker_scripts
