@@ -27,5 +27,3 @@ do
 done
 
 cd ~/
-
-sudo rm -rf ~/docker_scripts
