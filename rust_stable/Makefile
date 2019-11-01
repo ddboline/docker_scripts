@@ -1,4 +1,4 @@
-version := "0.0.5"
+version := "0.1.0"
 release := "1"
 build_type := release
 
@@ -13,6 +13,7 @@ amazon:
 	docker tag rust_stable:${version} rust_stable:latest_amazon
 
 cleanup:
+	rm Dockerfile
 	docker rmi `docker images | python -c "import sys; print('\n'.join(l.split()[2] for l in sys.stdin if '<none>' in l))"`
 
 push:
