@@ -8,7 +8,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     curl https://sh.rustup.rs > rustup.sh && \
     sh rustup.sh -y && \
-    . ~/.cargo/env &&
+    . ~/.cargo/env && \
     rustup component add rustfmt && \
     rustup component add clippy
 
