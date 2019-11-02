@@ -4,13 +4,13 @@ cd ~/docker_scripts/rust_nightly
 
 make && make push
 
-docker rmi `docker images | awk '/rust_nightly/ {print $3}' | sort | uniq`
+docker rmi -f `docker images | awk '/rust_nightly/ {print $3}' | sort | uniq`
 
 cd ~/docker_scripts/rust_stable
 
 make amazon && make push_amazon
 
-docker rmi `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort | uniq`
+docker rmi -f `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort | uniq`
 
 make && make push
 
