@@ -4,7 +4,7 @@
 
 PACKAGE_NAME=$1
 EXE_NAME=$2
-VERSION=`cargo search fd-find | head -n1 | awk '{print $3}' | sed 's:"::g'`
+VERSION=`cargo search $PACKAGE_NAME 2> /dev/null | head -n1 | awk '{print $3}' | sed 's:"::g'`
 RELEASE="1"
 
 echo $PACKAGE_NAME $EXE_NAME $VERSION $RELEASE

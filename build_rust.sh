@@ -24,6 +24,8 @@ do
     docker cp `cat ${CIDFILE}`:/root/${PACKAGE}/${EXE}_${VERSION}-${RELEASE}_amd64.deb .
     docker rm `cat ${CIDFILE}`
     rm ${CIDFILE}
+    cp ${EXE}_${VERSION}-${RELEASE}_amd64.deb ~/py2deb/
+    cp ${EXE}_${VERSION}-${RELEASE}_amd64.deb ~/py2deb3/
 done
 
 cd ~/
