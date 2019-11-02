@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ~/.cargo/env
+
 PACKAGE_NAME=$1
 EXE_NAME=$2
 VERSION=`cargo search fd-find | head -n1 | awk '{print $3}' | sed 's:"::g'`
