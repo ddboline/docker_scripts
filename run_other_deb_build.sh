@@ -13,7 +13,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
     install -yq awscli
 
-mkdir -p ~/py2deb/
 mkdir -p ~/py2deb3/
 
 ./docker_scripts/build_rust.sh 2>&1 > build.log

@@ -18,15 +18,8 @@ for PKGS in "fd-find,fd" "exa,exa" "bat,bat" "du-dust,dust";
 do
     PACKAGE=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
-    UNIQ=`head -c1000 /dev/urandom | sha512sum | head -c 12 ; echo`;
-    CIDFILE="/tmp/.tmp.docker.${UNIQ}";
-    docker run --cidfile ${CIDFILE} rust_stable:latest /root/build_rust_pkg.sh ${PACKAGE} ${EXE}
-    DOCKERID=`cat ${CIDFILE}`
-    DEBFILE=`docker exec ${DOCKERID} /bin/bash -c "ls /root/${PACKAGE}/${EXE}_*_amd64.deb" | tail -n1`
-    docker cp ${DOCKERID}:${DEBFILE} .
-    docker rm ${DOCKERID}
-    rm ${CIDFILE}
-    mv ${EXE}_*_amd64.deb ~/py2deb3/
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${PACKAGE} ${EXE}
+    sudo chown ${USER}:${USER} ~/py2deb3/${EXE}_*.deb
 done
 
 cd ~/
