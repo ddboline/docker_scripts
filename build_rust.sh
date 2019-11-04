@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p ~/py2deb3
+
 cd ~/docker_scripts/rust_nightly
 
 make && make push
