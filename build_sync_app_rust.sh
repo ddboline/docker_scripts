@@ -10,8 +10,7 @@ cd sync_app_rust
 
 make pull && make && make package
 
-cp sync-app-rust*.deb ~/py2deb/
-cp sync-app-rust*.deb ~/py2deb3/
+mv sync-app-rust*.deb ~/py2deb3/
 
 cd ~/
 

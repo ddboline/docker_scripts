@@ -10,8 +10,7 @@ cd podcatch_rust
 
 make pull && make && make package
 
-cp podcatch-rust*.deb ~/py2deb/
-cp podcatch-rust*.deb ~/py2deb3/
+mv podcatch-rust*.deb ~/py2deb3/
 
 cd ~/
 

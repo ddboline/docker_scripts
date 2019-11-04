@@ -10,8 +10,7 @@ cd gcsf
 
 make pull && make && make package
 
-cp gcsf*.deb ~/py2deb/
-cp gcsf*.deb ~/py2deb3/
+mv gcsf*.deb ~/py2deb3/
 
 cd ~/
 

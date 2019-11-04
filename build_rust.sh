@@ -21,11 +21,12 @@ do
     UNIQ=`head -c1000 /dev/urandom | sha512sum | head -c 12 ; echo`;
     CIDFILE="/tmp/.tmp.docker.${UNIQ}";
     docker run --cidfile ${CIDFILE} rust_stable:latest /root/build_rust_pkg.sh ${PACKAGE} ${EXE}
-    docker cp `cat ${CIDFILE}`:/root/${PACKAGE}/${EXE}_${VERSION}-${RELEASE}_amd64.deb .
-    docker rm `cat ${CIDFILE}`
+    DOCKERID=`cat ${CIDFILE}`
+    DEBFILE=`docker exec ${DOCKERID} /bin/bash -c "ls /root/${PACKAGE}/${EXE}_*_amd64.deb" | tail -n1`
+    docker cp ${DOCKERID}:${DEBFILE} .
+    docker rm ${DOCKERID}
     rm ${CIDFILE}
-    cp ${EXE}_${VERSION}-${RELEASE}_amd64.deb ~/py2deb/
-    cp ${EXE}_${VERSION}-${RELEASE}_amd64.deb ~/py2deb3/
+    mv ${EXE}_*_amd64.deb ~/py2deb3/
 done
 
 cd ~/

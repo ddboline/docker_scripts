@@ -10,8 +10,7 @@ cd garmin_rust
 
 make pull && make && make package
 
-cp garmin-rust*.deb ~/py2deb/
-cp garmin-rust*.deb ~/py2deb3/
+mv garmin-rust*.deb ~/py2deb3/
 
 cd ~/
 

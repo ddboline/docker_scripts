@@ -30,6 +30,5 @@ mkdir -p ~/py2deb3/
 
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
-    scp $MODIFIED build.log ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb/bionic/py2deb/
     scp $MODIFIED build.log ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/bionic/py2deb3/
 fi

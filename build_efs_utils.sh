@@ -16,8 +16,7 @@ make deb
 
 rename 's:amazon-efs-utils-:amazon-efs-utils_:g' build/amazon-efs-utils-*.deb
 
-cp build/amazon-efs-utils*.deb ~/py2deb/
-cp build/amazon-efs-utils*.deb ~/py2deb3/
+mv build/amazon-efs-utils*.deb ~/py2deb3/
 
 cd ~/
 

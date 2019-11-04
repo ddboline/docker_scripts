@@ -10,8 +10,7 @@ cd rust-auth-server
 
 make pull && make && make package
 
-cp rust-auth*.deb ~/py2deb/
-cp rust-auth*.deb ~/py2deb3/
+mv rust-auth*.deb ~/py2deb3/
 
 cd ~/
 

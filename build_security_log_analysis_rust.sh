@@ -10,8 +10,7 @@ cd security_log_analysis_rust
 
 make pull && make && make package
 
-cp security-log-analysis-rust*.deb ~/py2deb/
-cp security-log-analysis-rust*.deb ~/py2deb3/
+mv security-log-analysis-rust*.deb ~/py2deb3/
 
 cd ~/
 

@@ -10,8 +10,7 @@ cd diary_app_rust
 
 make pull && make && make package
 
-cp diary-app-rust*.deb ~/py2deb/
-cp diary-app-rust*.deb ~/py2deb3/
+mv diary-app-rust*.deb ~/py2deb3/
 
 cd ~/
 

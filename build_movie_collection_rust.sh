@@ -10,8 +10,7 @@ cd movie_collection_rust
 
 make pull && make && make package
 
-cp movie-collection-rust*.deb ~/py2deb/
-cp movie-collection-rust*.deb ~/py2deb3/
+mv movie-collection-rust*.deb ~/py2deb3/
 
 cd ~/
 

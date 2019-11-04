@@ -22,8 +22,7 @@ printf "Convert fit files to tcx\n" > description-pak
 sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
 sudo chown ${USER}:${USER} fit2tcx_${VERSION}-${RELEASE}*.deb
 
-cp fit2tcx_${VERSION}-${RELEASE}*.deb ~/py2deb/
-cp fit2tcx_${VERSION}-${RELEASE}*.deb ~/py2deb3/
+mv fit2tcx_${VERSION}-${RELEASE}*.deb ~/py2deb3/
 
 cd ~/
 
