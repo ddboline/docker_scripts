@@ -19,3 +19,4 @@ printf "Convert fit files to tcx\n" > description-pak
 ### this part is sadly interactive
 checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
 chown ${USER}:${USER} ${EXE_NAME}_${VERSION}-${RELEASE}*.deb
+mv ${EXE_NAME}_${VERSION}-${RELEASE}*.deb ~/py2deb3/
