@@ -16,12 +16,13 @@ docker rmi -f `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort
 
 make && make push
 
-for PKGS in "fd-find,fd" "exa,exa" "bat,bat" "du-dust,dust";
+for PKGS in "fd-find,fd,fd" "exa,exa,exa" "bat,bat,bat" "du-dust,dust,du";
 do
-    PACKAGE=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
+    CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${PACKAGE} ${EXE}
-    sudo chown ${USER}:${USER} ~/py2deb3/${EXE}_*.deb
+    PACKAGE=`echo $PKGS | sed 's:,: :g' | awk '{print $3}'`;
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${EXE} ${PACKAGE}
+    sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
 done
 
 cd ~/
