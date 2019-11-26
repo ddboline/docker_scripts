@@ -12,6 +12,7 @@ pandas
 matplotlib
 mock
 pyparsing
+wheel
 pbr
 entrypoints
 git+https://github.com/ddboline/openant.git
@@ -237,7 +238,6 @@ watchtower
 webencodings
 websockify
 wget
-wheel
 wrapt
 xdis
 xray
