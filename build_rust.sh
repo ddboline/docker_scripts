@@ -16,7 +16,7 @@ docker rmi -f `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort
 
 make && make push
 
-for PKGS in "fd-find,fd,fd" "exa,exa,exa" "bat,bat,bat" "du-dust,dust,du";
+for PKGS in "fd-find,fd,fd" "exa,exa,exa" "bat,bat,bat" "du-dust,dust,du" "diskus,diskus,diskus";
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;

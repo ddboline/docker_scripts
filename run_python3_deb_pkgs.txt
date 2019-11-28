@@ -4,7 +4,7 @@ cython
 git+https://github.com/ddboline/numpy.git@v1.17.4-1
 git+https://github.com/ddboline/scipy.git@v1.3.3-1
 botocore
-git+https://github.com/ddboline/aws-cli.git@1.16.290-1
+git+https://github.com/ddboline/aws-cli.git@1.16.292-1
 gevent
 python-dateutil
 pytz cycler
@@ -19,13 +19,13 @@ git+https://github.com/ddboline/openant.git
 git+https://github.com/ddboline/pip-accel.git@pip-8.1-upgrade-1
 git+https://github.com/ddboline/py2deb.git@2.1-1
 git+https://github.com/ddboline/antfs-cli.git
-git+https://github.com/ddboline/hangups.git@v0.4.9-1
-git+https://github.com/ddboline/testpath.git@0.4.2-1
+git+https://github.com/ddboline/hangups.git@v0.4.10-1
+testpath
 trakt.py
 git+https://github.com/ddboline/trakt_instance.git
 fitbit
 jedi
-git+https://github.com/ddboline/compose.git@1.24.1-1
+git+https://github.com/ddboline/compose.git@1.25.0-1
 asyncpg
 asyncpgsa
 ipython
@@ -37,8 +37,8 @@ git+https://github.com/ddboline/httpx@0.7.6-1
 git+https://github.com/ddboline/audio-metadata.git@0.6.0-1
 git+https://github.com/ddboline/google-music-proto.git@2.5.1-1
 git+https://github.com/ddboline/google-music.git@3.2.0-1
-git+https://github.com/great-expectations/great_expectations.git@v0.7.9
-git+https://github.com/duo-labs/dlint.git@0.8.0
+git+https://github.com/great-expectations/great_expectations.git@v0.7.10
+git+https://github.com/duo-labs/dlint.git@0.9.2
 webencodings
 html5lib
 jupyter
