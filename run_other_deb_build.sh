@@ -19,15 +19,6 @@ mkdir -p ~/py2deb3/
 ./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
-./docker_scripts/build_garmin_rust.sh 2>&1 >> build.log
-./docker_scripts/build_movie_collection_rust.sh 2>&1 >> build.log
-./docker_scripts/build_rust_auth.sh 2>&1 >> build.log
-./docker_scripts/build_gcsf.sh 2>&1 >> build.log
-./docker_scripts/build_sync_app_rust.sh 2>&1 >> build.log
-./docker_scripts/build_podcatch_rust.sh 2>&1 >> build.log
-./docker_scripts/build_security_log_analysis_rust.sh 2>&1 >> build.log
-./docker_scripts/build_diary_app_rust.sh 2>&1 >> build.log
-
 for REPONAME in aws_app_rust \
     diary_app_rust \
     garmin_rust \
