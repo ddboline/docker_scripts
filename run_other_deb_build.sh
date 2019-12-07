@@ -29,7 +29,7 @@ for REPONAME in aws_app_rust \
     sync_app_rust \
     security_log_analysis_rust;
 do
-    ./docker_scripts/build_rust_github.sh $REPONAME 2>&1 >> build.log;
+    ./docker_scripts/build_rust_github.sh $REPONAME 2>&1 >> build.log
 done
 
 MODIFIED=/home/${USER}/py2deb3/*.deb

@@ -19,10 +19,10 @@ make && make push
 for PKGS in "fd-find,fd,fd" \
     "exa,exa,exa" \
     "bat,bat,bat" \
-    "du-dust,dust,du"
-    "diesel_cli,diesel,diesel"
-    "cargo-generate,cargo-generate,cargo-generate"
-    "cargo-tree,cargo-tree,cargo-tree"
+    "du-dust,dust,du" \
+    "diesel_cli,diesel,diesel" \
+    "cargo-generate,cargo-generate,cargo-generate" \
+    "cargo-tree,cargo-tree,cargo-tree" \
     "cargo-outdated,cargo-outdated,cargo-outdated";
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
