@@ -19,17 +19,20 @@ mkdir -p ~/py2deb3/
 ./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
-for REPONAME in aws_app_rust \
-    diary_app_rust \
-    garmin_rust \
-    gcsf \
-    movie_collection_rust \
-    podcatch_rust \
-    rust-auth-server \
-    sync_app_rust \
-    security_log_analysis_rust;
+for PKGS in "aws_app_rust,aws-app-rust" \
+    "diary_app_rust,diary-app-rust" \
+    "garmin_rust,garmin-rust" \
+    "gcsf,gcsf" \
+    "movie_collection_rust,movie-collection-rust" \
+    "podcatch_rust,podcatch-rust" \
+    "rust-auth-server,rust-auth" \
+    "sync_app_rust,sync-app-rust" \
+    "security_log_analysis_rust,security-log-analysis-rust";
 do
-    ./docker_scripts/build_rust_github.sh $REPONAME 2>&1 >> build.log
+    REPONAME=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
+    PKGNAME=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
+
+    ./docker_scripts/build_rust_github.sh $REPONAME $PKGNAME 2>&1 >> build.log
 done
 
 MODIFIED=/home/${USER}/py2deb3/*.deb

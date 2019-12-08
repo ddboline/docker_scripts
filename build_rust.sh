@@ -20,7 +20,7 @@ for PKGS in "fd-find,fd,fd" \
     "exa,exa,exa" \
     "bat,bat,bat" \
     "du-dust,dust,du" \
-    "diesel_cli,diesel,diesel" \
+    "diesel_cli,diesel,diesel-cli" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-tree,cargo-tree,cargo-tree" \
     "cargo-outdated,cargo-outdated,cargo-outdated";

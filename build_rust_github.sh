@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPONAME=$1
-PKGNAME=`echo $REPONAME | sed 's:_:-:g'`
+PKGNAME=$2
 
 REPO="https://github.com/ddboline/${REPONAME}.git"
 
