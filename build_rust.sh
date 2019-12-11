@@ -23,7 +23,8 @@ for PKGS in "fd-find,fd,fd" \
     "diesel_cli,diesel,diesel-cli" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-tree,cargo-tree,cargo-tree" \
-    "cargo-outdated,cargo-outdated,cargo-outdated";
+    "cargo-outdated,cargo-outdated,cargo-outdated"
+    "cargo-edit,cargo-edit,cargo-edit";
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
