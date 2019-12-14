@@ -4,8 +4,8 @@ cython
 git+https://github.com/ddboline/numpy.git@v1.17.4-1
 git+https://github.com/ddboline/scipy.git@v1.3.3-1
 wheel
-git+https://github.com/ddboline/botocore.git@1.13.38-1
-git+https://github.com/ddboline/aws-cli.git@1.16.302-1
+git+https://github.com/ddboline/botocore.git@1.13.39-1
+git+https://github.com/ddboline/aws-cli.git@1.16.303-1
 gevent
 python-dateutil
 pytz cycler
