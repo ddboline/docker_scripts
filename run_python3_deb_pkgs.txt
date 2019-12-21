@@ -1,6 +1,6 @@
 packaging
 aiohttp appdirs yarl wheel
-cython
+cython pybind11
 git+https://github.com/ddboline/numpy.git@v1.17.4-1
 git+https://github.com/ddboline/scipy.git@v1.4.1-2
 git+https://github.com/ddboline/botocore.git@1.13.43-1
