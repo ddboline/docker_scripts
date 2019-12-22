@@ -14,5 +14,6 @@ RUN apt-get update && \
     rustup component add clippy
 
 ADD build_rust_pkg.sh /root/
+ADD build_rust_pkg_repo.sh /root/
 
 WORKDIR /workdir

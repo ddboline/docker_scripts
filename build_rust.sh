@@ -34,4 +34,6 @@ do
     sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
 done
 
+./docker_scripts/build_rust_pkg_repo.sh https://github.com/pop-os/debrepbuild.git debrepbuild debrep debrepbuild
+
 cd ~/
