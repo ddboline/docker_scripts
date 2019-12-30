@@ -16,8 +16,7 @@ cd ~/${CARGO_NAME}
 cargo install $CARGO_NAME
 
 printf "\ninstall:\n\tcp ~/.cargo/bin/${EXE_NAME} /usr/bin/\n" > Makefile
-printf "Convert fit files to tcx\n" > description-pak
-### this part is sadly interactive
+printf "${PACKAGE_NAME} package\n" > description-pak
 checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE_NAME} -y
 chown ${USER}:${USER} ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb
 mv ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb ~/py2deb3/
