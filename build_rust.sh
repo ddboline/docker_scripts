@@ -26,7 +26,7 @@ for PKGS in "fd-find,fd,fd" \
     "cargo-outdated,cargo-outdated,cargo-outdated" \
     "cargo-edit,cargo-edit,cargo-edit" \
     "cargo-scout,cargo-scout,cargo-scout" \
-    "what,what,what";
+    "bandwhich,bandwhich,bandwhich";
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
