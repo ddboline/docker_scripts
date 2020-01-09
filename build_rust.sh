@@ -16,10 +16,11 @@ docker rmi -f `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort
 
 make && make push
 
-for PKGS in "fd-find,fd,fd" \
+for PKGS in "fd-find,fd,fd-find" \
     "exa,exa,exa" \
     "bat,bat,bat" \
     "du-dust,dust,dust" \
+    "ripgrep,rg,ripgrep"
     "diesel_cli,diesel,diesel-cli" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-tree,cargo-tree,cargo-tree" \
