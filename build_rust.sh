@@ -21,6 +21,7 @@ for PKGS in "fd-find,fd,fd-find" \
     "bat,bat,bat" \
     "du-dust,dust,dust" \
     "ripgrep,rg,ripgrep" \
+    "b3sum,b3sum,b3sum" \
     "diesel_cli,diesel,diesel-cli" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-tree,cargo-tree,cargo-tree" \
