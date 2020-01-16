@@ -28,6 +28,7 @@ for PKGS in "fd-find,fd,fd-find" \
     "cargo-outdated,cargo-outdated,cargo-outdated" \
     "cargo-edit,cargo-edit,cargo-edit" \
     "cargo-scout,cargo-scout,cargo-scout" \
+    "cargo-expand,cargo-expand,cargo-expand" \
     "bandwhich,bandwhich,bandwhich";
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
