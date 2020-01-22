@@ -23,6 +23,7 @@ for PKGS in "fd-find,fd,fd-find" \
     "ripgrep,rg,ripgrep" \
     "weather_util_rust,weather-util-rust,weather-util-rust" \
     "b3sum,b3sum,b3sum" \
+    "weather_util_rust,weather-util-rust,weather-util-rust" \
     "diesel_cli,diesel,diesel-cli" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-tree,cargo-tree,cargo-tree" \
