@@ -27,8 +27,7 @@ for PKGS in "aws_app_rust,aws-app-rust" \
     "podcatch_rust,podcatch-rust" \
     "rust-auth-server,rust-auth" \
     "sync_app_rust,sync-app-rust" \
-    "security_log_analysis_rust,security-log-analysis-rust" \
-    "weather_util_rust,weather-util-rust";
+    "security_log_analysis_rust,security-log-analysis-rust";
 do
     REPONAME=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     PKGNAME=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
