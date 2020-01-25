@@ -16,15 +16,16 @@ docker rmi -f `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort
 
 make && make push
 
-for PKGS in "fd-find,fd,fd-find" \
-    "exa,exa,exa" \
+for PKGS in \
     "bat,bat,bat" \
+    "exa,exa,exa" \
+    "fd-find,fd,fd-find" \
     "du-dust,dust,dust" \
     "ripgrep,rg,ripgrep" \
-    "weather_util_rust,weather-util-rust,weather-util-rust" \
     "b3sum,b3sum,b3sum" \
     "weather_util_rust,weather-util-rust,weather-util-rust" \
     "diesel_cli,diesel,diesel-cli" \
+    "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-tree,cargo-tree,cargo-tree" \
     "cargo-outdated,cargo-outdated,cargo-outdated" \
