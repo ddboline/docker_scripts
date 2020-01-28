@@ -17,22 +17,23 @@ docker rmi -f `docker images | awk '/rust_stable/ && /amazon/ {print $3}' | sort
 make && make push
 
 for PKGS in \
+    "b3sum,b3sum,b3sum" \
+    "bandwhich,bandwhich,bandwhich" \
     "bat,bat,bat" \
+    "cargo-edit,cargo-edit,cargo-edit" \
+    "cargo-expand,cargo-expand,cargo-expand" \
+    "cargo-generate,cargo-generate,cargo-generate" \
+    "cargo-outdated,cargo-outdated,cargo-outdated" \
+    "cargo-scout,cargo-scout,cargo-scout" \
+    "cargo-tree,cargo-tree,cargo-tree" \
+    "diesel_cli,diesel,diesel-cli" \
+    "du-dust,dust,dust" \
     "exa,exa,exa" \
     "fd-find,fd,fd-find" \
-    "du-dust,dust,dust" \
     "ripgrep,rg,ripgrep" \
-    "b3sum,b3sum,b3sum" \
-    "weather_util_rust,weather-util-rust,weather-util-rust" \
-    "diesel_cli,diesel,diesel-cli" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
-    "cargo-generate,cargo-generate,cargo-generate" \
-    "cargo-tree,cargo-tree,cargo-tree" \
-    "cargo-outdated,cargo-outdated,cargo-outdated" \
-    "cargo-edit,cargo-edit,cargo-edit" \
-    "cargo-scout,cargo-scout,cargo-scout" \
-    "cargo-expand,cargo-expand,cargo-expand" \
-    "bandwhich,bandwhich,bandwhich";
+    "weather_util_rust,weather-util-rust,weather-util-rust" \
+    ;
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
