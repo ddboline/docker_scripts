@@ -30,6 +30,7 @@ for PKGS in \
     "du-dust,dust,dust" \
     "exa,exa,exa" \
     "fd-find,fd,fd-find" \
+    "hors,hors,hors" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "weather_util_rust,weather-util-rust,weather-util-rust" \
