@@ -33,6 +33,7 @@ for PKGS in \
     "hors,hors,hors" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
+    "tokei,tokei,tokei" \
     "weather_util_rust,weather-util-rust,weather-util-rust" \
     ;
 do
