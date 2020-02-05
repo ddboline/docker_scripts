@@ -32,6 +32,7 @@ for PKGS in \
     "fd-find,fd,fd-find" \
     "highlight-stderr,highlight-stderr,highlight-stderr" \
     "hors,hors,hors" \
+    "jql,jql,jql" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "tokei,tokei,tokei" \
