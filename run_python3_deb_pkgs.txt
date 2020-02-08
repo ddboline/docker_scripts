@@ -63,7 +63,6 @@ cherrypy
 click
 cloudpickle
 codemod
-confluent-kafka[avro]==1.2.0
 coverage
 cpplint
 cryptography
@@ -216,7 +215,6 @@ sqlacodegen
 sqlalchemy
 sqlparse
 spavro
-statsmodels
 stldecompose
 stravalib
 tables
@@ -230,7 +228,6 @@ units
 validictory
 vcrpy
 vcrpy-unittest
-voluptuous==0.10.5
 watchtower
 webencodings
 websockify
