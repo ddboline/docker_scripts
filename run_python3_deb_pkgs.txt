@@ -60,7 +60,6 @@ cached-property
 celery
 cfn-lint
 chardet
-cherrypy
 click
 cloudpickle
 codemod
@@ -116,13 +115,11 @@ jardin
 jdcal
 jinja2
 jsonschema
-keras
 lasagne
 lime
 lockfile
 lxml
 markupsafe
-mssql-cli
 murmurhash
 mypy-lang
 mysqlclient
@@ -165,7 +162,6 @@ pyflakes
 pygal
 pyhive
 pylint
-pymc3
 pymonad
 pyopenssl
 pyprof2calltree
@@ -217,15 +213,12 @@ sqlacodegen
 sqlalchemy
 sqlparse
 spavro
-statsmodels
-stldecompose
 stravalib
 tables
 test-helper
 thinc
 tpot
 traitlets
-tsfresh
 ujson
 units
 validictory
