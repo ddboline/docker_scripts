@@ -15,14 +15,13 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
 
 mkdir -p ~/py2deb3/
 
-./docker_scripts/build_rust.sh 2>&1 > build.log
 ./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
-for PKGS in "aws_app_rust,aws-app-rust" \
+for PKGS in \
+    "aws_app_rust,aws-app-rust" \
     "diary_app_rust,diary-app-rust" \
     "garmin_rust,garmin-rust" \
-    "gcsf,gcsf" \
     "movie_collection_rust,movie-collection-rust" \
     "podcatch_rust,podcatch-rust" \
     "rust-auth-server,rust-auth" \
