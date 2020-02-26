@@ -33,6 +33,7 @@ for PKGS in \
     "highlight-stderr,highlight-stderr,highlight-stderr" \
     "hors,hors,hors" \
     "jql,jql,jql" \
+    "pijul,pijul,pijul" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "tokei,tokei,tokei" \
