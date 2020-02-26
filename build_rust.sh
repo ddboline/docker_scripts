@@ -2,10 +2,12 @@
 
 mkdir -p ~/py2deb3
 
+export AWS_ACCOUNT=$(aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
+
 `aws ecr --region us-east-1 get-login --no-include-email`
-docker pull 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
-docker tag 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
-docker rmi 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
+docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
+docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
+docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
 for PKGS in \
     "b3sum,b3sum,b3sum" \
