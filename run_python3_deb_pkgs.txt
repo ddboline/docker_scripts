@@ -3,8 +3,8 @@ aiohttp appdirs yarl wheel
 cython pybind11
 git+https://github.com/ddboline/numpy.git@v1.18.1-1
 git+https://github.com/ddboline/scipy.git@v1.4.1-2
-git+https://github.com/ddboline/botocore.git@1.15.9-1
-git+https://github.com/ddboline/aws-cli.git@1.18.9-1
+git+https://github.com/ddboline/botocore.git@1.15.11-1
+git+https://github.com/ddboline/aws-cli.git@1.18.11-1
 gevent
 python-dateutil
 pytz cycler
