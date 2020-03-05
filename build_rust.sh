@@ -24,8 +24,10 @@ for PKGS in \
     "du-dust,dust,dust" \
     "exa,exa,exa" \
     "fd-find,fd,fd-find" \
+    "flamegraph,flamegraph,flamegraph" \
     "highlight-stderr,highlight-stderr,highlight-stderr" \
     "hors,hors,hors" \
+    "hx,hx,hx" \
     "jql,jql,jql" \
     "pijul,pijul,pijul" \
     "ripgrep,rg,ripgrep" \
@@ -43,5 +45,8 @@ done
 
 docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
     /root/build_rust_pkg_repo.sh https://github.com/pop-os/debrepbuild.git debrepbuild debrep debrepbuild
+
+docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
+    /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop ytop
 
 cd ~/
