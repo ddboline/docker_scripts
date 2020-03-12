@@ -14,7 +14,6 @@ for PKGS in \
     "bandwhich,bandwhich,bandwhich" \
     "bat,bat,bat" \
     "bottom,bottom,bottom" \
-    "cargo-edit,cargo-edit,cargo-edit" \
     "cargo-expand,cargo-expand,cargo-expand" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-outdated,cargo-outdated,cargo-outdated" \
@@ -31,6 +30,7 @@ for PKGS in \
     "jql,jql,jql" \
     "kibi,kibi,kibi" \
     "pijul,pijul,pijul" \
+    "procs,procs,procs" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "tokei,tokei,tokei" \
