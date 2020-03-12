@@ -29,6 +29,7 @@ for PKGS in \
     "hors,hors,hors" \
     "hx,hx,hx" \
     "jql,jql,jql" \
+    "kibi,kibi,kibi" \
     "pijul,pijul,pijul" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
