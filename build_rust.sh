@@ -27,6 +27,7 @@ for PKGS in \
     "highlight-stderr,highlight-stderr,highlight-stderr" \
     "hors,hors,hors" \
     "hx,hx,hx" \
+    "hyperfine,hyperfine,hyperfine" \
     "jql,jql,jql" \
     "kibi,kibi,kibi" \
     "pijul,pijul,pijul" \
