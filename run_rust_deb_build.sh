@@ -19,5 +19,5 @@ mkdir -p ~/py2deb3/
 
 MODIFIED=/home/${USER}/py2deb3/*.deb
 if [ -n "$MODIFIED" ]; then
-    scp $MODIFIED build_rust.log ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/bionic/py2deb3/
+    scp $MODIFIED build_rust.log ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/bionic/devel_rust/
 fi
