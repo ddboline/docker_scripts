@@ -46,9 +46,9 @@ do
 done
 
 docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-    /root/build_rust_pkg_repo.sh https://github.com/pop-os/debrepbuild.git debrepbuild debrep debrepbuild
+    /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop
 
 docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-    /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop ytop
+    /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain explain-rs
 
 cd ~/
