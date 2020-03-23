@@ -20,6 +20,7 @@ mkdir -p ~/py2deb3/
 
 for PKGS in \
     "aws_app_rust,aws-app-rust" \
+    "calendar_app_rust,calendar-app-rust" \
     "diary_app_rust,diary-app-rust" \
     "garmin_rust,garmin-rust" \
     "movie_collection_rust,movie-collection-rust" \
