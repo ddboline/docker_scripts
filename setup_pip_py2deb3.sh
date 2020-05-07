@@ -15,6 +15,8 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
                 python3-setuptools python3-py2deb libpq-dev libatlas-base-dev \
                 libhdf5-dev libgeos-dev libgeos++-dev \
                 libexif-dev libjpeg-dev liblcms2-dev libtiff5-dev zlib1g-dev \
-                freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev pybind11-dev
+                freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev pybind11-dev \
+                python3-apt apt-file fakeroot build-essential devscripts debhelper
+sudo apt-file update
 mkdir -p /home/ubuntu/py2deb3
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
