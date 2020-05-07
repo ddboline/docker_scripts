@@ -16,7 +16,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
                 libhdf5-dev libgeos-dev libgeos++-dev \
                 libexif-dev libjpeg-dev liblcms2-dev libtiff5-dev zlib1g-dev \
                 freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev pybind11-dev
-sudo apt-get remove -y --force-yes python3-cffi-backend
 mkdir -p /home/ubuntu/py2deb3
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
 sudo rm -rf /usr/lib/python3/dist-packages/pkg_resources
