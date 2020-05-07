@@ -12,7 +12,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
     install -yq python3-pip python3-dev lintian liblapack-dev libblas-dev \
                 dpkg-dev gfortran libfreetype6-dev libpng-dev pkg-config \
-                python3-setuptools python3-py2deb libpq-dev libatlas-base-dev \
+                libpq-dev libatlas-base-dev \
                 libhdf5-dev libgeos-dev libgeos++-dev \
                 libexif-dev libjpeg-dev liblcms2-dev libtiff5-dev zlib1g-dev \
                 freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev pybind11-dev \
