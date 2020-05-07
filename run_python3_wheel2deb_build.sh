@@ -20,7 +20,7 @@ sudo ln -s /usr/bin/llvm-config-10 /usr/bin/llvm-config
 
 touch build.log
 md5sum /home/${USER}/output/*.deb > existing.log
-for PKG in `cat ./docker_scripts/run_python3_deb_pkgs.txt`;
+for PKG in `cat ./docker_scripts/run_python3_wheel2deb_pkgs.txt`;
 do
     ./docker_scripts/build_python3_wheel2deb.sh $PKG 2>&1 >> build.log
     rm -rf /tmp/pip-*-build
