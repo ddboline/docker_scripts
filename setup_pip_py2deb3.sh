@@ -18,4 +18,3 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
                 freetds-dev libmysqlclient-dev pandoc swig libsnappy-dev pybind11-dev
 mkdir -p /home/ubuntu/py2deb3
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
-sudo rm -rf /usr/lib/python3/dist-packages/pkg_resources
