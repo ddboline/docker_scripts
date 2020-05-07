@@ -234,3 +234,4 @@ youtube-dl
 spacy
 bokeh
 great-expectations
+wheel2deb
