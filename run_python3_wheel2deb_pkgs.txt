@@ -1,30 +1,19 @@
-packaging
-aiohttp appdirs yarl wheel
-cython pybind11
+cython
 numpy
 scipy
 botocore
-aws-cli
+awscli
 gevent
 python-dateutil
-pytz cycler
+aiohttp
+pytz
 pandas
 matplotlib
 mock
-pyparsing
-pbr
-entrypoints
-git+https://github.com/ddboline/openant.git
-git+https://github.com/ddboline/antfs-cli.git
 hangups
-testpath
 trakt.py
 git+https://github.com/ddboline/trakt_instance.git
 fitbit
-jedi
-docker-compose
-asyncpg
-asyncpgsa
 ipython
 jupyter_client
 PyWavelets
@@ -39,18 +28,13 @@ html5lib
 jupyter
 jupyterlab
 ipywidgets
-alembic
-argparse
 arrow
+autopep8
+argparse
 asyncio
 attrs
-autopep8
-awscli
 beautifulsoup4
-bitstring
-blaze
 boltons
-boto
 boto3
 boxsdk
 cached-property
