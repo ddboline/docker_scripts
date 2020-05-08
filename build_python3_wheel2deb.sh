@@ -42,6 +42,6 @@ do
 done
 
 wheel2deb --map $OPTS
-wheel2deb build -i *.whl
+wheel2deb build
 wheel2deb --map $OPTS --ignore-entry-points --ignore-upstream-version
-wheel2deb build -i *.whl
+wheel2deb build
