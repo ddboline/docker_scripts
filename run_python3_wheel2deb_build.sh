@@ -20,17 +20,15 @@ sudo ln -s /usr/bin/llvm-config-10 /usr/bin/llvm-config
 
 touch build.log
 md5sum /home/${USER}/output/*.deb > existing.log
-for PKG in `cat ./docker_scripts/run_python3_wheel2deb_pkgs.txt`;
-do
-    ./docker_scripts/build_python3_wheel2deb.sh $PKG 2>&1 >> build.log
-    rm -rf /tmp/pip-*-build
-    md5sum /home/${USER}/output/*.deb > modified.log
-    MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
-    sudo sed -i 's/numpy (<< 1:/numpy (<< /g' /var/lib/dpkg/status
-    sudo dpkg --force-overwrite -i $MODIFIED
-    sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
-    mv modified.log existing.log
-done
+
+./docker_scripts/build_python3_wheel2deb.sh `cat ./docker_scripts/run_python3_wheel2deb_pkgs.txt` 2>&1 >> build.log
+
+md5sum /home/${USER}/output/*.deb > modified.log
+MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
+sudo sed -i 's/numpy (<< 1:/numpy (<< /g' /var/lib/dpkg/status
+sudo dpkg --force-overwrite -i $MODIFIED
+sudo apt-get -o Dpkg::Options::="--force-overwrite" install -f -y --force-yes
+mv modified.log existing.log
 
 MODIFIED=/home/${USER}/output/*.deb
 if [ -n "$MODIFIED" ]; then

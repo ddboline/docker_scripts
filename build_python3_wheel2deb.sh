@@ -39,8 +39,9 @@ for REPO in $REPOS;
 do
     pip3 install $REPO
     pip3 wheel $REPO
-    wheel2deb --map $OPTS
-    wheel2deb build
-    wheel2deb --map $OPTS --ignore-entry-points
-    wheel2deb build
 done
+
+wheel2deb --map $OPTS
+wheel2deb build
+wheel2deb --map $OPTS --ignore-entry-points
+wheel2deb build
