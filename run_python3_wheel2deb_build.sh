@@ -22,6 +22,11 @@ touch build.log
 md5sum /home/${USER}/output/*.deb > existing.log
 
 ./docker_scripts/build_python3_wheel2deb.sh wheel2deb 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh trakt.py git+https://github.com/ddboline/trakt_instance.git 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh python-dateutil pytz 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh numpy scipy pandas matplotlib ipython 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh tbm-utils httpx audio-metadata google-music-proto google-music 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh jupyter_client 2>&1 >> build.log
 ./docker_scripts/build_python3_wheel2deb.sh `cat ./docker_scripts/run_python3_wheel2deb_pkgs.txt` 2>&1 >> build.log
 
 md5sum /home/${USER}/output/*.deb > modified.log
