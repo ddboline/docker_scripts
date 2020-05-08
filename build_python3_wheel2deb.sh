@@ -6,7 +6,8 @@ OPTS="pyyaml=yaml pyusb=usb websockify=websockify3
       pytz=tz pillow=pil python-debian=debian
       beautifulsoup4=bs4 compose=docker-compose
       pyzmq=zmq spyder=spyder3 ipython=ipython3
-      pylint=pylint3 pyflakes=pyflakes3 python-dateutil=dateutil"
+      pylint=pylint3 pyflakes=pyflakes3 python-dateutil=dateutil
+      attrs=attr"
 
 ### hack...
 export LANG="C.UTF-8"
