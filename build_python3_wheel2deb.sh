@@ -43,5 +43,5 @@ done
 
 wheel2deb --map $OPTS
 wheel2deb build
-wheel2deb --map $OPTS --ignore-entry-points
+wheel2deb --map $OPTS --ignore-entry-points --ignore-upstream-version
 wheel2deb build
