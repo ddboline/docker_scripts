@@ -1,12 +1,12 @@
 #!/bin/bash
 
-OPTS="pyyaml=python3-yaml pyusb=python3-usb websockify=websockify3 
-      scikit-learn=python3-sklearn scikit-image=python3-skimage 
-      google-api-python-client=python3-googleapi cython=cython3
-      pytz=python3-tz pillow=python3-pil python-debian=python3-debian
-      beautifulsoup4=python3-bs4 compose=python3-docker-compose
-      pyzmq=python3-zmq spyder=spyder3 ipython=ipython3
-      pylint=pylint3 pyflakes=pyflakes3 python-dateutil=python3-dateutil"
+OPTS="pyyaml=yaml pyusb=usb websockify=websockify3
+      scikit-learn=sklearn scikit-image=skimage
+      google-api-python-client=googleapi cython=cython3
+      pytz=tz pillow=pil python-debian=debian
+      beautifulsoup4=bs4 compose=docker-compose
+      pyzmq=zmq spyder=spyder3 ipython=ipython3
+      pylint=pylint3 pyflakes=pyflakes3 python-dateutil=dateutil"
 
 ### hack...
 export LANG="C.UTF-8"
@@ -42,6 +42,6 @@ do
 done
 
 wheel2deb --map $OPTS
-wheel2deb build
+wheel2deb build -i *.whl
 wheel2deb --map $OPTS --ignore-entry-points --ignore-upstream-version
-wheel2deb build
+wheel2deb build -i *.whl
