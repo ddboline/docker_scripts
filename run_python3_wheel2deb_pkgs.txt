@@ -20,4 +20,4 @@ git+https://github.com/ddboline/tbm-utils@2.6.0-1
 git+https://github.com/ddboline/httpx.git@0.12.1-1
 git+https://github.com/ddboline/audio-metadata.git@0.11.0-2
 git+https://github.com/ddboline/google-music-proto.git@2.10.0-1
-git+https://github.com/ddboline/google-music.git@3.7.0-1
+git+https://github.com/ddboline/google-music.git@3.7.0-3
