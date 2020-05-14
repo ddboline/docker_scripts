@@ -32,6 +32,7 @@ for PKGS in \
     "kibi,kibi,kibi" \
     "pijul,pijul,pijul" \
     "procs,procs,procs" \
+    "pyoxidizer,pyoxidizer,pyoxidizer" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "tokei,tokei,tokei" \
