@@ -13,7 +13,6 @@ for PKGS in \
     "b3sum,b3sum,b3sum" \
     "bandwhich,bandwhich,bandwhich" \
     "bat,bat,bat" \
-    "bottom,bottom,bottom" \
     "cargo-expand,cargo-expand,cargo-expand" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-outdated,cargo-outdated,cargo-outdated" \
