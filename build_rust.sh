@@ -35,6 +35,7 @@ for PKGS in \
     "pyoxidizer,pyoxidizer,pyoxidizer" \
     "ripgrep,rg,ripgrep" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
+    "starship,starship,starship" \
     "tokei,tokei,tokei" \
     "weather_util_rust,weather-util-rust,weather-util-rust" \
     ;
