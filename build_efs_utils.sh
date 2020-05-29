@@ -1,6 +1,7 @@
 #!/bin/bash
 
 REPO="https://github.com/ddboline/efs-utils.git"
+TAG="v1.25-3-1"
 
 sudo apt-get update
 sudo apt-get install -y binutils pkg-config \
@@ -8,7 +9,7 @@ sudo apt-get install -y binutils pkg-config \
 
 cd ~/
 
-git clone $REPO efs-utils
+git clone -b $TAG $REPO efs-utils
 
 cd efs-utils
 
