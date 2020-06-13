@@ -34,6 +34,7 @@ for PKGS in \
     "procs,procs,procs" \
     "pyoxidizer,pyoxidizer,pyoxidizer" \
     "ripgrep,rg,ripgrep" \
+    "ripgrep_all,rga,ripgrep-all" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "starship,starship,starship" \
     "tokei,tokei,tokei" \
