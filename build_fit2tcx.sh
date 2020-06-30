@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VERSION="0.4.3"
-RELEASE="2"
+RELEASE="3"
 REPO="https://github.com/ddboline/Fit2Tcx"
 
 sudo apt-get update
