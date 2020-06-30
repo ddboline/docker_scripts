@@ -2,7 +2,7 @@
 
 VERSION="0.4.3"
 RELEASE="2"
-REPO="https://github.com/adiesner/Fit2Tcx"
+REPO="https://github.com/ddboline/Fit2Tcx"
 
 sudo apt-get update
 sudo apt-get install -y libtinyxml-dev pkg-config \
