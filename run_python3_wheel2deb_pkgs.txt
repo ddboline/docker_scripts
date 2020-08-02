@@ -1,5 +1,3 @@
-cython
-mock
 git+https://github.com/ddboline/hangups.git@v0.4.10-1
 git+https://github.com/ddboline/send_to_gtalk.git
 dlint
