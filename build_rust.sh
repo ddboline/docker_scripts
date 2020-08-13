@@ -13,6 +13,7 @@ for PKGS in \
     "b3sum,b3sum,b3sum" \
     "bandwhich,bandwhich,bandwhich" \
     "bat,bat,bat" \
+    "cargo-bloat,cargo-bloat,cargo-bloat" \
     "cargo-deb,cargo-deb,cargo-deb" \
     "cargo-expand,cargo-expand,cargo-expand" \
     "cargo-generate,cargo-generate,cargo-generate" \
@@ -24,6 +25,7 @@ for PKGS in \
     "exa,exa,exa" \
     "fd-find,fd,fd-find" \
     "flamegraph,flamegraph,flamegraph" \
+    "grex,grex,grex" \
     "highlight-stderr,highlight-stderr,highlight-stderr" \
     "hors,hors,hors" \
     "hx,hx,hx" \
