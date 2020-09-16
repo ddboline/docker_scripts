@@ -19,13 +19,13 @@ mkdir -p ~/py2deb3/
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
 for PKGS in \
+    "auth_server_rust,auth-server-rust" \
     "aws_app_rust,aws-app-rust" \
     "calendar_app_rust,calendar-app-rust" \
     "diary_app_rust,diary-app-rust" \
     "garmin_rust,garmin-rust" \
     "movie_collection_rust,movie-collection-rust" \
     "podcatch_rust,podcatch-rust" \
-    "rust-auth-server,rust-auth" \
     "sync_app_rust,sync-app-rust" \
     "security_log_analysis_rust,security-log-analysis-rust" \
     "weather_api_rust,weather-api-rust,weather-api-rust";
