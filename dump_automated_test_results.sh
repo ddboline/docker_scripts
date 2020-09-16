@@ -14,8 +14,5 @@ do
     mkdir temp_${N}_${D}_${C}
     $SUDO docker cp ${C}:/home/ubuntu/output.out temp_${N}_${D}_${C}/
     $SUDO docker cp ${C}:/home/ubuntu/output.err temp_${N}_${D}_${C}/
-#     $SUDO docker cp ${C}:/home/ubuntu temp_${N}_${D}_${C}/
-#     $SUDO docker cp ${C}:/home/ubuntu temp_${N}_${D}_${C}/
-#     $SUDO docker cp ${C}:/home/ubuntu/garmin_app temp_${D}_${C}/
     $SUDO chown -R ${USER}:${USER} temp_${N}_${D}_${C}/
 done

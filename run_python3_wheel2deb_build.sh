@@ -25,7 +25,7 @@ md5sum /home/${USER}/output/*.deb > existing.log
 ./docker_scripts/build_python3_wheel2deb.sh python-dateutil pytz 2>&1 >> build.log
 ./docker_scripts/build_python3_wheel2deb.sh cython mock 2>&1 >> build.log
 ./docker_scripts/build_python3_wheel2deb.sh numpy scipy pandas matplotlib 2>&1 >> build.log
-./docker_scripts/build_python3_wheel2deb.sh `cat ./docker_scripts/run_python3_wheel2deb_pkgs.txt` 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh dlint maturin 2>&1 >> build.log
 
 md5sum /home/${USER}/output/*.deb > modified.log
 MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`

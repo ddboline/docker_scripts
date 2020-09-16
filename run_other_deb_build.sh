@@ -15,7 +15,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
 
 mkdir -p ~/py2deb3/
 
-./docker_scripts/build_fit2tcx.sh 2>&1 >> build.log
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
 for PKGS in \

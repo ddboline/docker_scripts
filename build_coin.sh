@@ -17,7 +17,6 @@ git checkout releases/2.9.9
 
 ./configure --enable-cbc-parallel=yes --prefix=/usr
 make
-# printf "\ninstall:\n\tmv fit2tcx /usr/bin/\n" >> Makefile
 printf "COIN-OR Linear Program Solver\n" > description-pak
 ### this part is sadly interactive
 sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} -y
