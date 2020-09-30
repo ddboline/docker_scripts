@@ -42,6 +42,7 @@ for PKGS in \
     "starship,starship,starship" \
     "tokei,tokei,tokei" \
     "weather_util_rust,weather-util-rust,weather-util-rust" \
+    "watchexec,watchexec,watchexec" \
     ;
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
