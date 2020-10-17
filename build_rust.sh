@@ -33,6 +33,7 @@ PKGS="
     hyperfine,hyperfine,hyperfine
     jql,jql,jql
     kibi,kibi,kibi
+    lfs,lfs,lfs
     pijul,pijul,pijul
     procs,procs,procs
     pyoxidizer,pyoxidizer,pyoxidizer
