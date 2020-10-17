@@ -52,17 +52,19 @@ fi
 
 for PKG in $PKGS;
 do
-    CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
-    EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
-    PACKAGE=`echo $PKGS | sed 's:,: :g' | awk '{print $3}'`;
+    CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
+    EXE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
+    PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $3}'`;
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${EXE} ${PACKAGE}
     sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
 done
 
-docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-    /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop
+if [ -z "$1" ]; then
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
+        /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop
 
-docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-    /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain explain-rs
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
+        /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain explain-rs
+fi
 
 cd ~/
