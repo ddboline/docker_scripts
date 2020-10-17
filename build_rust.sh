@@ -47,7 +47,7 @@ PKGS="
 "
 
 if [ -n $1 ]; then
-    PKGS=`echo $PKGS | sed 's: :\n:g' | rg $1`
+    PKGS=`echo $PKGS | sed 's: :\n:g' | grep $1`
 fi
 
 for PKG in $PKGS;
