@@ -9,41 +9,48 @@ docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
 docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
-for PKGS in \
-    "b3sum,b3sum,b3sum" \
-    "bandwhich,bandwhich,bandwhich" \
-    "bat,bat,bat" \
-    "cargo-bloat,cargo-bloat,cargo-bloat" \
-    "cargo-deb,cargo-deb,cargo-deb" \
-    "cargo-expand,cargo-expand,cargo-expand" \
-    "cargo-generate,cargo-generate,cargo-generate" \
-    "cargo-outdated,cargo-outdated,cargo-outdated" \
-    "cargo-scout,cargo-scout,cargo-scout" \
-    "cargo-tree,cargo-tree,cargo-tree" \
-    "diesel_cli,diesel,diesel-cli" \
-    "du-dust,dust,dust" \
-    "exa,exa,exa" \
-    "fd-find,fd,fd-find" \
-    "flamegraph,flamegraph,flamegraph" \
-    "grex,grex,grex" \
-    "highlight-stderr,highlight-stderr,highlight-stderr" \
-    "hors,hors,hors" \
-    "hx,hx,hx" \
-    "hyperfine,hyperfine,hyperfine" \
-    "jql,jql,jql" \
-    "kibi,kibi,kibi" \
-    "pijul,pijul,pijul" \
-    "procs,procs,procs" \
-    "pyoxidizer,pyoxidizer,pyoxidizer" \
-    "ripgrep,rg,ripgrep" \
-    "ripgrep_all,rga,ripgrep-all" \
-    "sd,sd,sd" \
-    "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
-    "starship,starship,starship" \
-    "tokei,tokei,tokei" \
-    "weather_util_rust,weather-util-rust,weather-util-rust" \
-    "watchexec,watchexec,watchexec" \
-    ;
+PKGS="
+    b3sum,b3sum,b3sum
+    bandwhich,bandwhich,bandwhich
+    bat,bat,bat
+    cargo-bloat,cargo-bloat,cargo-bloat
+    cargo-deb,cargo-deb,cargo-deb
+    cargo-expand,cargo-expand,cargo-expand
+    cargo-generate,cargo-generate,cargo-generate
+    cargo-outdated,cargo-outdated,cargo-outdated
+    cargo-scout,cargo-scout,cargo-scout
+    cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
+    cargo-tree,cargo-tree,cargo-tree
+    diesel_cli,diesel,diesel-cli
+    du-dust,dust,dust
+    exa,exa,exa
+    fd-find,fd,fd-find
+    flamegraph,flamegraph,flamegraph
+    grex,grex,grex
+    highlight-stderr,highlight-stderr,highlight-stderr
+    hors,hors,hors
+    hx,hx,hx
+    hyperfine,hyperfine,hyperfine
+    jql,jql,jql
+    kibi,kibi,kibi
+    pijul,pijul,pijul
+    procs,procs,procs
+    pyoxidizer,pyoxidizer,pyoxidizer
+    ripgrep,rg,ripgrep
+    ripgrep_all,rga,ripgrep-all
+    sd,sd,sd
+    sql_db_mapper,sql_db_mapper,sql-db-mapper
+    starship,starship,starship
+    tokei,tokei,tokei
+    weather_util_rust,weather-util-rust,weather-util-rust
+    watchexec,watchexec,watchexec
+"
+
+if [ -n $1 ]; then
+    PKGS=`echo $PKGS | sed 's: :\n:g' | rg $1`
+fi
+
+for PKG in $PKGS;
 do
     CARGO=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
