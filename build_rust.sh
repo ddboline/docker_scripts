@@ -47,8 +47,8 @@ PKGS="
     watchexec,watchexec,watchexec
 "
 
-if [ -n $1 ]; then
-    PKGS=`echo $PKGS | sed 's: :\n:g' | grep $1`
+if [ "$1" != "" ]; then
+    PKGS=`echo $PKGS | sed 's: :\n:g' | grep "$1"`
 fi
 
 for PKG in $PKGS;
@@ -60,12 +60,14 @@ do
     sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
 done
 
-if [ -z "$1" ]; then
+if [ "$1" = "" ]; then
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
         /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop
+    sudo chown ${USER}:${USER} ~/py2deb3/ytop_*.deb
 
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
         /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain explain-rs
+    sudo chown ${USER}:${USER} ~/py2deb3/explain_*.deb
 fi
 
 cd ~/
