@@ -25,9 +25,10 @@ for PKGS in \
     "diary_app_rust,diary-app-rust" \
     "garmin_rust,garmin-rust" \
     "movie_collection_rust,movie-collection-rust" \
+    "notification_app_rust,notification-app-rust" \
     "podcatch_rust,podcatch-rust" \
-    "sync_app_rust,sync-app-rust" \
     "security_log_analysis_rust,security-log-analysis-rust" \
+    "sync_app_rust,sync-app-rust" \
     "weather_api_rust,weather-api-rust,weather-api-rust";
 do
     REPONAME=`echo $PKGS | sed 's:,: :g' | awk '{print $1}'`;
