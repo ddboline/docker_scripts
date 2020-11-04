@@ -26,6 +26,7 @@ PKGS="
     exa,exa,exa
     fd-find,fd,fd-find
     flamegraph,flamegraph,flamegraph
+    fselect,fselect,fselect
     grex,grex,grex
     highlight-stderr,highlight-stderr,highlight-stderr
     hors,hors,hors
