@@ -41,11 +41,13 @@ PKGS="
     ripgrep,rg,ripgrep
     ripgrep_all,rga,ripgrep-all
     sd,sd,sd
+    silicon,silicon,silicon
     sql_db_mapper,sql_db_mapper,sql-db-mapper
     starship,starship,starship
     tokei,tokei,tokei
     weather_util_rust,weather-util-rust,weather-util-rust
     watchexec,watchexec,watchexec
+    wool,wool,wool
 "
 
 if [ "$1" != "" ]; then
