@@ -22,6 +22,7 @@ PKGS="
     cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
     cargo-tree,cargo-tree,cargo-tree
     diesel_cli,diesel,diesel-cli
+    delta,delta,delta
     du-dust,dust,dust
     exa,exa,exa
     fd-find,fd,fd-find
