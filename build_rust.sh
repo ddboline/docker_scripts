@@ -62,6 +62,7 @@ do
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $3}'`;
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${EXE} ${PACKAGE}
     sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
+    scp ~/py2deb3/${PACKAGE}_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 done
 
 if [ "$1" = "" ]; then
