@@ -22,7 +22,6 @@ PKGS="
     cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
     cargo-tree,cargo-tree,cargo-tree
     diesel_cli,diesel,diesel-cli
-    delta,delta,delta
     du-dust,dust,dust
     exa,exa,exa
     fd-find,fd,fd-find
@@ -36,11 +35,9 @@ PKGS="
     jql,jql,jql
     kibi,kibi,kibi
     lfs,lfs,lfs
-    pijul,pijul,pijul
     procs,procs,procs
     pyoxidizer,pyoxidizer,pyoxidizer
     ripgrep,rg,ripgrep
-    ripgrep_all,rga,ripgrep-all
     sd,sd,sd
     silicon,silicon,silicon
     sql_db_mapper,sql_db_mapper,sql-db-mapper
