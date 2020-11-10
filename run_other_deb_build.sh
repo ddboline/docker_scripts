@@ -35,9 +35,7 @@ do
     PKGNAME=`echo $PKGS | sed 's:,: :g' | awk '{print $2}'`;
 
     ./docker_scripts/build_rust_github.sh $REPONAME $PKGNAME 2>&1 >> build.log
+    scp ~/py2deb3/${PKGNAME}*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 done
 
-MODIFIED=/home/${USER}/py2deb3/*.deb
-if [ -n "$MODIFIED" ]; then
-    scp $MODIFIED build.log ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
-fi
+scp build.log ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/

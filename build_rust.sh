@@ -17,6 +17,7 @@ PKGS="
     cargo-deb,cargo-deb,cargo-deb
     cargo-expand,cargo-expand,cargo-expand
     cargo-generate,cargo-generate,cargo-generate
+    cargo-mutagen,cargo-mutagen,cargo-mutagen
     cargo-outdated,cargo-outdated,cargo-outdated
     cargo-scout,cargo-scout,cargo-scout
     cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
@@ -24,6 +25,7 @@ PKGS="
     diesel_cli,diesel,diesel-cli
     du-dust,dust,dust
     exa,exa,exa
+    fastmod,fastmod,fastmod
     fd-find,fd,fd-find
     flamegraph,flamegraph,flamegraph
     fselect,fselect,fselect
@@ -46,6 +48,7 @@ PKGS="
     weather_util_rust,weather-util-rust,weather-util-rust
     watchexec,watchexec,watchexec
     wool,wool,wool
+    yj,yj,yj
 "
 
 if [ "$1" != "" ]; then
