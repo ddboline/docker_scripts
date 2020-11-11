@@ -36,6 +36,7 @@ PKGS="
     hyperfine,hyperfine,hyperfine
     jql,jql,jql
     kibi,kibi,kibi
+    kiro-editor,kiro,kiro
     lfs,lfs,lfs
     procs,procs,procs
     pyoxidizer,pyoxidizer,pyoxidizer
