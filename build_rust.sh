@@ -52,8 +52,14 @@ PKGS="
     yj,yj,yj
 "
 
-if [ "$1" != "" ]; then
-    PKGS=`echo $PKGS | sed 's: :\n:g' | grep "$1"`
+if [ "$1" = "1" ]; then
+    PKGS=`echo $PKGS | sed 's: :\n:g' | head -n20`
+elif [ "$1" = "2" ]; then
+    NPKGS=`echo $PKGS | sed 's: :\n:g' | wc -l`
+    NPKGS=$((NPKGS-20))
+    PKGS=`echo $PKGS | sed 's: :\n:g' | head -n40 | tail -n$NPKGS`
+elif [ "$1" != "" ]; then
+    PKGS=`echo $PKGS | sed 's: :\n:g' | grep $1`
 fi
 
 for PKG in $PKGS;
