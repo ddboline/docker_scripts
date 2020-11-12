@@ -23,15 +23,18 @@ PKGS="
     cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
     cargo-tree,cargo-tree,cargo-tree
     diesel_cli,diesel,diesel-cli
+    dotenv-linter,dotenv-linter,dotenv-linter
     du-dust,dust,dust
     exa,exa,exa
     fastmod,fastmod,fastmod
     fd-find,fd,fd-find
     flamegraph,flamegraph,flamegraph
+    frawk,frawk,frawk
     fselect,fselect,fselect
     grex,grex,grex
     highlight-stderr,highlight-stderr,highlight-stderr
     hors,hors,hors
+    huniq,huniq,huniq
     hx,hx,hx
     hyperfine,hyperfine,hyperfine
     jql,jql,jql
