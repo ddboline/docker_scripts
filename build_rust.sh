@@ -49,8 +49,9 @@ PKGS="
     sql_db_mapper,sql_db_mapper,sql-db-mapper
     starship,starship,starship
     tokei,tokei,tokei
-    weather_util_rust,weather-util-rust,weather-util-rust
+    waitfor,waitfor,waitfor
     watchexec,watchexec,watchexec
+    weather_util_rust,weather-util-rust,weather-util-rust
     wool,wool,wool
     yj,yj,yj
 "
@@ -75,7 +76,11 @@ do
     scp ~/py2deb3/${PACKAGE}_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 done
 
-if [ "$1" = "" ]; then
+if [ "$1" = "" -o "$1" = "2" ]; then
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk frawk
+    sudo chown ${USER}:${USER} ~/py2deb3/frawk_*.deb
+    scp ~/py2deb3/frawk_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
+
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
         /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop
     sudo chown ${USER}:${USER} ~/py2deb3/ytop_*.deb
