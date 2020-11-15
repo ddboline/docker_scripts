@@ -13,6 +13,7 @@ PKGS="
     b3sum,b3sum,b3sum
     bandwhich,bandwhich,bandwhich
     bat,bat,bat
+    broot,broot,broot
     cargo-bloat,cargo-bloat,cargo-bloat
     cargo-deb,cargo-deb,cargo-deb
     cargo-expand,cargo-expand,cargo-expand
