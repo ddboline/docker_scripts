@@ -14,11 +14,13 @@ for PKGS in \
     "bandwhich,bandwhich,bandwhich" \
     "bat,bat,bat" \
     "cargo-bloat,cargo-bloat,cargo-bloat" \
+    "cargo-cache,cargo-cache,cargo-cache" \
     "cargo-deb,cargo-deb,cargo-deb" \
     "cargo-expand,cargo-expand,cargo-expand" \
     "cargo-generate,cargo-generate,cargo-generate" \
     "cargo-outdated,cargo-outdated,cargo-outdated" \
     "cargo-scout,cargo-scout,cargo-scout" \
+    "cargo-sweep,cargo-sweep,cargo-sweep" \
     "cargo-tree,cargo-tree,cargo-tree" \
     "diesel_cli,diesel,diesel-cli" \
     "du-dust,dust,dust" \
@@ -32,11 +34,13 @@ for PKGS in \
     "hyperfine,hyperfine,hyperfine" \
     "jql,jql,jql" \
     "kibi,kibi,kibi" \
+    "papyrus,papyrus,papyrus" \
     "pijul,pijul,pijul" \
     "procs,procs,procs" \
     "pyoxidizer,pyoxidizer,pyoxidizer" \
     "ripgrep,rg,ripgrep" \
     "ripgrep_all,rga,ripgrep-all" \
+    "rust-script,rust-script,rust-script" \
     "sd,sd,sd" \
     "sql_db_mapper,sql_db_mapper,sql-db-mapper" \
     "starship,starship,starship" \
