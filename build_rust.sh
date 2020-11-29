@@ -15,12 +15,14 @@ PKGS="
     bat,bat,bat
     broot,broot,broot
     cargo-bloat,cargo-bloat,cargo-bloat
+    cargo-cache,cargo-cache,cargo-cache
     cargo-deb,cargo-deb,cargo-deb
     cargo-expand,cargo-expand,cargo-expand
     cargo-generate,cargo-generate,cargo-generate
     cargo-mutagen,cargo-mutagen,cargo-mutagen
     cargo-outdated,cargo-outdated,cargo-outdated
     cargo-scout,cargo-scout,cargo-scout
+    cargo-sweep,cargo-sweep,cargo-sweep
     cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
     cargo-tree,cargo-tree,cargo-tree
     diesel_cli,diesel,diesel-cli
@@ -42,9 +44,11 @@ PKGS="
     kibi,kibi,kibi
     kiro-editor,kiro,kiro
     lfs,lfs,lfs
+    papyrus,papyrus,papyrus
     procs,procs,procs
     pyoxidizer,pyoxidizer,pyoxidizer
     ripgrep,rg,ripgrep
+    rust-script,rust-script,rust-script
     sd,sd,sd
     silicon,silicon,silicon
     sql_db_mapper,sql_db_mapper,sql-db-mapper
