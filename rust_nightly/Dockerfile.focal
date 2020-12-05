@@ -1,5 +1,5 @@
 FROM ubuntu:focal
-MAINTAINER Daniel Boline
+LABEL maintainer="Daniel Boline <ddboline@gmail.com>"
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y curl pkg-config checkinstall gcc libssl-dev ca-certificates \

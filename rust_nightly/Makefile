@@ -5,9 +5,12 @@ ubuntu_release := focal
 aws_release := $(shell aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[",]::g')
 
 all:
-	cp Dockerfile.${ubuntu_release} Dockerfile
-	docker build --no-cache -t rust_nightly:${version} .
+	docker build --no-cache -f Dockerfile.${ubuntu_release} -t rust_nightly:${version} .
 	docker tag rust_nightly:${version} rust_nightly:latest
+
+update:
+	docker build --no-cache -f Dockerfile.update -t rust_nightly:update .
+	docker tag rust_nightly:update rust_nightly:latest
 
 cleanup:
 	rm Dockerfile
