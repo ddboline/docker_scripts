@@ -25,24 +25,28 @@ docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rus
 docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
 PKGS="
-    auth_server_rust
-    aws_app_rust
-    backup_app_rust
-    calendar_app_rust
-    diary_app_rust
-    garmin_rust
-    movie_collection_rust
-    notification_app_rust
-    podcatch_rust
-    security_log_analysis_rust
-    sync_app_rust
-    weather_api_rust
+    auth_server_rust,auth-server,rust
+    aws_app_rust,aws-app-rust
+    backup_app_rust,backup-app-rust
+    calendar_app_rust,calendar-app-rust
+    diary_app_rust,diary-app-rust
+    garmin_rust,garmin-rust
+    movie_collection_rust,movie-collection-rust
+    notification_app_rust,notification-app-rust
+    podcatch_rust,podcatch-rust
+    security_log_analysis_rust,security-log-analysis-rust
+    sync_app_rust,sync-app-rust
+    weather_api_rust,weather-api-rust
 "
+
+PKGS=`echo $PKGS | sed 's: :\n:g' | grep $1`
 
 for PKG in $PKGS;
 do
+    CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
+    PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-        /root/build_rust_pkg_repo.sh https://github.com/ddboline/${PKG}.git ${PKG}
+        /root/build_rust_pkg_repo.sh https://github.com/ddboline/${CARGO}.git ${CARGO} ${PACKAGE}
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb
