@@ -87,12 +87,9 @@ if [ "$1" = "" -o "$1" = "2" ]; then
     scp ~/py2deb3/frawk_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-        /root/build_rust_pkg_repo.sh https://github.com/cjbassi/ytop ytop ytop
-    sudo chown ${USER}:${USER} ~/py2deb3/ytop_*.deb
-
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-        /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain explain-rs
+        /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain
     sudo chown ${USER}:${USER} ~/py2deb3/explain_*.deb
+    scp ~/py2deb3/explain_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 fi
 
 cd ~/
