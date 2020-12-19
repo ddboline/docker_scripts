@@ -57,7 +57,7 @@ do
     VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
     RELEASE="1"
 
-    printf "\ninstall:\n\tsudo . ${HOME}/.cargo/env && sudo cargo install ${CARGO} --git=${REPO_URL} --branch=main --root=/usr\n" > Makefile
+    printf "\ninstall:\n\tsudo source ${HOME}/.cargo/env && sudo cargo install ${CARGO} --git=${REPO_URL} --branch=main --root=/usr\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
     sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
     sudo chown ${USER}:${USER} ${PACKAGE}_${VERSION}-${RELEASE}*.deb
