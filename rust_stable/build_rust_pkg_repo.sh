@@ -1,16 +1,23 @@
 #!/bin/bash
 
+. ~/.cargo/env
+
 REPO_URL=$1
-CRATE_NAME=$2
-PACKAGE_NAME=$3
-BRANCH_NAME=$4
+PACKAGE_NAME=$2
 
-echo $REPO_URL $CRATE_NAME $PACKAGE_NAME $BRANCH_NAME
+git clone $REPO_URL /workdir/$PACKAGE_NAME/
 
-mkdir -p /root/${CRATE_NAME}
-cd /root/${CRATE_NAME}
+cd /workdir/$PACKAGE_NAME/
+mkdir -p /${PACKAGE_NAME}
 
-printf "\ninstall:\n\t. /root/.cargo/env && cargo install ${CRATE_NAME} --git=\"${REPO_URL}\" --branch=${BRANCH_NAME} --root=/usr\n" > Makefile
+VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
+RELEASE="1"
+
+echo $PACKAGE_NAME $VERSION $RELEASE
+
+cargo install --path=. --root=/${PACKAGE_NAME}
+
+printf "\ninstall:\n\tcp /${PACKAGE_NAME}/bin/* /usr/bin/\n" > Makefile
 printf "${PACKAGE_NAME} package\n" > description-pak
 checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE_NAME} -y
 chown ${USER}:${USER} ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb

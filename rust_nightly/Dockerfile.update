@@ -5,4 +5,5 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y && \
     rm -rf /var/lib/apt/lists/* && \
     . ~/.cargo/env && \
-    rustup update
+    rustup update &&
+    cargo +nightly install cargo-deb
