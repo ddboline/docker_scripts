@@ -5,7 +5,7 @@ RUN yum install -y gcc && curl https://sh.rustup.rs > rustup.sh && \
     sh rustup.sh -y && \
     . ~/.cargo/env && \
     rustup component add rustfmt && \
-    rustup component add clippy &&
+    rustup component add clippy && \
     cargo install cargo-deb
 
 WORKDIR /workdir
