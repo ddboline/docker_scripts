@@ -39,7 +39,7 @@ PKGS="
     weather_api_rust,weather-api-rust
 "
 
-PKGS=`echo $PKGS | sed 's: :\n:g' | grep $1`
+PKGS=`echo $PKGS | sed 's: :\n:g'`
 
 for PKG in $PKGS;
 do
