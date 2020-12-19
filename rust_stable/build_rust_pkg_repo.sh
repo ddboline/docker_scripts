@@ -7,10 +7,10 @@ BRANCH_NAME=$4
 
 echo $REPO_URL $CRATE_NAME $PACKAGE_NAME $BRANCH_NAME
 
-mkdir -p ~/${CRATE_NAME}
-cd ~/${CRATE_NAME}
+mkdir -p /root/${CRATE_NAME}
+cd /root/${CRATE_NAME}
 
-printf "\ninstall:\n\t. ${HOME}/.cargo/env && cargo install ${CRATE_NAME} --git=${REPO_URL} --branch=${BRANCH_NAME} --root=/usr\n" > Makefile
+printf "\ninstall:\n\t. /root/.cargo/env && cargo install ${CRATE_NAME} --git=\"${REPO_URL}\" --branch=${BRANCH_NAME} --root=/usr\n" > Makefile
 printf "${PACKAGE_NAME} package\n" > description-pak
 checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE_NAME} -y
 chown ${USER}:${USER} ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb
