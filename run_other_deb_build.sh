@@ -30,7 +30,7 @@ curl https://sh.rustup.rs > rustup.sh
 sudo sh rustup.sh -y
 
 PKGS="
-    auth_server_rust,auth-server,rust
+    auth_server_rust,auth-server-rust
     aws_app_rust,aws-app-rust
     backup_app_rust,backup-app-rust
     calendar_app_rust,calendar-app-rust
@@ -49,7 +49,7 @@ PKGS=`echo $PKGS | sed 's: :\n:g'`
 for PKG in $PKGS;
 do
     CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
-    PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
+    PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     REPO_URL="https://github.com/ddboline/${CARGO}.git"
 
     git clone ${REPO_URL} $CARGO
