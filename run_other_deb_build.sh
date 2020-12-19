@@ -52,12 +52,13 @@ do
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     REPO_URL="https://github.com/ddboline/${CARGO}.git"
 
+    cd ~/
     git clone ${REPO_URL} $CARGO
     cd $CARGO
     VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
     RELEASE="1"
 
-    printf "\ninstall:\n\. /root/.cargo/env && cargo install ${CARGO} --git=${REPO_URL} --branch=main --root=/usr\n" > Makefile
+    printf "\ninstall:\n\t. /root/.cargo/env && cargo install ${CARGO} --git=\"${REPO_URL}\" --branch=main --root=/usr\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
     sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
     sudo chown ${USER}:${USER} ${PACKAGE}_${VERSION}-${RELEASE}*.deb
