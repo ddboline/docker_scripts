@@ -17,12 +17,18 @@ mkdir -p ~/py2deb3/
 
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
-export AWS_ACCOUNT=$(aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
-
-`aws ecr --region us-east-1 get-login --no-include-email`
-docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
-docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
-docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
+sudo apt-get update
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -y \
+        curl pkg-config checkinstall gcc libssl-dev ca-certificates \
+        file build-essential autoconf automake autotools-dev libtool xutils-dev \
+        git libusb-dev libxml2-dev libpq-dev libpython3.8-dev llvm clang \
+        default-libmysqlclient-dev libsqlite3-dev libsodium-dev libclang-dev \
+        nettle-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev \
+        libxcb-xfixes0-dev
+sudo rm -rf /var/lib/apt/lists/*
+curl https://sh.rustup.rs > rustup.sh
+sh rustup.sh -y
+. ~/.cargo/env
 
 PKGS="
     auth_server_rust,auth-server,rust
@@ -45,6 +51,14 @@ for PKG in $PKGS;
 do
     CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
+    REPO_URL="https://github.com/ddboline/${CARGO}.git"
+
+    printf "\ninstall:\n\t. ${HOME}/.cargo/env && cargo install ${CARGO} --git=${REPO_URL} --branch=main --root=/usr\n" > Makefile
+    printf "${PACKAGE} package\n" > description-pak
+    checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
+    chown ${USER}:${USER} ${PACKAGE}_${VERSION}-${RELEASE}*.deb
+    mv ${PACKAGE}_${VERSION}-${RELEASE}*.deb ~/py2deb3/
+
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
         /root/build_rust_pkg_repo.sh https://github.com/ddboline/${CARGO}.git \
         ${CARGO} ${PACKAGE} main
