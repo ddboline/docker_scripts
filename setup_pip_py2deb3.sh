@@ -2,7 +2,7 @@
 
 sudo cp -a /home/ubuntu/.ssh /root/
 sudo chown -R root:root /root/.ssh
-sudo bash -c "echo deb [trusted=yes] https://py2deb-repo.s3.amazonaws.com/deb/bionic/python3 bionic main > /etc/apt/sources.list.d/py2deb3.list"
+sudo bash -c "echo deb [trusted=yes] https://py2deb-repo.s3.amazonaws.com/deb/focal/python3 focal main > /etc/apt/sources.list.d/py2deb3.list"
 sudo apt-key adv --receive-keys 25508FAF711C1DEB
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get \
