@@ -76,13 +76,18 @@ do
     CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $3}'`;
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${EXE} ${PACKAGE}
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${PACKAGE}
     sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
     scp ~/py2deb3/${PACKAGE}_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 done
 
 if [ "$1" = "" -o "$1" = "2" ]; then
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk frawk
+    `aws ecr --region us-east-1 get-login --no-include-email`
+    docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
+    docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest rust_nightly:latest
+    docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
+
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk
     sudo chown ${USER}:${USER} ~/py2deb3/frawk_*.deb
     scp ~/py2deb3/frawk_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
 
