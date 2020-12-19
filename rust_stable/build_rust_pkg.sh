@@ -13,9 +13,7 @@ echo $CARGO_NAME $EXE_NAME $PACKAGE_NAME $VERSION $RELEASE
 mkdir -p ~/${CARGO_NAME}
 cd ~/${CARGO_NAME}
 
-cargo install $CARGO_NAME
-
-printf "\ninstall:\n\tcp ~/.cargo/bin/${EXE_NAME} /usr/bin/\n" > Makefile
+printf "\ninstall:\n\tsource ${HOME}/.cargo/env && cargo install $CARGO_NAME --root=/usr\n" > Makefile
 printf "${PACKAGE_NAME} package\n" > description-pak
 checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE_NAME} -y
 chown ${USER}:${USER} ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb
