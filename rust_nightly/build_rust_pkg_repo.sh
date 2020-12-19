@@ -3,8 +3,7 @@
 . ~/.cargo/env
 
 REPO_URL=$1
-EXE_NAME=$2
-PACKAGE_NAME=$3
+PACKAGE_NAME=$2
 
 git clone $REPO_URL $PACKAGE_NAME/
 
@@ -13,7 +12,7 @@ cd $PACKAGE_NAME/
 VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
 RELEASE="1"
 
-echo $CARGO_NAME $EXE_NAME $PACKAGE_NAME $VERSION $RELEASE
+echo $CARGO_NAME $PACKAGE_NAME $VERSION $RELEASE
 
 cargo +nightly build --release
 
