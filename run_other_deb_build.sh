@@ -27,8 +27,7 @@ DEBIAN_FRONTEND=noninteractive sudo apt-get install -y \
         libxcb-xfixes0-dev
 sudo rm -rf /var/lib/apt/lists/*
 curl https://sh.rustup.rs > rustup.sh
-sh rustup.sh -y
-. ~/.cargo/env
+sudo sh rustup.sh -y
 
 PKGS="
     auth_server_rust,auth-server,rust
@@ -53,16 +52,20 @@ do
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     REPO_URL="https://github.com/ddboline/${CARGO}.git"
 
+    git clone ${REPO_URL} $CARGO
+    cd $CARGO
+    VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
+    RELEASE="1"
+
     printf "\ninstall:\n\t. ${HOME}/.cargo/env && cargo install ${CARGO} --git=${REPO_URL} --branch=main --root=/usr\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
-    checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
-    chown ${USER}:${USER} ${PACKAGE}_${VERSION}-${RELEASE}*.deb
+    sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
+    sudo chown ${USER}:${USER} ${PACKAGE}_${VERSION}-${RELEASE}*.deb
     mv ${PACKAGE}_${VERSION}-${RELEASE}*.deb ~/py2deb3/
 
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-        /root/build_rust_pkg_repo.sh https://github.com/ddboline/${CARGO}.git \
-        ${CARGO} ${PACKAGE} main
-    sudo chown ${USER}:${USER} ~/py2deb3/*.deb
+    cd ~/
+    rm -rf ${CARGO}
+
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb
 done
