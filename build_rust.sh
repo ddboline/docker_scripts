@@ -83,7 +83,12 @@ do
 done
 
 if [ "$1" = "" -o "$1" = "2" ]; then
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk frawk
+    `aws ecr --region us-east-1 get-login --no-include-email`
+    docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
+    docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest rust_nightly:latest
+    docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
+
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk
     sudo chown ${USER}:${USER} ~/py2deb3/frawk_*.deb
     scp ~/py2deb3/frawk_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb

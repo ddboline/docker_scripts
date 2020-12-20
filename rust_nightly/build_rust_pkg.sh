@@ -17,5 +17,5 @@ cargo +nightly install $CARGO_NAME --root=/${CARGO_NAME}
 printf "\ninstall:\n\tcp /${CARGO_NAME}/bin/* /usr/bin/\n" > Makefile
 printf "${PACKAGE_NAME} package\n" > description-pak
 checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE_NAME} -y
-chown ${USER}:${USER} ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb
-mv ${PACKAGE_NAME}_${VERSION}-${RELEASE}*.deb ~/py2deb3/
+chown ${USER}:${USER} ${PACKAGE_NAME}_*.deb
+mv ${PACKAGE_NAME}_*.deb ~/py2deb3/
