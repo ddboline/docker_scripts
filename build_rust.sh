@@ -76,20 +76,23 @@ do
     CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $3}'`;
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${EXE} ${PACKAGE}
-    sudo chown ${USER}:${USER} ~/py2deb3/${PACKAGE}_*.deb
-    scp ~/py2deb3/${PACKAGE}_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${PACKAGE}
+    sudo chown ${USER}:${USER} ~/py2deb3/*.deb
+    scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
+    rm ~/py2deb3/*.deb
 done
 
 if [ "$1" = "" -o "$1" = "2" ]; then
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk frawk
     sudo chown ${USER}:${USER} ~/py2deb3/frawk_*.deb
     scp ~/py2deb3/frawk_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
+    rm ~/py2deb3/*.deb
 
     docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
         /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain
     sudo chown ${USER}:${USER} ~/py2deb3/explain_*.deb
     scp ~/py2deb3/explain_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
+    rm ~/py2deb3/*.deb
 fi
 
 cd ~/

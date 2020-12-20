@@ -1,4 +1,4 @@
-FROM amazonlinux:2018.03
+FROM amazonlinux:2
 MAINTAINER Daniel Boline
 
 RUN yum install -y gcc && curl https://sh.rustup.rs > rustup.sh && \
@@ -7,5 +7,9 @@ RUN yum install -y gcc && curl https://sh.rustup.rs > rustup.sh && \
     rustup component add rustfmt && \
     rustup component add clippy && \
     cargo install cargo-deb
+
+ADD build_rust_pkg.sh /root/
+ADD build_rust_pkg_repo.sh /root/
+ADD build_rust_pkg_deb.sh /root/
 
 WORKDIR /workdir

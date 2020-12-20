@@ -19,5 +19,6 @@ RUN apt-get update && \
 
 ADD build_rust_pkg.sh /root/
 ADD build_rust_pkg_repo.sh /root/
+ADD build_rust_pkg_deb.sh /root/
 
 WORKDIR /workdir

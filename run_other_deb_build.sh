@@ -52,20 +52,8 @@ do
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     REPO_URL="https://github.com/ddboline/${CARGO}.git"
 
-    cd ~/
-    git clone ${REPO_URL} $CARGO
-    cd $CARGO
-    VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
-    RELEASE="1"
-
-    printf "\ninstall:\n\t. /root/.cargo/env && cargo install ${CARGO} --git=\"${REPO_URL}\" --branch=main --root=/usr\n" > Makefile
-    printf "${PACKAGE} package\n" > description-pak
-    sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
-    sudo chown ${USER}:${USER} ${PACKAGE}_${VERSION}-${RELEASE}*.deb
-    mv ${PACKAGE}_${VERSION}-${RELEASE}*.deb ~/py2deb3/
-
-    cd ~/
-    rm -rf ${CARGO}
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg_deb.sh ${REPO_URL} ${PACKAGE}
+    sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb
