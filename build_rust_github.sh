@@ -10,7 +10,6 @@ docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rus
 docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
 REPONAME=$1
-PKGNAME=$2
 
 REPO="https://github.com/ddboline/${REPONAME}.git"
 
@@ -20,7 +19,7 @@ git clone $REPO ${REPONAME}
 
 cd ${REPONAME}
 
-docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg_deb.sh ${REPO} ${PKGNAME}
+docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg_deb.sh ${REPO} ${REPONAME}
 sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
 scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
