@@ -1,7 +1,8 @@
 FROM amazonlinux:2
 MAINTAINER Daniel Boline
 
-RUN yum install -y gcc && curl https://sh.rustup.rs > rustup.sh && \
+RUN yum install -y gcc openssl-devel && \
+    curl https://sh.rustup.rs > rustup.sh && \
     sh rustup.sh -y && \
     . ~/.cargo/env && \
     rustup component add rustfmt && \
