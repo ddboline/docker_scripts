@@ -67,6 +67,10 @@ elif [ "$1" = "2" ]; then
     NPKGS=`echo $PKGS | sed 's: :\n:g' | wc -l`
     NPKGS=$((NPKGS-20))
     PKGS=`echo $PKGS | sed 's: :\n:g' | head -n40 | tail -n$NPKGS`
+elif [ "$1" = "3" ]; then
+    NPKGS=`echo $PKGS | sed 's: :\n:g' | wc -l`
+    NPKGS=$((NPKGS-40))
+    PKGS=`echo $PKGS | sed 's: :\n:g' | head -n60 | tail -n$NPKGS`
 elif [ "$1" != "" ]; then
     PKGS=`echo $PKGS | sed 's: :\n:g' | grep $1`
 fi
