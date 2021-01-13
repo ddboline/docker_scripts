@@ -47,6 +47,7 @@ PKGS="
     papyrus,papyrus,papyrus
     procs,procs,procs
     pyoxidizer,pyoxidizer,pyoxidizer
+    refinery_cli,refinery,refinery-cli
     ripgrep,rg,ripgrep
     rust-script,rust-script,rust-script
     sd,sd,sd
