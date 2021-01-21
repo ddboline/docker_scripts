@@ -11,18 +11,23 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -o Dpkg::Options::=--force-confold \
     -o Dpkg::Options::=--force-confdef \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
-    install -yq awscli
+    install -yq awscli curl pkg-config checkinstall gcc libssl-dev ca-certificates \
+                file build-essential autoconf automake autotools-dev libtool xutils-dev \
+                git libusb-dev libxml2-dev libpq-dev libpython3.8-dev llvm clang \
+                default-libmysqlclient-dev libsqlite3-dev libsodium-dev libclang-dev \
+                nettle-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev \
+                libxcb-xfixes0-dev && \
+    sudo rm -rf /var/lib/apt/lists/* && \
+    curl https://sh.rustup.rs > rustup.sh && \
+    sh rustup.sh -y && \
+    . ~/.cargo/env && \
+    rustup component add rustfmt && \
+    rustup component add clippy && \
+    cargo install cargo-deb
 
 mkdir -p ~/py2deb3/
 
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
-
-export AWS_ACCOUNT=$(aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
-
-`aws ecr --region us-east-1 get-login --no-include-email`
-docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
-docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
-docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
 PKGS="
     auth_server_rust,auth-server-rust
@@ -47,9 +52,23 @@ do
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     REPO_URL="https://github.com/ddboline/${CARGO}.git"
 
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg_deb.sh ${REPO_URL} ${PACKAGE}
+    git clone $REPO_URL ~/$PACKAGE/
+
+    cd ~/$PACKAGE/
+
+    VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
+    RELEASE="1"
+
+    echo $CARGO_NAME $PACKAGE $VERSION $RELEASE
+
+    cargo deb
+
+    mv ~/${PACKAGE}/target/debian/*.deb ~/py2deb3/
+
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb
+
+    rm -rf ~/${PACKAGE}
 done
