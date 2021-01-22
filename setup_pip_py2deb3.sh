@@ -3,7 +3,7 @@
 sudo cp -a /home/ubuntu/.ssh /root/
 sudo chown -R root:root /root/.ssh
 sudo bash -c "echo deb [trusted=yes] https://py2deb-repo.s3.amazonaws.com/deb/focal/python3 focal main > /etc/apt/sources.list.d/py2deb3.list"
-sudo apt-key adv --receive-keys 25508FAF711C1DEB
+sudo apt-key adv --keyserver keyserver.ubuntu.com --receive-keys 25508FAF711C1DEB
 sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -o Dpkg::Options::=--force-confold \
@@ -19,4 +19,5 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
                 python3-apt apt-file fakeroot build-essential devscripts debhelper
 sudo apt-file update
 mkdir -p /home/ubuntu/py2deb3
+mkdir -p /home/ubuntu/output
 sudo apt-get autoremove && sudo apt-get autoclean && sudo rm -rf /var/cache/apt/archives/*.deb
