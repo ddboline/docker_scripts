@@ -39,7 +39,7 @@ do
     pip3 wheel $REPO
 done
 
-wheel2deb --map $OPTS
-wheel2deb build --arch $ARCH
-wheel2deb --map $OPTS --ignore-entry-points --ignore-upstream-version
-wheel2deb build --arch $ARCH
+wheel2deb --arch $ARCH --map $OPTS
+wheel2deb build
+wheel2deb --arch $ARCH --map $OPTS --ignore-entry-points --ignore-upstream-version
+wheel2deb build
