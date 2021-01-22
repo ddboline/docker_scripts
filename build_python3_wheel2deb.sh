@@ -9,6 +9,10 @@ OPTS="pyyaml=yaml pyusb=usb websockify=websockify3
       pylint=pylint3 pyflakes=pyflakes3 python-dateutil=dateutil
       attrs=attr"
 
+if [ -n "$ARCH" ]; then
+    ARCH="amd64"
+fi
+
 ### hack...
 export LANG="C.UTF-8"
 
@@ -36,6 +40,6 @@ do
 done
 
 wheel2deb --map $OPTS
-wheel2deb build
+wheel2deb build --arch $ARCH
 wheel2deb --map $OPTS --ignore-entry-points --ignore-upstream-version
-wheel2deb build
+wheel2deb build --arch $ARCH
