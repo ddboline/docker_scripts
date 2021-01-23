@@ -52,9 +52,10 @@ do
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     REPO_URL="https://github.com/ddboline/${CARGO}.git"
 
-    git clone $REPO_URL ~/$PACKAGE/
+    cd ~/
+    git clone $REPO_URL
 
-    cd ~/$PACKAGE/
+    cd ~/${CARGO}/
 
     VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
     RELEASE="1"
@@ -63,12 +64,12 @@ do
 
     cargo deb
 
-    mv ~/${PACKAGE}/target/debian/*.deb ~/py2deb3/
+    mv ~/${CARGO}/target/debian/*.deb ~/py2deb3/
 
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb
 
-    rm -rf ~/${PACKAGE}
+    rm -rf ~/${CARGO}
 done

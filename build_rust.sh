@@ -93,7 +93,7 @@ do
 
     cd ~/
 
-    mkdir -p ~/${CARGO}
+    mkdir -p ~/${CARGO}/bin
     cd ~/${CARGO}
 
     cargo install $CARGO --root=~/${CARGO}
