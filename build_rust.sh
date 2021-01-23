@@ -98,9 +98,9 @@ do
     mkdir -p ~/${CARGO}/bin
     cd ~/${CARGO}
 
-    cargo install $CARGO --root=~/${CARGO}
+    cargo install $CARGO --root=${HOME}/${CARGO}
 
-    printf "\ninstall:\n\tcp ~/${CARGO}/bin/* /usr/bin/\n" > Makefile
+    printf "\ninstall:\n\tcp ${HOME}/${CARGO}/bin/* /usr/bin/\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
     checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
     chown ${USER}:${USER} ${PACKAGE}_*.deb
