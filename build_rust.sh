@@ -90,6 +90,8 @@ do
     CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $3}'`;
+    VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
+    RELEASE="1"
 
     cd ~/
 
