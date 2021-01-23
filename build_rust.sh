@@ -102,7 +102,7 @@ do
 
     printf "\ninstall:\n\tcp ${HOME}/${CARGO}/bin/* /usr/bin/\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
-    checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
+    sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
     chown ${USER}:${USER} ${PACKAGE}_*.deb
     mv ${PACKAGE}_*.deb ~/py2deb3/
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
