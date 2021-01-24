@@ -2,21 +2,12 @@
 
 mkdir -p ~/py2deb3
 
-sudo apt-get update && \
-    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
-            curl pkg-config checkinstall gcc libssl-dev ca-certificates \
-            file build-essential autoconf automake autotools-dev libtool xutils-dev \
-            git libusb-dev libxml2-dev libpq-dev libpython3.8-dev llvm clang \
-            default-libmysqlclient-dev libsqlite3-dev libsodium-dev libclang-dev \
-            nettle-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev \
-            libxcb-xfixes0-dev && \
-    sudo rm -rf /var/lib/apt/lists/* && \
-    curl https://sh.rustup.rs > rustup.sh && \
-    sh rustup.sh -y && \
-    . ~/.cargo/env && \
-    rustup component add rustfmt && \
-    rustup component add clippy && \
-    cargo install cargo-deb
+export AWS_ACCOUNT=$(aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
+
+`aws ecr --region us-east-1 get-login --no-include-email`
+docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
+docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
+docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
 PKGS="
     b3sum,b3sum,b3sum
@@ -90,32 +81,10 @@ do
     CARGO=`echo $PKG | sed 's:,: :g' | awk '{print $1}'`;
     EXE=`echo $PKG | sed 's:,: :g' | awk '{print $2}'`;
     PACKAGE=`echo $PKG | sed 's:,: :g' | awk '{print $3}'`;
-    VERSION=`cargo search $CARGO 2> /dev/null | head -n1 | awk '{print $3}' | sed 's:"::g'`
-    RELEASE="1"
-
-    if [ -z "$VERSION" ]; then
-        continue;
-    fi
-
-    echo $CARGO $EXE $PACKAGE $VERSION $RELEASE
-
-    cd ~/
-
-    mkdir -p ~/${CARGO}/bin
-    cd ~/${CARGO}
-
-    cargo install $CARGO --root=${HOME}/${CARGO}
-
-    printf "\ninstall:\n\tcp ${HOME}/${CARGO}/bin/* /usr/bin/\n" > Makefile
-    printf "${PACKAGE} package\n" > description-pak
-    sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
-    sudo chown ${USER}:${USER} ${PACKAGE}_*.deb
-    mv ${PACKAGE}_*.deb ~/py2deb3/
+    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest /root/build_rust_pkg.sh ${CARGO} ${PACKAGE}
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
-    sudo rm ~/py2deb3/*.deb
-
-    sudo rm -rf ~/${CARGO}
+    rm ~/py2deb3/*.deb
 done
 
 if [ "$1" = "" -o "$1" = "2" ]; then
