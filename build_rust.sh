@@ -93,6 +93,8 @@ do
     VERSION=`cargo search $CARGO_NAME 2> /dev/null | head -n1 | awk '{print $3}' | sed 's:"::g'`
     RELEASE="1"
 
+    echo $CARGO $EXE $PACKAGE $VERSION $RELEASE
+
     cd ~/
 
     mkdir -p ~/${CARGO}/bin
@@ -103,11 +105,11 @@ do
     printf "\ninstall:\n\tcp ${HOME}/${CARGO}/bin/* /usr/bin/\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
     sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
-    chown ${USER}:${USER} ${PACKAGE}_*.deb
+    sudo chown ${USER}:${USER} ${PACKAGE}_*.deb
     mv ${PACKAGE}_*.deb ~/py2deb3/
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
-    rm ~/py2deb3/*.deb
+    sudo rm ~/py2deb3/*.deb
 
     sudo rm -rf ~/${CARGO}
 done
