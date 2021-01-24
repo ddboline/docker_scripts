@@ -109,7 +109,7 @@ do
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     rm ~/py2deb3/*.deb
 
-    rm -rf ~/${CARGO}
+    sudo rm -rf ~/${CARGO}
 done
 
 if [ "$1" = "" -o "$1" = "2" ]; then

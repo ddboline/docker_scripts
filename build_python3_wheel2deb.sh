@@ -9,10 +9,6 @@ OPTS="pyyaml=yaml pyusb=usb websockify=websockify3
       pylint=pylint3 pyflakes=pyflakes3 python-dateutil=dateutil
       attrs=attr"
 
-if [ -n "$ARCH" ]; then
-    ARCH="amd64"
-fi
-
 ### hack...
 export LANG="C.UTF-8"
 
@@ -39,7 +35,7 @@ do
     pip3 wheel $REPO
 done
 
-wheel2deb --arch $ARCH --map $OPTS
+wheel2deb --map $OPTS
 wheel2deb build
-wheel2deb --arch $ARCH --map $OPTS --ignore-entry-points --ignore-upstream-version
+wheel2deb --map $OPTS --ignore-entry-points --ignore-upstream-version
 wheel2deb build
