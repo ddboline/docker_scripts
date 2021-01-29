@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir -p ~/py2deb3
+mkdir -p ~/py2deb3 ~/bin
 
 sudo apt-get update && \
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -101,12 +101,9 @@ do
 
     cd ~/
 
-    mkdir -p ~/${CARGO}/bin
-    cd ~/${CARGO}
+    cargo install $CARGO --root=${HOME}
 
-    cargo install $CARGO --root=${HOME}/${CARGO}
-
-    printf "\ninstall:\n\tcp ${HOME}/${CARGO}/bin/* /usr/bin/\n" > Makefile
+    printf "\ninstall:\n\tmv ${HOME}/bin/* /usr/bin/\n" > Makefile
     printf "${PACKAGE} package\n" > description-pak
     sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname ${PACKAGE} -y
     sudo chown ${USER}:${USER} ${PACKAGE}_*.deb
@@ -114,26 +111,6 @@ do
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
     scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
     sudo rm ~/py2deb3/*.deb
-
-    sudo rm -rf ~/${CARGO}
 done
-
-if [ "$1" = "" -o "$1" = "2" ]; then
-    `aws ecr --region us-east-1 get-login --no-include-email`
-    docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
-    docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest rust_nightly:latest
-    docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
-
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_nightly:latest /root/build_rust_pkg.sh frawk frawk
-    sudo chown ${USER}:${USER} ~/py2deb3/frawk_*.deb
-    scp ~/py2deb3/frawk_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
-    rm ~/py2deb3/*.deb
-
-    docker run --rm -v ~/py2deb3:/root/py2deb3 rust_stable:latest \
-        /root/build_rust_pkg_repo.sh https://github.com/sanpii/explain.git explain
-    sudo chown ${USER}:${USER} ~/py2deb3/explain_*.deb
-    scp ~/py2deb3/explain_*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/focal/devel_rust/
-    rm ~/py2deb3/*.deb
-fi
 
 cd ~/
