@@ -37,6 +37,7 @@ PKGS="
     grex,grex,grex
     highlight-stderr,highlight-stderr,highlight-stderr
     hors,hors,hors
+    ht,ht,ht
     huniq,huniq,huniq
     hx,hx,hx
     hyperfine,hyperfine,hyperfine
@@ -46,6 +47,7 @@ PKGS="
     lfs,lfs,lfs
     papyrus,papyrus,papyrus
     procs,procs,procs
+    pwatch,pwatch,pwatch
     pyoxidizer,pyoxidizer,pyoxidizer
     refinery_cli,refinery,refinery-cli
     ripgrep,rg,ripgrep
