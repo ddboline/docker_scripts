@@ -38,7 +38,7 @@ cargo build -p sequoia-sq --release
 
 printf "\ninstall:\n\tcp ./target/release/sq /usr/bin/\n" > Makefile
 printf "sequoia-sq package\n" > description-pak
-checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname sequoia-sq -y
+sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname sequoia-sq -y
 chown ${USER}:${USER} sequoia-sq_*.deb
 mv sequoia-sq_*.deb ~/py2deb3/
 
