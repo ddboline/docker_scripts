@@ -31,7 +31,7 @@ cd ~/
 git clone https://gitlab.com/sequoia-pgp/sequoia.git
 cd ~/sequoia/
 
-VERSION=`awk '/^version/' Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
+VERSION=`awk '/^version/' sq/Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
 RELEASE="1"
 
 cargo build -p sequoia-sq --release
