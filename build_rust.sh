@@ -45,7 +45,7 @@ PKGS="
     kibi,kibi,kibi
     kiro-editor,kiro,kiro
     lfs,lfs,lfs
-    nushell,nushell,nushell
+    nu,nu,nu
     papyrus,papyrus,papyrus
     procs,procs,procs
     pwatch,pwatch,pwatch
