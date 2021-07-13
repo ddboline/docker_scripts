@@ -35,6 +35,7 @@ PKGS="
     frawk,frawk,frawk
     fselect,fselect,fselect
     grex,grex,grex
+    hexyl,hexyl,hexyl
     highlight-stderr,highlight-stderr,highlight-stderr
     hors,hors,hors
     ht,ht,ht
