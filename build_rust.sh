@@ -13,6 +13,7 @@ PKGS="
     b3sum,b3sum,b3sum
     bandwhich,bandwhich,bandwhich
     bat,bat,bat
+    bottom,bottom,bottom
     broot,broot,broot
     cargo-bloat,cargo-bloat,cargo-bloat
     cargo-cache,cargo-cache,cargo-cache
@@ -25,6 +26,8 @@ PKGS="
     cargo-sweep,cargo-sweep,cargo-sweep
     cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
     cargo-tree,cargo-tree,cargo-tree
+    choose,choose,choose
+    delta,delta,delta
     diesel_cli,diesel,diesel-cli
     dotenv-linter,dotenv-linter,dotenv-linter
     du-dust,dust,dust
@@ -34,6 +37,9 @@ PKGS="
     flamegraph,flamegraph,flamegraph
     frawk,frawk,frawk
     fselect,fselect,fselect
+    fzf,fzf,fzf
+    dog,dog,dog
+    gping,gping,gping
     grex,grex,grex
     hexyl,hexyl,hexyl
     highlight-stderr,highlight-stderr,highlight-stderr
@@ -46,6 +52,8 @@ PKGS="
     kibi,kibi,kibi
     kiro-editor,kiro,kiro
     lfs,lfs,lfs
+    lsd,lsd,lsd
+    mcfly,mcfly,mcfly
     nu,nu,nu
     papyrus,papyrus,papyrus
     procs,procs,procs
@@ -64,6 +72,8 @@ PKGS="
     weather_util_rust,weather-util-rust,weather-util-rust
     wool,wool,wool
     yj,yj,yj
+    xh,xh,xh
+    zoxide,zoxide,zoxide
 "
 
 if [ "$1" = "1" ]; then
