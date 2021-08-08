@@ -49,6 +49,7 @@ PKGS="
     hx,hx,hx
     hyperfine,hyperfine,hyperfine
     jql,jql,jql
+    kdash,kdash,kdash
     kibi,kibi,kibi
     kiro-editor,kiro,kiro
     lfs,lfs,lfs
