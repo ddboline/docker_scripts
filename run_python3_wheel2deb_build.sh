@@ -29,6 +29,7 @@ md5sum /home/${USER}/output/*.deb > existing.log
 ./docker_scripts/build_python3_wheel2deb.sh jwcrypto 2>&1 >> build.log
 ./docker_scripts/build_python3_wheel2deb.sh maturin 2>&1 >> build.log
 ./docker_scripts/build_python3_wheel2deb.sh dlint 2>&1 >> build.log
+./docker_scripts/build_python3_wheel2deb.sh pdm 2>&1 >> build.log
 
 md5sum /home/${USER}/output/*.deb > modified.log
 MODIFIED=`diff -u existing.log modified.log | awk '$1 ~ /\+/ && $1 != "+++" {I=I" "$2} END{print I}'`
