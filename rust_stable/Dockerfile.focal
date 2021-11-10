@@ -15,6 +15,7 @@ RUN apt-get update && \
     . ~/.cargo/env && \
     rustup component add rustfmt && \
     rustup component add clippy && \
+    rustup component remove rust-docs && \
     cargo install cargo-deb
 
 ADD build_rust_pkg.sh /root/

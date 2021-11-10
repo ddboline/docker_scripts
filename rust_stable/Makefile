@@ -6,13 +6,8 @@ aws_release := $(shell aws sts get-caller-identity | awk '/Account/ {print $2}' 
 
 all:
 	cp Dockerfile.${ubuntu_release} Dockerfile
-	docker build --no-cache -t rust_stable:${version} .
+	docker build --compress -t rust_stable:${version} .
 	docker tag rust_stable:${version} rust_stable:latest
-
-amazon:
-	cp Dockerfile.amazon Dockerfile
-	docker build --no-cache -t rust_stable:${version} .
-	docker tag rust_stable:${version} rust_stable:latest_amazon
 
 cleanup:
 	rm Dockerfile
@@ -29,15 +24,3 @@ pull:
 	docker pull ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 	docker tag ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
 	docker rmi ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
-
-push_amazon:
-	`aws ecr --region us-east-1 get-login --no-include-email`
-	docker tag rust_stable:latest_amazon ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest_amazon
-	docker push ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest_amazon
-	docker rmi ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest_amazon
-
-pull_amazon:
-	`aws ecr --region us-east-1 get-login --no-include-email`
-	docker pull ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest_amazon
-	docker tag ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest_amazon rust_stable:latest_amazon
-	docker rmi ${aws_release}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest_amazon
