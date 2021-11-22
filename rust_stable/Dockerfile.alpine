@@ -1,0 +1,6 @@
+FROM rust:alpine3.14
+
+RUN apk add musl-dev
+
+ADD build_rust_docker.sh /root/
+ADD build_rust_docker_repo.sh /root/
