@@ -48,6 +48,7 @@ PKGS="
     huniq,huniq,huniq
     hx,hx,hx
     hyperfine,hyperfine,hyperfine
+    jless,jless,jless
     jql,jql,jql
     kalker,kalker,kalker
     kdash,kdash,kdash
