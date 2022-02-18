@@ -29,6 +29,7 @@ PKGS="
     choose,choose,choose
     delta,delta,delta
     diesel_cli,diesel,diesel-cli
+    dioxus-cli,dioxus,dioxus-cli
     dotenv-linter,dotenv-linter,dotenv-linter
     du-dust,dust,dust
     exa,exa,exa
@@ -70,6 +71,7 @@ PKGS="
     sql_db_mapper,sql_db_mapper,sql-db-mapper
     starship,starship,starship
     tokei,tokei,tokei
+    trunk,trunk,trunk
     waitfor,waitfor,waitfor
     watchexec,watchexec,watchexec
     weather_util_rust,weather-util-rust,weather-util-rust
