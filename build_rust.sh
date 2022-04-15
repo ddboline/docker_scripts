@@ -29,6 +29,7 @@ PKGS="
     choose,choose,choose
     delta,delta,delta
     diesel_cli,diesel,diesel-cli
+    difftastic,difft,difftastic
     dioxus-cli,dioxus,dioxus-cli
     dotenv-linter,dotenv-linter,dotenv-linter
     du-dust,dust,dust
