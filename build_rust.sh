@@ -45,7 +45,6 @@ PKGS="
     hexyl,hexyl,hexyl
     highlight-stderr,highlight-stderr,highlight-stderr
     hors,hors,hors
-    ht,ht,ht
     huniq,huniq,huniq
     hx,hx,hx
     hyperfine,hyperfine,hyperfine
