@@ -1,7 +1,7 @@
 version := "0.1.0"
 release := "1"
 build_type := release
-ubuntu_release := focal
+ubuntu_release := jammy
 aws_release := $(shell aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
 
 all:
