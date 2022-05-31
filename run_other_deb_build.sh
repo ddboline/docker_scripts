@@ -13,7 +13,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
     install -yq awscli curl pkg-config checkinstall gcc libssl-dev ca-certificates \
                 file build-essential autoconf automake autotools-dev libtool xutils-dev \
-                git libusb-dev libxml2-dev libpq-dev libpython3.8-dev llvm clang \
+                git libusb-dev libxml2-dev libpq-dev libpython3-dev llvm clang \
                 default-libmysqlclient-dev libsqlite3-dev libsodium-dev libclang-dev \
                 nettle-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev \
                 libxcb-xfixes0-dev nettle-dev && \
