@@ -1,0 +1,20 @@
+FROM ubuntu:jammy
+LABEL maintainer="Daniel Boline <ddboline@gmail.com>"
+
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y curl pkg-config checkinstall gcc libssl-dev ca-certificates \
+            file build-essential autoconf automake autotools-dev libtool xutils-dev \
+            git libusb-dev libxml2-dev libpq-dev && \
+    rm -rf /var/lib/apt/lists/* && \
+    curl https://sh.rustup.rs > rustup.sh && \
+    sh rustup.sh -y --default-toolchain nightly && \
+    . ~/.cargo/env && \
+    rustup component add rustfmt && \
+    rustup component add clippy && \
+    rustup component remove rust-docs && \
+    cargo +nightly install cargo-deb
+
+ADD build_rust_pkg.sh /root/
+ADD build_rust_pkg_repo.sh /root/
+
+WORKDIR /workdir
