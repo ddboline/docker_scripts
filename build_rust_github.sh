@@ -2,10 +2,9 @@
 
 mkdir -p ~/py2deb3
 
-# libssl-dev
 sudo apt-get update && \
     sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
-            curl pkg-config checkinstall gcc ca-certificates \
+            curl pkg-config checkinstall gcc ca-certificates libssl-dev \
             file build-essential autoconf automake autotools-dev libtool xutils-dev \
             git libusb-dev libxml2-dev libpq-dev libpython3-dev llvm clang \
             default-libmysqlclient-dev libsqlite3-dev libsodium-dev libclang-dev \
