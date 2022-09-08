@@ -44,6 +44,7 @@ PKGS="
     flamegraph,flamegraph,flamegraph
     frawk,frawk,frawk
     fselect,fselect,fselect
+    gitui,gitui,gitui
     grex,grex,grex
     highlight-stderr,highlight-stderr,highlight-stderr
     hors,hors,hors
