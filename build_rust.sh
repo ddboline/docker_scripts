@@ -15,6 +15,7 @@ PKGS="
     bat,bat,bat
     bottom,bottom,bottom
     broot,broot,broot
+    cargo-audit,cargo-audit,cargo-audit
     cargo-bloat,cargo-bloat,cargo-bloat
     cargo-cache,cargo-cache,cargo-cache
     cargo-deb,cargo-deb,cargo-deb
