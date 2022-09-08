@@ -41,6 +41,7 @@ PKGS="
     fselect,fselect,fselect
     fzf,fzf,fzf
     dog,dog,dog
+    gitui,gitui,gitui
     gping,gping,gping
     grex,grex,grex
     hexyl,hexyl,hexyl
