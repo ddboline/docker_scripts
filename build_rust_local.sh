@@ -18,60 +18,7 @@ sudo apt-get update && \
     rustup component add clippy && \
     cargo install cargo-deb
 
-PKGS="
-    b3sum,b3sum,b3sum
-    bandwhich,bandwhich,bandwhich
-    bat,bat,bat
-    broot,broot,broot
-    cargo-audit,cargo-audit,cargo-audit
-    cargo-bloat,cargo-bloat,cargo-bloat
-    cargo-cache,cargo-cache,cargo-cache
-    cargo-deb,cargo-deb,cargo-deb
-    cargo-expand,cargo-expand,cargo-expand
-    cargo-generate,cargo-generate,cargo-generate
-    cargo-mutagen,cargo-mutagen,cargo-mutagen
-    cargo-outdated,cargo-outdated,cargo-outdated
-    cargo-scout,cargo-scout,cargo-scout
-    cargo-sweep,cargo-sweep,cargo-sweep
-    cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
-    cargo-tree,cargo-tree,cargo-tree
-    diesel_cli,diesel,diesel-cli
-    dotenv-linter,dotenv-linter,dotenv-linter
-    du-dust,dust,dust
-    exa,exa,exa
-    fastmod,fastmod,fastmod
-    fd-find,fd,fd-find
-    flamegraph,flamegraph,flamegraph
-    frawk,frawk,frawk
-    fselect,fselect,fselect
-    gitui,gitui,gitui
-    grex,grex,grex
-    highlight-stderr,highlight-stderr,highlight-stderr
-    hors,hors,hors
-    huniq,huniq,huniq
-    hx,hx,hx
-    hyperfine,hyperfine,hyperfine
-    jql,jql,jql
-    kibi,kibi,kibi
-    kiro-editor,kiro,kiro
-    lfs,lfs,lfs
-    papyrus,papyrus,papyrus
-    procs,procs,procs
-    pyoxidizer,pyoxidizer,pyoxidizer
-    refinery_cli,refinery,refinery-cli
-    ripgrep,rg,ripgrep
-    rust-script,rust-script,rust-script
-    sd,sd,sd
-    silicon,silicon,silicon
-    sql_db_mapper,sql_db_mapper,sql-db-mapper
-    starship,starship,starship
-    tokei,tokei,tokei
-    waitfor,waitfor,waitfor
-    watchexec,watchexec,watchexec
-    weather_util_rust,weather-util-rust,weather-util-rust
-    wool,wool,wool
-    yj,yj,yj
-"
+PKGS=`cat rust_packages.txt`
 
 if [ "$1" = "1" ]; then
     PKGS=`echo $PKGS | sed 's: :\n:g' | head -n20`
