@@ -9,7 +9,7 @@ docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest rust_stable:latest
 docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_stable:latest
 
-PKGS=`cat rust_packages.txt`
+PKGS=`cat ./docker_scripts/rust_packages.txt`
 
 if [ "$1" = "1" ]; then
     PKGS=`echo $PKGS | sed 's: :\n:g' | head -n20`

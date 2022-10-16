@@ -18,7 +18,7 @@ sudo apt-get update && \
     rustup component add clippy && \
     cargo install cargo-deb
 
-PKGS=`cat rust_packages.txt`
+PKGS=`cat ./docker_scripts/rust_packages.txt`
 
 if [ "$1" = "1" ]; then
     PKGS=`echo $PKGS | sed 's: :\n:g' | head -n20`
