@@ -38,6 +38,7 @@ hexyl,hexyl,hexyl
 highlight-stderr,highlight-stderr,highlight-stderr
 hors,hors,hors
 huniq,huniq,huniq
+hurl,hurl,hurl
 hx,hx,hx
 hyperfine,hyperfine,hyperfine
 jless,jless,jless
