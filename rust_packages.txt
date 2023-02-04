@@ -8,6 +8,7 @@ cargo-audit,cargo-audit,cargo-audit
 cargo-bloat,cargo-bloat,cargo-bloat
 cargo-cache,cargo-cache,cargo-cache
 cargo-deb,cargo-deb,cargo-deb
+cargo-dist,cargo-dist,cargo-dist
 cargo-expand,cargo-expand,cargo-expand
 cargo-generate,cargo-generate,cargo-generate
 cargo-mutagen,cargo-mutagen,cargo-mutagen
