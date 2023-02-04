@@ -13,6 +13,7 @@ cargo-expand,cargo-expand,cargo-expand
 cargo-generate,cargo-generate,cargo-generate
 cargo-mutagen,cargo-mutagen,cargo-mutagen
 cargo-outdated,cargo-outdated,cargo-outdated
+cargo-release,cargo-release,cargo-release
 cargo-scout,cargo-scout,cargo-scout
 cargo-sweep,cargo-sweep,cargo-sweep
 cargo-tarpaulin,cargo-tarpaulin,cargo-tarpaulin
