@@ -54,6 +54,7 @@ lsd,lsd,lsd
 mcfly,mcfly,mcfly
 nu,nu,nu
 papyrus,papyrus,papyrus
+polars-cli,polars,polars-cli
 procs,procs,procs
 pwatch,pwatch,pwatch
 pyoxidizer,pyoxidizer,pyoxidizer
