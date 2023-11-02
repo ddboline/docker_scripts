@@ -26,6 +26,7 @@ dioxus-cli,dioxus,dioxus-cli
 dog,dog,dog
 dotenv-linter,dotenv-linter,dotenv-linter
 du-dust,dust,dust
+evcxr,evcxr,evcxr
 exa,exa,exa
 fastmod,fastmod,fastmod
 fd-find,fd,fd-find
