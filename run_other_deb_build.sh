@@ -42,7 +42,7 @@ sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname sequ
 chown ${USER}:${USER} sequoia-sq_*.deb
 mv sequoia-sq_*.deb ~/py2deb3/
 
-scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/jammy/devel_rust/
+scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/noble/devel_rust/
 rm ~/py2deb3/*.deb
 
 rm -rf ~/sequoia
@@ -88,7 +88,7 @@ do
 
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
 
-    scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/jammy/devel_rust/
+    scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/noble/devel_rust/
     rm ~/py2deb3/*.deb
 
     rm -rf ~/${CARGO}

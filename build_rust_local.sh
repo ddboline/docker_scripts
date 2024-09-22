@@ -58,7 +58,7 @@ do
     sudo chown ${USER}:${USER} ${PACKAGE}_*.deb
     mv ${PACKAGE}_*.deb ~/py2deb3/
     sudo chown ${USER}:${USER} ~/py2deb3/*.deb
-    scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/jammy/devel_rust/
+    scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/noble/devel_rust/
     sudo rm ~/py2deb3/*.deb
 done
 
