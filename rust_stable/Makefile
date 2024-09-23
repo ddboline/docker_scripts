@@ -2,7 +2,7 @@ version := "0.1.0"
 release := "1"
 build_type := release
 ubuntu_release := noble
-aws_release := $(shell aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
+aws_release := $(shell aws sts get-caller-identity | awk '/Account/' | sed 's:Account::g' | sed 's/[ :",]//g')
 docker_endpoint := https://${aws_release}.dkr.ecr.us-east-1.amazonaws.com
 
 all:
