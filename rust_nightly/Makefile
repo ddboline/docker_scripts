@@ -3,7 +3,7 @@ release := "1"
 build_type := release
 ubuntu_release := noble
 aws_release := $(shell aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[",]::g')
-docker_endpoint := https://${aws_release}.dkr.ecr.us-east-1.amazonaws.com
+docker_endpoint := "https://${aws_release}.dkr.ecr.us-east-1.amazonaws.com"
 
 all:
 	docker build --no-cache -f Dockerfile.${ubuntu_release} -t rust_nightly:${version} .
@@ -18,6 +18,7 @@ cleanup:
 	docker rmi `docker images | python -c "import sys; print('\n'.join(l.split()[2] for l in sys.stdin if '<none>' in l))"`
 
 push:
+	echo `docker login -u AWS -p `aws ecr --region us-east-1 get-login-password` ${docker_endpoint}`
 	docker login -u AWS -p `aws ecr --region us-east-1 get-login-password` ${docker_endpoint}
 	docker tag rust_nightly:latest 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
 	docker push 281914939654.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
