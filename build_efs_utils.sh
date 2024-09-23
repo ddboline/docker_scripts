@@ -4,8 +4,7 @@ REPO="https://github.com/ddboline/efs-utils.git"
 TAG="v1.33.1-2"
 
 sudo apt-get update
-sudo apt-get install -y binutils pkg-config \
-                        checkinstall rename
+sudo apt-get install -y binutils pkg-config checkinstall
 
 cd ~/
 
