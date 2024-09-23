@@ -3,8 +3,9 @@
 mkdir -p ~/py2deb3
 
 export AWS_ACCOUNT=$(aws sts get-caller-identity | awk '/Account/ {print $2}' | sed 's:[^0-9]::g')
+export DOCKER_ENDPOINT=https://${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com
 
-`aws ecr --region us-east-1 get-login --no-include-email`
+docker login -u AWS -p `aws ecr --region us-east-1 get-login-password` ${DOCKER_ENDPOINT}
 docker pull ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
 docker tag ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest rust_nightly:latest
 docker rmi ${AWS_ACCOUNT}.dkr.ecr.us-east-1.amazonaws.com/rust_nightly:latest
