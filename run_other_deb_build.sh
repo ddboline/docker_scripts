@@ -11,7 +11,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     -o Dpkg::Options::=--force-confold \
     -o Dpkg::Options::=--force-confdef \
     -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
-    install -yq awscli curl pkg-config checkinstall gcc libssl-dev ca-certificates \
+    install -yq curl pkg-config checkinstall gcc libssl-dev ca-certificates \
                 file build-essential autoconf automake autotools-dev libtool xutils-dev \
                 git libusb-dev libxml2-dev libpq-dev libpython3-dev llvm clang \
                 default-libmysqlclient-dev libsqlite3-dev libsodium-dev libclang-dev \
