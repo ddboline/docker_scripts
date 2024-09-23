@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPO="https://github.com/ddboline/efs-utils.git"
-TAG="v1.31.2-1"
+TAG="v1.33.1-2"
 
 sudo apt-get update
 sudo apt-get install -y binutils pkg-config \
