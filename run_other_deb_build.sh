@@ -54,6 +54,7 @@ PKGS="
     aws_app_rust,aws-app-rust
     backup_app_rust,backup-app-rust
     calendar_app_rust,calendar-app-rust
+    ddboline-scripts-rs,ddboline-scripts-rs
     diary_app_rust,diary-app-rust
     garmin_rust,garmin-rust
     movie_collection_rust,movie-collection-rust
