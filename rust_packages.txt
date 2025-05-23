@@ -63,6 +63,7 @@ refinery_cli,refinery,refinery-cli
 ripgrep,rg,ripgrep
 rust-script,rust-script,rust-script
 sd,sd,sd
+sequoia-sq,sq,sequoia-sq
 silicon,silicon,silicon
 sql_db_mapper,sql_db_mapper,sql-db-mapper
 starship,starship,starship

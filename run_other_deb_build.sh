@@ -18,7 +18,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
                 nettle-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev \
                 libxcb-xfixes0-dev libpango1.0-dev libsoup2.4-dev libatk1.0-dev \
                 libgdk-pixbuf2.0-dev libgdk3.0-cil-dev libgtk-3-dev \
-                libappindicator3-dev libwebkit2gtk-4.1-dev libxdo-dev && \
+                libappindicator3-dev libwebkit2gtk-4.1-dev libxdo-dev capnproto && \
     sudo rm -rf /var/lib/apt/lists/* && \
     curl https://sh.rustup.rs > rustup.sh && \
     sh rustup.sh -y && \
@@ -28,26 +28,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get \
     cargo install cargo-deb
 
 mkdir -p ~/py2deb3/
-
-cd ~/
-git clone https://gitlab.com/sequoia-pgp/sequoia.git
-cd ~/sequoia/
-
-VERSION=`awk '/^version/' sq/Cargo.toml | head -n1 | cut -d "=" -f 2 | sed 's: ::g'`
-RELEASE="1"
-
-cargo build -p sequoia-sq --release
-
-printf "\ninstall:\n\tcp ./target/release/sq /usr/bin/\n" > Makefile
-printf "sequoia-sq package\n" > description-pak
-sudo checkinstall --pkgversion ${VERSION} --pkgrelease ${RELEASE} --pkgname sequoia-sq -y
-chown ${USER}:${USER} sequoia-sq_*.deb
-mv sequoia-sq_*.deb ~/py2deb3/
-
-scp ~/py2deb3/*.deb ubuntu@cloud.ddboline.net:/home/ubuntu/setup_files/deb/py2deb3/noble/devel_rust/
-rm ~/py2deb3/*.deb
-
-rm -rf ~/sequoia
 
 ./docker_scripts/build_efs_utils.sh 2>&1 >> build.log
 
